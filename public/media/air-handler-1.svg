@@ -1,0 +1,40 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Air Handler Unit Icon - FB4CNF036 -->
+  <defs>
+    <linearGradient id="airHandlerGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#64748b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#475569;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Main unit body - vertical rectangle -->
+  <rect x="50" y="30" width="100" height="140" rx="6" fill="url(#airHandlerGrad1)" stroke="#334155" stroke-width="2"/>
+  
+  <!-- Top panel -->
+  <rect x="60" y="40" width="80" height="25" rx="4" fill="#94a3b8" opacity="0.2"/>
+  <circle cx="70" cy="52.5" r="3" fill="#fbbf24"/>
+  <rect x="80" y="48" width="50" height="3" rx="1.5" fill="#334155"/>
+  <rect x="80" y="54" width="35" height="3" rx="1.5" fill="#334155"/>
+  
+  <!-- Air flow slots (horizontal) -->
+  <g opacity="0.4">
+    <rect x="60" y="75" width="80" height="2" fill="#334155"/>
+    <rect x="60" y="82" width="80" height="2" fill="#334155"/>
+    <rect x="60" y="89" width="80" height="2" fill="#334155"/>
+    <rect x="60" y="96" width="80" height="2" fill="#334155"/>
+    <rect x="60" y="103" width="80" height="2" fill="#334155"/>
+    <rect x="60" y="110" width="80" height="2" fill="#334155"/>
+    <rect x="60" y="117" width="80" height="2" fill="#334155"/>
+    <rect x="60" y="124" width="80" height="2" fill="#334155"/>
+  </g>
+  
+  <!-- Control panel -->
+  <rect x="60" y="140" width="80" height="20" rx="3" fill="#334155"/>
+  <circle cx="75" cy="150" r="4" fill="#94a3b8"/>
+  <circle cx="90" cy="150" r="4" fill="#94a3b8"/>
+  <rect x="105" y="147" width="25" height="6" rx="3" fill="#94a3b8"/>
+  
+  <!-- Label -->
+  <text x="100" y="20" font-family="system-ui" font-size="12" font-weight="600" fill="#334155" text-anchor="middle">CARRIER</text>
+  <text x="100" y="190" font-family="system-ui" font-size="9" fill="#64748b" text-anchor="middle">AIR HANDLER</text>
+</svg>
