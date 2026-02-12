@@ -34,8 +34,8 @@ export function TechnicalSearchAnimation({ isActive }) {
   }, [isActive]);
 
   return (
-    <div className="w-full h-full bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 p-6 flex items-center justify-center">
-      <div className="w-full max-w-2xl space-y-4">
+    <div className="w-full h-full bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 p-4 sm:p-6 flex items-center justify-center">
+      <div className="w-full space-y-4">
         {/* System Status Bar */}
         <div className="flex items-center justify-between text-xs text-slate-600 dark:text-slate-400 px-1">
           <div className="flex items-center gap-3 flex-wrap">
@@ -144,8 +144,8 @@ export function RFQCaptureAnimation({ isActive }) {
   }, [isActive]);
 
   return (
-    <div className="w-full h-full bg-gradient-to-br from-violet-50 to-fuchsia-50 dark:from-violet-950 dark:to-fuchsia-950 p-6 flex items-center justify-center">
-      <div className="w-full max-w-md space-y-4">
+    <div className="w-full h-full bg-gradient-to-br from-violet-50 to-fuchsia-50 dark:from-violet-950 dark:to-fuchsia-950 p-4 sm:p-6 flex items-center justify-center">
+      <div className="w-full max-w-md mx-auto space-y-4">
         {/* Account Context Bar */}
         <div className="text-xs text-slate-600 dark:text-slate-400 px-1">
           <div className="flex items-center gap-3 flex-wrap">
@@ -310,7 +310,7 @@ export function SubstitutesAnimation({ isActive }) {
 
   return (
     <div className="w-full h-full bg-gradient-to-br from-orange-50 to-amber-50 dark:from-orange-950 dark:to-amber-950 p-4 sm:p-6 flex items-center justify-center">
-      <div className="w-full max-w-4xl">
+      <div className="w-full">
         {/* System Context Bar */}
         <div className="text-xs text-slate-600 dark:text-slate-400 mb-4 px-1">
           <div className="flex items-center gap-3 flex-wrap">
@@ -479,7 +479,7 @@ export function CompatibilityAnimation({ isActive }) {
 
   return (
     <div className="w-full h-full bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-950 dark:to-cyan-950 p-4 sm:p-6 flex items-center justify-center">
-      <div className="w-full max-w-4xl">
+      <div className="w-full">
         {/* Context Bar */}
         <div className="text-xs text-slate-600 dark:text-slate-400 mb-4 px-1">
           <div className="flex items-center gap-3 flex-wrap">
