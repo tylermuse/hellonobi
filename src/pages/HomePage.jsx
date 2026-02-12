@@ -480,7 +480,7 @@ function Features() {
 
         <div className="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
           <div
-            className="order-1 lg:order-2 rounded-3xl border border-black/10 dark:border-white/10 overflow-hidden aspect-[4/3] sm:aspect-video lg:aspect-auto lg:h-full shadow-lg"
+            className="order-1 lg:order-2 rounded-3xl border border-black/10 dark:border-white/10 overflow-hidden aspect-[4/3] sm:aspect-video lg:aspect-auto lg:min-h-[600px] shadow-lg"
             role="tabpanel"
             id="feature-preview"
             aria-labelledby={`feature-tab-${active}`}
@@ -511,166 +511,6 @@ function Features() {
                 </div>
               </button>
             ))}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function Results() {
-  const rows = [
-    { metric: "Quote Requests Captured", defaultVal: "12%", nobiVal: "38%", impact: "+217%" },
-    { metric: "Search-to-RFQ", defaultVal: "3.2%", nobiVal: "8.1%", impact: "+153%" },
-    { metric: "Support Ticket Reduction", defaultVal: "—", nobiVal: "42%", impact: "42%" },
-    { metric: "Average Order Value", defaultVal: "$8,450", nobiVal: "$11,200", impact: "+33%" },
-  ];
-
-  return (
-    <section id="results" className="scroll-mt-20 py-20 border-t border-black/5 dark:border-white/5">
-      <div className="mx-auto max-w-6xl px-6">
-        <p className="text-sm font-semibold text-fuchsia-600">Results</p>
-        <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight mt-2">
-          Capture more quotes and reduce sales friction.
-        </h2>
-        <p className="mt-3 text-black/70 dark:text-white/70">
-          Industrial distributors using Nobi see measurable improvements in quote capture, order value, and operational efficiency.
-        </p>
-
-        <div className="mt-8">
-          <table className="w-full text-left border-collapse table-fixed">
-            <colgroup>
-              <col style={{ width: "40%" }} />
-              <col style={{ width: "20%" }} />
-              <col style={{ width: "20%" }} />
-              <col style={{ width: "20%" }} />
-            </colgroup>
-
-            <thead>
-              <tr className="text-xs sm:text-sm font-semibold text-black/70 dark:text-white/70">
-                <th className="py-2 px-2 sm:px-4"></th>
-                <th className="py-2 px-2 sm:px-4 text-center">Before</th>
-                <th className="py-2 px-2 sm:px-4 text-center">With Nobi</th>
-                <th className="py-2 px-2 sm:px-4 text-center bg-gradient-to-r from-indigo-500 via-violet-500 to-fuchsia-500 bg-clip-text text-transparent">
-                  Impact
-                </th>
-              </tr>
-            </thead>
-
-            <tbody>
-              {rows.map((r, i) => (
-                <tr
-                  key={r.metric}
-                  className={i !== rows.length - 1 ? "border-b border-dashed border-black/20 dark:border-white/15" : ""}
-                >
-                  <td className="py-3 px-2 sm:px-4 font-medium text-black/80 dark:text-white/90 leading-snug">
-                    {r.metric}
-                  </td>
-
-                  <td className="py-3 px-2 sm:px-4 text-center text-xl sm:text-2xl font-semibold tabular-nums">
-                    {r.defaultVal}
-                  </td>
-                  <td className="py-3 px-2 sm:px-4 text-center text-xl sm:text-2xl font-semibold tabular-nums">
-                    {r.nobiVal}
-                  </td>
-                  <td className="py-3 px-2 sm:px-4 text-center text-xl sm:text-2xl font-bold tabular-nums whitespace-nowrap bg-gradient-to-r from-indigo-500 via-violet-500 to-fuchsia-500 bg-clip-text text-transparent">
-                    {r.impact}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-
-        <p className="mt-3 text-xs text-black/50 dark:text-white/50">
-          Results from mid-market industrial distributors using Nobi for 6+ months.
-        </p>
-      </div>
-    </section>
-  );
-}
-
-function Testimonial() {
-  const leftRef = useRef(null);
-  const [leftHeight, setLeftHeight] = useState(0);
-  const [photoFailed, setPhotoFailed] = useState(false);
-  const [avatarFailed, setAvatarFailed] = useState(false);
-
-  useEffect(() => {
-    if (!leftRef.current) return;
-    const el = leftRef.current;
-
-    if (typeof window === "undefined" || typeof window.ResizeObserver === "undefined") {
-      setLeftHeight(el.getBoundingClientRect().height || 320);
-      return;
-    }
-
-    const ro = new ResizeObserver(() => {
-      setLeftHeight(el.getBoundingClientRect().height);
-    });
-    ro.observe(el);
-    setLeftHeight(el.getBoundingClientRect().height);
-
-    return () => ro.disconnect();
-  }, []);
-
-  return (
-    <section id="testimonial" className="py-20 border-t border-black/5 dark:border-white/5">
-      <div className="mx-auto max-w-6xl px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
-          <div
-            ref={leftRef}
-            className="lg:col-span-2 self-start rounded-3xl border border-black/10 dark:border-white/10 bg-white/70 dark:bg-white/5 p-8 shadow-sm"
-          >
-            <Quote className="h-6 w-6 text-fuchsia-600 mb-4" />
-            <p className="text-2xl leading-snug font-medium text-black/90 dark:text-white">
-              "Our contractors used to call us constantly asking 'do you have X in stock?' and 'what's the right air handler for this unit?' Now Nobi handles those questions instantly. Our counter staff can focus on complex quotes instead of repetitive lookups."
-            </p>
-            <div className="mt-6 flex items-center gap-4">
-              {!avatarFailed ? (
-                <img
-                  src="/media/testimonial-avatar.png"
-                  alt="Customer avatar"
-                  className="h-10 w-10 rounded-full object-cover bg-black/10 dark:bg-white/10"
-                  onError={() => setAvatarFailed(true)}
-                />
-              ) : (
-                <div className="h-10 w-10 rounded-full bg-gradient-to-br from-fuchsia-400 to-indigo-500" />
-              )}
-              <div>
-                <div className="font-semibold">Mike Sullivan</div>
-                <div className="text-sm text-black/60 dark:text-white/60">
-                  Operations Manager, Regional Industrial Distributor
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div
-            className="relative self-start rounded-3xl border border-black/10 dark:border-white/10 overflow-hidden bg-white/70 dark:bg-white/5"
-            style={{
-              height: leftHeight || 320,
-            }}
-          >
-            {!photoFailed ? (
-              <img
-                src="/media/industrial-testimonial-image.png"
-                alt="Industrial facility"
-                className="h-full w-full object-cover"
-                onError={() => setPhotoFailed(true)}
-              />
-            ) : (
-              <div className="h-full w-full bg-gradient-to-br from-zinc-200 via-white to-zinc-100 dark:from-zinc-800 dark:via-zinc-900 dark:to-zinc-800" />
-            )}
-            <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
-            <div className="absolute bottom-5 left-5 right-5 text-white text-center">
-              <div className="text-3xl sm:text-4xl font-semibold leading-tight">
-                62% more RFQs
-              </div>
-              <div className="text-lg sm:text-xl font-medium text-white/90">
-                captured in first 90 days
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -1076,9 +916,7 @@ export default function HomePage() {
       <Header />
       <Hero onOpenVideo={() => setIsVideoOpen(true)} />
       <Features />
-      <Results />
       <Insights onOpenForm={onOpenForm} />
-      <Testimonial />
       <HowItWorks />
       <LatestPosts />
       {SHOW_PRICING && <div>Pricing section placeholder</div>}
