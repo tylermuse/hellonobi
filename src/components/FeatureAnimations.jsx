@@ -325,7 +325,7 @@ export function SubstitutesAnimation({ isActive }) {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-[300px_1fr] gap-4 md:gap-6 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-[180px_1fr] gap-3 md:gap-4 items-start">
           {/* Product Image - Left Side */}
           <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg overflow-hidden border border-slate-200 dark:border-slate-700">
             <div className="aspect-square bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-700 dark:to-slate-800 p-6 flex items-center justify-center">
@@ -492,19 +492,19 @@ export function CompatibilityAnimation({ isActive }) {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-[300px_1fr] gap-4 md:gap-6 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-[180px_1fr] gap-3 md:gap-4 items-start">
           {/* Product Image - Left Side */}
-          <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg overflow-hidden border border-slate-200 dark:border-slate-700">
-            <div className="aspect-square bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-700 dark:to-slate-800 p-6 flex items-center justify-center">
+          <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg overflow-hidden border border-slate-200 dark:border-slate-700">
+            <div className="aspect-square bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-700 dark:to-slate-800 p-4 flex items-center justify-center">
               <img
                 src="/media/hvac-unit-1.svg"
                 alt="Carrier 25VNA4 3-Ton Heat Pump"
                 className="w-full h-full object-contain"
               />
             </div>
-            <div className="p-4 border-t border-slate-200 dark:border-slate-700">
-              <div className="font-semibold text-slate-900 dark:text-white">Carrier 25VNA4 3-Ton</div>
-              <div className="text-sm text-slate-600 dark:text-slate-400 mt-1">16 SEER2 • $3,450</div>
+            <div className="p-3 border-t border-slate-200 dark:border-slate-700">
+              <div className="font-semibold text-sm text-slate-900 dark:text-white">Carrier 25VNA4 3-Ton</div>
+              <div className="text-xs text-slate-600 dark:text-slate-400 mt-1">16 SEER2 • $3,450</div>
             </div>
           </div>
 
@@ -570,23 +570,23 @@ export function CompatibilityAnimation({ isActive }) {
                       initial={{ opacity: 0, x: -10 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: i * 0.15 }}
-                      className="bg-white dark:bg-slate-800 rounded-xl shadow p-3 border border-slate-200 dark:border-slate-700"
+                      className="bg-white dark:bg-slate-800 rounded-xl shadow p-2 border border-slate-200 dark:border-slate-700"
                     >
-                      <div className="flex items-center gap-3">
-                        <div className="w-16 h-16 flex-shrink-0 rounded-lg bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 p-2">
+                      <div className="flex items-center gap-2">
+                        <div className="w-12 h-12 flex-shrink-0 rounded-lg bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 p-1.5">
                           <img src={item.img} alt={item.name} className="w-full h-full object-contain" />
                         </div>
                         <div className="flex-1 min-w-0">
-                          <div className="font-medium text-sm text-slate-900 dark:text-white">{item.name}</div>
+                          <div className="font-medium text-xs text-slate-900 dark:text-white truncate">{item.name}</div>
                           <div className="text-xs text-slate-600 dark:text-slate-400 mt-0.5">{item.specs}</div>
-                          <div className="flex items-center gap-2 mt-1.5 text-xs">
-                            <span className="inline-flex items-center gap-1 text-green-600 dark:text-green-400">
-                              <CheckCircle2 className="h-3 w-3" />
-                              In stock
+                          <div className="flex items-center gap-1.5 mt-1 text-xs">
+                            <span className="inline-flex items-center gap-0.5 text-green-600 dark:text-green-400">
+                              <CheckCircle2 className="h-2.5 w-2.5" />
+                              <span className="text-[10px]">Stock</span>
                             </span>
-                            <span className="text-slate-400">•</span>
-                            <span className="text-slate-500 dark:text-slate-400">
-                              {i === 0 ? "Phoenix • Pickup today" : "Phoenix • Will-call"}
+                            <span className="text-slate-400 text-[10px]">•</span>
+                            <span className="text-slate-500 dark:text-slate-400 text-[10px]">
+                              {i === 0 ? "Pickup today" : "Will-call"}
                             </span>
                           </div>
                         </div>
@@ -595,10 +595,10 @@ export function CompatibilityAnimation({ isActive }) {
                   ))}
 
                   <div className="flex gap-2 pt-2 px-1">
-                    <button className="flex-1 h-9 px-4 text-sm rounded-xl font-medium bg-gradient-to-r from-fuchsia-500 to-pink-500 text-white hover:opacity-90 transition">
+                    <button className="flex-1 h-8 px-3 text-xs rounded-lg font-medium bg-gradient-to-r from-fuchsia-500 to-pink-500 text-white hover:opacity-90 transition">
                       Add to RFQ
                     </button>
-                    <button className="flex-1 h-9 px-4 text-sm rounded-xl font-medium border border-slate-300 dark:border-slate-600 text-slate-900 dark:text-white hover:bg-slate-50 dark:hover:bg-slate-700 transition">
+                    <button className="flex-1 h-8 px-3 text-xs rounded-lg font-medium border border-slate-300 dark:border-slate-600 text-slate-900 dark:text-white hover:bg-slate-50 dark:hover:bg-slate-700 transition">
                       Add to Cart
                     </button>
                   </div>
