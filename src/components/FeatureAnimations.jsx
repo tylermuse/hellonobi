@@ -37,30 +37,31 @@ export function TechnicalSearchAnimation({ isActive }) {
     <div className="w-full h-full bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 p-4 sm:p-6 flex items-center justify-center">
       <div className="w-full space-y-4">
         {/* System Status Bar */}
-        <div className="flex items-center justify-between text-xs text-slate-600 dark:text-slate-400 px-1">
-          <div className="flex items-center gap-3 flex-wrap">
-            <span className="inline-flex items-center gap-1.5">
+        <div className="flex items-center justify-between text-[10px] sm:text-xs text-slate-600 dark:text-slate-400 px-1">
+          <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
+            <span className="inline-flex items-center gap-1">
               <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
-              Connected: Catalog + Inventory
+              <span className="hidden sm:inline">Connected: Catalog + Inventory</span>
+              <span className="sm:hidden">Connected</span>
             </span>
-            <span>•</span>
+            <span className="hidden sm:inline">•</span>
             <span>Phoenix Branch</span>
-            <span>•</span>
-            <span>Contractor tier pricing</span>
+            <span className="hidden sm:inline">•</span>
+            <span className="hidden sm:inline">Contractor pricing</span>
           </div>
         </div>
 
         {/* Search Bar */}
-        <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg p-4 border border-slate-200 dark:border-slate-700">
-          <div className="flex items-center gap-3">
-            <Search className="h-5 w-5 text-slate-400" />
+        <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg p-3 sm:p-4 border border-slate-200 dark:border-slate-700">
+          <div className="flex items-center gap-2 sm:gap-3">
+            <Search className="h-4 w-4 sm:h-5 sm:w-5 text-slate-400" />
             <input
               readOnly
               value={query}
-              className="flex-1 bg-transparent outline-none text-slate-900 dark:text-white"
+              className="flex-1 bg-transparent outline-none text-sm sm:text-base text-slate-900 dark:text-white"
               placeholder="Search for equipment..."
             />
-            <Sparkles className="h-5 w-5 text-fuchsia-600" />
+            <Sparkles className="h-4 w-4 sm:h-5 sm:w-5 text-fuchsia-600" />
           </div>
         </div>
 
@@ -72,8 +73,8 @@ export function TechnicalSearchAnimation({ isActive }) {
               animate={{ opacity: 1, y: 0 }}
               className="space-y-3"
             >
-              <div className="flex items-start gap-2 text-xs text-slate-700 dark:text-slate-300 px-1">
-                <Sparkles className="h-3.5 w-3.5 mt-0.5 flex-shrink-0 text-fuchsia-600" />
+              <div className="flex items-start gap-2 text-[11px] sm:text-xs text-slate-700 dark:text-slate-300 px-1">
+                <Sparkles className="h-3 w-3 sm:h-3.5 sm:w-3.5 mt-0.5 flex-shrink-0 text-fuchsia-600" />
                 <p>Found 3 pumps matching your specs. Checked Phoenix inventory, filtered by voltage/phase, and cross-referenced material compatibility.</p>
               </div>
               {[
@@ -147,14 +148,15 @@ export function RFQCaptureAnimation({ isActive }) {
     <div className="w-full h-full bg-gradient-to-br from-violet-50 to-fuchsia-50 dark:from-violet-950 dark:to-fuchsia-950 p-4 sm:p-6 flex items-center justify-center">
       <div className="w-full max-w-md mx-auto space-y-4">
         {/* Account Context Bar */}
-        <div className="text-xs text-slate-600 dark:text-slate-400 px-1">
-          <div className="flex items-center gap-3 flex-wrap">
-            <span className="inline-flex items-center gap-1.5">
+        <div className="text-[10px] sm:text-xs text-slate-600 dark:text-slate-400 px-1">
+          <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
+            <span className="inline-flex items-center gap-1">
               <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span>
-              Account: Phoenix HVAC Co
+              <span className="hidden sm:inline">Account: Phoenix HVAC Co</span>
+              <span className="sm:hidden">Phoenix HVAC Co</span>
             </span>
-            <span>•</span>
-            <span>Contractor pricing active</span>
+            <span className="hidden sm:inline">•</span>
+            <span className="hidden sm:inline">Contractor pricing</span>
           </div>
         </div>
         {/* Chat Message */}
@@ -312,20 +314,21 @@ export function SubstitutesAnimation({ isActive }) {
     <div className="w-full h-full bg-gradient-to-br from-orange-50 to-amber-50 dark:from-orange-950 dark:to-amber-950 p-4 sm:p-6 flex items-center justify-center">
       <div className="w-full">
         {/* System Context Bar */}
-        <div className="text-xs text-slate-600 dark:text-slate-400 mb-4 px-1">
-          <div className="flex items-center gap-3 flex-wrap">
-            <span className="inline-flex items-center gap-1.5">
+        <div className="text-[10px] sm:text-xs text-slate-600 dark:text-slate-400 mb-3 sm:mb-4 px-1">
+          <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
+            <span className="inline-flex items-center gap-1">
               <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span>
-              Live inventory feed
+              <span className="hidden sm:inline">Live inventory</span>
+              <span className="sm:hidden">Inventory</span>
             </span>
-            <span>•</span>
-            <span>Phoenix Branch</span>
-            <span>•</span>
-            <span>Cross-referencing 3 suppliers</span>
+            <span className="hidden sm:inline">•</span>
+            <span>Phoenix</span>
+            <span className="hidden sm:inline">•</span>
+            <span className="hidden sm:inline">3 suppliers</span>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-[180px_1fr] gap-3 md:gap-4 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-[180px_1fr] gap-3 items-start">
           {/* Product Image - Left Side */}
           <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg overflow-hidden border border-slate-200 dark:border-slate-700">
             <div className="aspect-square bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-700 dark:to-slate-800 p-6 flex items-center justify-center">
@@ -481,47 +484,48 @@ export function CompatibilityAnimation({ isActive }) {
     <div className="w-full h-full bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-950 dark:to-cyan-950 p-4 sm:p-6 flex items-center justify-center">
       <div className="w-full">
         {/* Context Bar */}
-        <div className="text-xs text-slate-600 dark:text-slate-400 mb-4 px-1">
-          <div className="flex items-center gap-3 flex-wrap">
-            <span className="inline-flex items-center gap-1.5">
+        <div className="text-[10px] sm:text-xs text-slate-600 dark:text-slate-400 mb-3 sm:mb-4 px-1">
+          <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
+            <span className="inline-flex items-center gap-1">
               <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span>
-              Referencing: OEM spec sheets + compatibility matrix
+              <span className="hidden sm:inline">Referencing: OEM specs + compatibility</span>
+              <span className="sm:hidden">OEM specs</span>
             </span>
-            <span>•</span>
-            <span>Phoenix inventory</span>
+            <span className="hidden sm:inline">•</span>
+            <span className="hidden sm:inline">Phoenix inventory</span>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-[180px_1fr] gap-3 md:gap-4 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-[180px_1fr] gap-3 items-start">
           {/* Product Image - Left Side */}
-          <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg overflow-hidden border border-slate-200 dark:border-slate-700">
-            <div className="aspect-square bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-700 dark:to-slate-800 p-4 flex items-center justify-center">
+          <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg overflow-hidden border border-slate-200 dark:border-slate-700 max-w-[180px] md:max-w-none mx-auto md:mx-0">
+            <div className="aspect-square bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-700 dark:to-slate-800 p-3 sm:p-4 flex items-center justify-center">
               <img
                 src="/media/hvac-unit-1.svg"
                 alt="Carrier 25VNA4 3-Ton Heat Pump"
                 className="w-full h-full object-contain"
               />
             </div>
-            <div className="p-3 border-t border-slate-200 dark:border-slate-700">
-              <div className="font-semibold text-sm text-slate-900 dark:text-white">Carrier 25VNA4 3-Ton</div>
-              <div className="text-xs text-slate-600 dark:text-slate-400 mt-1">16 SEER2 • $3,450</div>
+            <div className="p-2 sm:p-3 border-t border-slate-200 dark:border-slate-700">
+              <div className="font-semibold text-xs sm:text-sm text-slate-900 dark:text-white">Carrier 25VNA4 3-Ton</div>
+              <div className="text-[10px] sm:text-xs text-slate-600 dark:text-slate-400 mt-1">16 SEER2 • $3,450</div>
             </div>
           </div>
 
           {/* Q&A - Right Side */}
           <div className="space-y-3">
             {/* Question Input */}
-            <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-4 border border-fuchsia-200 dark:border-fuchsia-800">
-              <div className="flex items-center gap-2 mb-3">
-                <Sparkles className="h-5 w-5 text-fuchsia-600" />
-                <span className="text-sm font-medium text-slate-700 dark:text-slate-300">Ask about this product</span>
+            <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-3 sm:p-4 border border-fuchsia-200 dark:border-fuchsia-800">
+              <div className="flex items-center gap-2 mb-2 sm:mb-3">
+                <Sparkles className="h-4 w-4 sm:h-5 sm:w-5 text-fuchsia-600" />
+                <span className="text-xs sm:text-sm font-medium text-slate-700 dark:text-slate-300">Ask about this product</span>
               </div>
               
-              <div className="flex items-center gap-3 bg-slate-50 dark:bg-slate-900 rounded-xl p-3 border border-slate-200 dark:border-slate-700">
-                <div className="w-8 h-8 rounded-full bg-slate-700 dark:bg-slate-600 flex items-center justify-center flex-shrink-0">
-                  <User className="h-4 w-4 text-white" />
+              <div className="flex items-center gap-2 sm:gap-3 bg-slate-50 dark:bg-slate-900 rounded-xl p-2 sm:p-3 border border-slate-200 dark:border-slate-700">
+                <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-slate-700 dark:bg-slate-600 flex items-center justify-center flex-shrink-0">
+                  <User className="h-3 w-3 sm:h-4 sm:w-4 text-white" />
                 </div>
-                <div className="flex-1 text-sm text-slate-900 dark:text-white min-h-[20px]">
+                <div className="flex-1 text-xs sm:text-sm text-slate-900 dark:text-white min-h-[20px]">
                   {question || <span className="text-slate-400">Ask a question...</span>}
                   {question.length > 0 && question.length < QUESTION.length && (
                     <span className="animate-pulse">|</span>
@@ -558,7 +562,7 @@ export function CompatibilityAnimation({ isActive }) {
                   animate={{ opacity: 1, y: 0 }}
                   className="space-y-2"
                 >
-                  <div className="text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-400 px-1">
+                  <div className="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-400 px-1">
                     Compatible Air Handlers
                   </div>
                   {[
