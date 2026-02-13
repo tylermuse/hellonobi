@@ -540,15 +540,15 @@ export function CompatibilityAnimation({ isActive }) {
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="bg-gradient-to-br from-fuchsia-50 to-pink-50 dark:from-fuchsia-900/20 dark:to-pink-900/20 rounded-2xl shadow p-4 border border-fuchsia-100 dark:border-fuchsia-800"
+                  className="space-y-2"
                 >
-                  <div className="space-y-2">
-                    <p className="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+                  <div className="bg-gradient-to-br from-fuchsia-50 to-pink-50 dark:from-fuchsia-900/20 dark:to-pink-900/20 rounded-2xl shadow p-2 sm:p-3 border border-fuchsia-100 dark:border-fuchsia-800">
+                    <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
                       Carrier FB4CNF036 and FB4CNF042 are factory-matched air handlers for the 25VNA4. Want variable-speed or lowest cost?
                     </p>
-                    <p className="text-xs text-slate-500 dark:text-slate-400">
-                      Source: Carrier installation manual + compatibility database
-                    </p>
+                  </div>
+                  <div className="text-[10px] sm:text-xs text-slate-500 dark:text-slate-400">
+                    Source: Carrier manual + compatibility database
                   </div>
                 </motion.div>
               )}
