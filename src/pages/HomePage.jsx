@@ -556,6 +556,13 @@ function Insights({ onOpenForm }) {
     { label: "Delivery timing concerns", value: 38 },
   ];
 
+  const categories = [
+    { label: "HVAC components", value: 142 },
+    { label: "Electrical supplies", value: 118 },
+    { label: "Industrial pumps & motors", value: 89 },
+    { label: "Control systems", value: 67 },
+  ];
+
   const max = (arr) => Math.max(...arr.map((d) => d.value));
 
   function InsightsBar({ value, maxValue }) {
@@ -638,6 +645,24 @@ function Insights({ onOpenForm }) {
                       <span className="tabular-nums text-black/60 dark:text-white/60">{d.value}</span>
                     </div>
                     <InsightsBar value={d.value} maxValue={max(objections)} />
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="rounded-3xl border border-black/10 dark:border-white/10 bg-white/70 dark:bg-white/5 p-6 shadow-sm">
+              <div className="font-semibold flex items-center gap-2">
+                <Package className="h-4 w-4 text-fuchsia-600" />
+                Top product categories
+              </div>
+              <div className="mt-4 space-y-3">
+                {categories.map((d) => (
+                  <div key={d.label}>
+                    <div className="flex items-center justify-between text-sm">
+                      <span className="text-black/80 dark:text-white/90">{d.label}</span>
+                      <span className="tabular-nums text-black/60 dark:text-white/60">{d.value}</span>
+                    </div>
+                    <InsightsBar value={d.value} maxValue={max(categories)} />
                   </div>
                 ))}
               </div>
