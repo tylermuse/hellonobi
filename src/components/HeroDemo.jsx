@@ -66,7 +66,7 @@ const EQUIPMENT = [
     price: "$3,450",
     availability: "Ships tomorrow",
     location: "Phoenix",
-    img: "/media/hvac-unit-1.svg",
+    img: "/media/carrier-25vna4.png",
   },
   {
     title: "Trane XR14 3-Ton",
@@ -74,7 +74,7 @@ const EQUIPMENT = [
     price: "$3,280",
     availability: "Pickup today",
     location: "Phoenix",
-    img: "/media/hvac-unit-2.svg",
+    img: "/media/trane-xr14.png",
   },
   {
     title: "Lennox ML14XC1 3-Ton",
@@ -82,7 +82,7 @@ const EQUIPMENT = [
     price: "$3,620",
     availability: "Ships in 2 days",
     location: "Tempe (transfer available)",
-    img: "/media/hvac-unit-3.svg",
+    img: "/media/lennox-ml14xc1.png",
   },
 ];
 

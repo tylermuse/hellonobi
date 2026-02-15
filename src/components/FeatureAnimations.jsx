@@ -330,17 +330,17 @@ export function SubstitutesAnimation({ isActive }) {
 
         <div className="grid grid-cols-1 md:grid-cols-[180px_1fr] gap-3 items-start">
           {/* Product Image - Left Side */}
-          <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg overflow-hidden border border-slate-200 dark:border-slate-700">
-            <div className="aspect-square bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-700 dark:to-slate-800 p-6 flex items-center justify-center">
+          <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg overflow-hidden border border-slate-200 dark:border-slate-700 max-w-[180px] md:max-w-none mx-auto md:mx-0">
+            <div className="aspect-square bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-700 dark:to-slate-800 p-3 sm:p-4 flex items-center justify-center">
               <img
-                src="/media/hvac-unit-1.svg"
+                src="/media/carrier-25vna4.png"
                 alt="Carrier Part #38MGRQ36D3"
                 className="w-full h-full object-contain"
               />
             </div>
-            <div className="p-4 border-t border-slate-200 dark:border-slate-700">
-              <div className="font-semibold text-slate-900 dark:text-white">Carrier #38MGRQ36D3</div>
-              <div className="text-sm text-slate-600 dark:text-slate-400 mt-1">3-ton condenser coil</div>
+            <div className="p-2 sm:p-3 border-t border-slate-200 dark:border-slate-700">
+              <div className="font-semibold text-xs sm:text-sm text-slate-900 dark:text-white">Carrier #38MGRQ36D3</div>
+              <div className="text-[10px] sm:text-xs text-slate-600 dark:text-slate-400 mt-1">3-ton condenser coil</div>
               <AnimatePresence mode="wait">
                 {!showOOS ? (
                   <motion.span
@@ -501,7 +501,7 @@ export function CompatibilityAnimation({ isActive }) {
           <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg overflow-hidden border border-slate-200 dark:border-slate-700 max-w-[180px] md:max-w-none mx-auto md:mx-0">
             <div className="aspect-square bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-700 dark:to-slate-800 p-3 sm:p-4 flex items-center justify-center">
               <img
-                src="/media/hvac-unit-1.svg"
+                src="/media/carrier-25vna4.png"
                 alt="Carrier 25VNA4 3-Ton Heat Pump"
                 className="w-full h-full object-contain"
               />
