@@ -566,8 +566,8 @@ export function CompatibilityAnimation({ isActive }) {
                     Compatible Air Handlers
                   </div>
                   {[
-                    { name: "Carrier FB4CNF036", specs: "3-ton • Variable speed", img: "/media/air-handler-1.svg" },
-                    { name: "Carrier FB4CNF042", specs: "3.5-ton • Variable speed", img: "/media/air-handler-2.svg" },
+                    { name: "Carrier FB4CNF036", specs: "3-ton • Variable speed", img: "/media/carrier-air-handler.png" },
+                    { name: "Carrier FB4CNF042", specs: "3.5-ton • Variable speed", img: "/media/carrier-air-handler.png" },
                   ].map((item, i) => (
                     <motion.div
                       key={i}
