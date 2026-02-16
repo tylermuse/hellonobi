@@ -66,7 +66,7 @@ const EQUIPMENT = [
     price: "$285",
     availability: "Pickup today",
     location: "Phoenix Main",
-    img: "/media/mrcool-heat-pump.png",
+    img: "/media/denso-alternator.png",
   },
   {
     title: "Bosch AL0890X Alternator",
@@ -74,7 +74,7 @@ const EQUIPMENT = [
     price: "$195",
     availability: "Phoenix North • Will-call",
     location: "Phoenix North",
-    img: "/media/trane-xr14.png",
+    img: "/media/bosch-alternator.png",
   },
   {
     title: "TYC 2-13992 Alternator",
@@ -82,7 +82,7 @@ const EQUIPMENT = [
     price: "$165",
     availability: "Tempe • Transfer 2hrs",
     location: "Tempe",
-    img: "/media/lennox-ml14xc1.png",
+    img: "/media/tyc-alternator.png",
   },
 ];
 
