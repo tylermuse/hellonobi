@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Sparkles, FileText, CheckCircle2 } from "lucide-react";
 
-const DEMO_QUERY = "replacement 3-ton compressor • Carrier compatible • any branch today";
+const DEMO_QUERY = "replacement alternator • 2019 Toyota Camry 2.5L • any location today";
 
 function Button({ variant = "primary", size = "md", className = "", children, ...props }) {
   const base =
@@ -58,30 +58,30 @@ function SearchBar({
   );
 }
 
-// Industrial equipment data
+// Auto parts data
 const EQUIPMENT = [
   {
-    title: "Carrier 25VNA4 3-Ton",
-    specs: "16 SEER2 • Single Stage",
-    price: "$3,450",
-    availability: "Ships tomorrow",
-    location: "Phoenix",
+    title: "Denso 210-5320 Alternator",
+    specs: "130A • OEM Direct Fit",
+    price: "$285",
+    availability: "Pickup today",
+    location: "Phoenix Main",
     img: "/media/mrcool-heat-pump.png",
   },
   {
-    title: "Trane XR14 3-Ton",
-    specs: "14.3 SEER2 • Single Stage",
-    price: "$3,280",
-    availability: "Pickup today",
-    location: "Phoenix",
+    title: "Bosch AL0890X Alternator",
+    specs: "130A • Remanufactured",
+    price: "$195",
+    availability: "Phoenix North • Will-call",
+    location: "Phoenix North",
     img: "/media/trane-xr14.png",
   },
   {
-    title: "Lennox ML14XC1 3-Ton",
-    specs: "15 SEER2 • Single Stage",
-    price: "$3,620",
-    availability: "Ships in 2 days",
-    location: "Tempe (transfer available)",
+    title: "TYC 2-13992 Alternator",
+    specs: "130A • New Aftermarket",
+    price: "$165",
+    availability: "Tempe • Transfer 2hrs",
+    location: "Tempe",
     img: "/media/lennox-ml14xc1.png",
   },
 ];
@@ -150,7 +150,7 @@ function TechnicalSearchDemo({ isActive }) {
           <div className="flex items-start gap-2 text-sm text-black/80 dark:text-white/80">
             <Sparkles className="h-4 w-4 mt-0.5 text-fuchsia-600 flex-shrink-0" />
             <p>
-              Found 3 heat pumps matching your requirements. Checked inventory at Phoenix branch, filtered by SEER2 compliance, and surfaced compatible matched air handlers.
+              Found 3 compatible alternators for 2019 Camry 2.5L. Checked inventory across all locations, verified direct-fit compatibility, and filtered by availability today.
             </p>
           </div>
 
@@ -228,7 +228,7 @@ function RFQCaptureDemo({ isActive }) {
     quoteType: "",
   });
 
-  const RFQ_QUERY = "Need quote for emergency compressor replacement";
+  const RFQ_QUERY = "Need quote for brake job • 2018 Honda Accord";
 
   useEffect(() => {
     if (!isActive) {
@@ -295,9 +295,9 @@ function RFQCaptureDemo({ isActive }) {
             <div className="flex items-start gap-2 text-sm text-black/80 dark:text-white/80">
               <FileText className="h-4 w-4 mt-0.5 text-fuchsia-600 flex-shrink-0" />
               <div>
-                <p className="font-medium mb-2">I can help you get a quote for an emergency compressor replacement.</p>
+                <p className="font-medium mb-2">I can help you get a quote for a brake job on your 2018 Honda Accord.</p>
                 <p className="text-black/60 dark:text-white/60">
-                  To expedite your quote, I'll need a few details:
+                  To provide an accurate quote, I'll need a few details:
                 </p>
               </div>
             </div>
