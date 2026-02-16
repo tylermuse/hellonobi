@@ -173,7 +173,7 @@ export function RFQCaptureAnimation({ isActive }) {
                 </div>
                 <div>
                   <p className="text-sm text-slate-900 dark:text-white">
-                    I can help you get a quote. Let me collect a few details about your project.
+                    I can help you get a quote for an emergency replacement. Let me collect a few details to expedite this.
                   </p>
                 </div>
               </div>
@@ -278,8 +278,8 @@ export function RFQCaptureAnimation({ isActive }) {
                     RFQ Captured
                   </p>
                   <div className="text-xs text-green-800 dark:text-green-200 space-y-0.5">
-                    <p><strong>Routed to:</strong> Phoenix Branch Counter</p>
-                    <p><strong>SLA:</strong> Same day response</p>
+                  <p><strong>Routed to:</strong> Phoenix Counter Team</p>
+                  <p><strong>Priority:</strong> Emergency / same day</p>
                   </div>
                 </div>
               </div>

@@ -295,14 +295,14 @@ function RFQCaptureDemo({ isActive }) {
             <div className="flex items-start gap-2 text-sm text-black/80 dark:text-white/80">
               <FileText className="h-4 w-4 mt-0.5 text-fuchsia-600 flex-shrink-0" />
               <div>
-                <p className="font-medium mb-2">I can help you get a quote for a complete 3-ton system.</p>
+                <p className="font-medium mb-2">I can help you get a quote for an emergency compressor replacement.</p>
                 <p className="text-black/60 dark:text-white/60">
-                  To provide an accurate quote, I'll need a few details about your installation:
+                  To expedite your quote, I'll need a few details:
                 </p>
               </div>
             </div>
             <div className="text-xs text-black/50 dark:text-white/50 pl-6">
-              Will route to: Phoenix sales team • Expected response: 2 hours
+              Will route to: Phoenix counter team • Priority response: same day
             </div>
           </div>
         </motion.div>
@@ -418,8 +418,8 @@ function RFQCaptureDemo({ isActive }) {
                 RFQ Captured
               </p>
               <div className="text-sm text-black/70 dark:text-white/70 space-y-1">
-                <p><strong>Routed to:</strong> Phoenix Branch Counter</p>
-                <p><strong>SLA:</strong> Same day response</p>
+                <p><strong>Routed to:</strong> Phoenix Counter Team</p>
+                <p><strong>Priority:</strong> Emergency / same day</p>
               </div>
             </div>
           </div>
