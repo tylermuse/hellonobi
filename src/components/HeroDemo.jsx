@@ -536,7 +536,7 @@ function CompatibilityDemo({ isActive }) {
                 <div className="flex items-center gap-3">
                   <div className="w-16 h-16 flex-shrink-0 rounded-lg overflow-hidden bg-white/80 dark:bg-white/10 border border-black/5 dark:border-white/10">
                     <img
-                      src="/media/carrier-air-handler.png"
+                      src="/media/carrier-air-handler-new.png"
                       alt="Carrier FB4CNF036"
                       className="w-full h-full object-contain p-1"
                     />
@@ -558,7 +558,7 @@ function CompatibilityDemo({ isActive }) {
                 <div className="flex items-center gap-3">
                   <div className="w-16 h-16 flex-shrink-0 rounded-lg overflow-hidden bg-white/80 dark:bg-white/10 border border-black/5 dark:border-white/10">
                     <img
-                      src="/media/carrier-air-handler.png"
+                      src="/media/carrier-air-handler-new.png"
                       alt="Carrier FB4CNF042"
                       className="w-full h-full object-contain p-1"
                     />
