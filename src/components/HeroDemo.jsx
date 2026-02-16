@@ -61,27 +61,27 @@ function SearchBar({
 // Industrial equipment data
 const EQUIPMENT = [
   {
-    title: "Copeland ZP32K5E-PFV Scroll",
-    specs: "3-ton • R410A • 208-230V",
-    price: "$1,450",
+    title: "Carrier 25VNA4 3-Ton",
+    specs: "16 SEER2 • Single Stage",
+    price: "$3,450",
     availability: "Ships tomorrow",
-    location: "Phoenix Main",
+    location: "Phoenix",
     img: "/media/carrier-25vna4.png",
   },
   {
-    title: "Tecumseh AVA5534EXT",
-    specs: "3-ton • R410A • Direct replacement",
-    price: "$1,280",
+    title: "Trane XR14 3-Ton",
+    specs: "14.3 SEER2 • Single Stage",
+    price: "$3,280",
     availability: "Pickup today",
-    location: "Phoenix North",
+    location: "Phoenix",
     img: "/media/trane-xr14.png",
   },
   {
-    title: "Emerson CR32K6E-PFV",
-    specs: "3-ton • R410A • High efficiency",
-    price: "$1,620",
-    availability: "Transfer available",
-    location: "Tempe",
+    title: "Lennox ML14XC1 3-Ton",
+    specs: "15 SEER2 • Single Stage",
+    price: "$3,620",
+    availability: "Ships in 2 days",
+    location: "Tempe (transfer available)",
     img: "/media/lennox-ml14xc1.png",
   },
 ];
@@ -228,7 +228,7 @@ function RFQCaptureDemo({ isActive }) {
     quoteType: "",
   });
 
-  const RFQ_QUERY = "Need quote for complete 3-ton system install";
+  const RFQ_QUERY = "Need quote for emergency compressor replacement";
 
   useEffect(() => {
     if (!isActive) {
