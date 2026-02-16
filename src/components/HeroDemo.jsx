@@ -282,7 +282,7 @@ function RFQCaptureDemo({ isActive }) {
         </div>
       </div>
 
-      <SearchBar query={query} placeholder="Describe your project or request a quote..." />
+      <SearchBar query={query} placeholder="Describe your repair need or request a quote..." />
 
       {showResponse && (
         <motion.div
