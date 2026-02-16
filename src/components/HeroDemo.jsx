@@ -228,7 +228,7 @@ function RFQCaptureDemo({ isActive }) {
     quoteType: "",
   });
 
-  const RFQ_QUERY = "Need quote for brake job • 2018 Honda Accord";
+  const RFQ_QUERY = "Need quote for emergency compressor replacement";
 
   useEffect(() => {
     if (!isActive) {
@@ -295,9 +295,9 @@ function RFQCaptureDemo({ isActive }) {
             <div className="flex items-start gap-2 text-sm text-black/80 dark:text-white/80">
               <FileText className="h-4 w-4 mt-0.5 text-fuchsia-600 flex-shrink-0" />
               <div>
-                <p className="font-medium mb-2">I can help you get a quote for a brake job on your 2018 Honda Accord.</p>
+                <p className="font-medium mb-2">I can help you get a quote for an emergency compressor replacement.</p>
                 <p className="text-black/60 dark:text-white/60">
-                  To provide an accurate quote, I'll need a few details:
+                  To expedite your quote, I'll need a few details:
                 </p>
               </div>
             </div>
