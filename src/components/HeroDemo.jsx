@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Sparkles, FileText, CheckCircle2 } from "lucide-react";
 
-const DEMO_QUERY = "3-ton heat pump • SEER2 compliant • pickup today • Phoenix branch";
+const DEMO_QUERY = "replacement 3-ton compressor • Carrier compatible • any branch today";
 
 function Button({ variant = "primary", size = "md", className = "", children, ...props }) {
   const base =
@@ -61,27 +61,27 @@ function SearchBar({
 // Industrial equipment data
 const EQUIPMENT = [
   {
-    title: "Carrier 25VNA4 3-Ton",
-    specs: "16 SEER2 • Single Stage",
-    price: "$3,450",
+    title: "Copeland ZP32K5E-PFV Scroll",
+    specs: "3-ton • R410A • 208-230V",
+    price: "$1,450",
     availability: "Ships tomorrow",
-    location: "Phoenix",
+    location: "Phoenix Main",
     img: "/media/carrier-25vna4.png",
   },
   {
-    title: "Trane XR14 3-Ton",
-    specs: "14.3 SEER2 • Single Stage",
-    price: "$3,280",
+    title: "Tecumseh AVA5534EXT",
+    specs: "3-ton • R410A • Direct replacement",
+    price: "$1,280",
     availability: "Pickup today",
-    location: "Phoenix",
+    location: "Phoenix North",
     img: "/media/trane-xr14.png",
   },
   {
-    title: "Lennox ML14XC1 3-Ton",
-    specs: "15 SEER2 • Single Stage",
-    price: "$3,620",
-    availability: "Ships in 2 days",
-    location: "Tempe (transfer available)",
+    title: "Emerson CR32K6E-PFV",
+    specs: "3-ton • R410A • High efficiency",
+    price: "$1,620",
+    availability: "Transfer available",
+    location: "Tempe",
     img: "/media/lennox-ml14xc1.png",
   },
 ];

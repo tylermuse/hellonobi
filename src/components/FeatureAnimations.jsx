@@ -6,7 +6,7 @@ import { Search, Sparkles, CheckCircle2, FileText, User, ArrowRight } from "luci
 export function TechnicalSearchAnimation({ isActive }) {
   const [query, setQuery] = useState("");
   const [showResults, setShowResults] = useState(false);
-  const QUERY = "3-phase 480V SS pump • pickup Phoenix";
+  const QUERY = "replacement 480V motor • 3-phase • any branch Phoenix";
 
   useEffect(() => {
     if (!isActive) {
@@ -75,12 +75,12 @@ export function TechnicalSearchAnimation({ isActive }) {
             >
               <div className="flex items-start gap-2 text-[11px] sm:text-xs text-slate-700 dark:text-slate-300 px-1">
                 <Sparkles className="h-3 w-3 sm:h-3.5 sm:w-3.5 mt-0.5 flex-shrink-0 text-fuchsia-600" />
-                <p>Found 3 pumps matching your specs. Checked Phoenix inventory, filtered by voltage/phase, and cross-referenced material compatibility.</p>
+                <p>Found 3 replacement motors matching your specs. Checked all Phoenix branches, filtered by voltage/phase, and verified cross-compatibility.</p>
               </div>
               {[
-                { name: "Grundfos CR3-8 Pump", specs: "3-phase, 480V, SS316", price: "$2,450", location: "Phoenix • Pickup today" },
-                { name: "Wilo Helix V 1006", specs: "3-phase, 480V, SS304", price: "$2,180", location: "Phoenix • Ships tomorrow" },
-                { name: "Armstrong 4302 Series", specs: "3-phase, 460-480V, SS316L", price: "$2,820", location: "Tempe • Transfer available" },
+                { name: "Baldor M3615T Motor", specs: "3-phase, 480V, 5HP", price: "$890", location: "Phoenix Main • Pickup today" },
+                { name: "WEG 00536ET3E215T", specs: "3-phase, 460-480V, 5HP", price: "$825", location: "Phoenix North • Will-call" },
+                { name: "Leeson C145T17FB6", specs: "3-phase, 480V, 5HP", price: "$940", location: "Tempe • Transfer today" },
               ].map((item, i) => (
                 <motion.div
                   key={i}

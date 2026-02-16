@@ -365,14 +365,14 @@ function Hero({ onOpenVideo }) {
       <div className="mx-auto max-w-7xl px-6 pt-10 sm:pt-12 lg:pt-16 pb-24">
         <div className="max-w-4xl mx-auto text-center space-y-6">
           <h1 className="text-5xl sm:text-6xl font-semibold tracking-tight text-balance">
-            Contractors ask.{" "}
+            Help buyers find compatible parts{" "}
             <span className="bg-gradient-to-r from-indigo-500 via-violet-500 to-fuchsia-500 bg-clip-text text-transparent">
-              Nobi answers.
+              in seconds 
             </span>
           </h1>
 
           <p className="mt-4 text-lg text-black/70 dark:text-white/70 max-w-2xl mx-auto">
-          Find parts, check stock, and request quotes in seconds.
+          Nobi improves search, reduces counter calls, and captures more repair orders online.
           </p>
 
           <div className="grid grid-cols-[1fr_auto] items-center gap-1 max-w-xl mx-auto">
@@ -388,6 +388,10 @@ function Hero({ onOpenVideo }) {
               <span className="hidden sm:inline">See it in action</span>
             </Button>
           </div>
+
+          <p className="mt-6 text-sm text-black/60 dark:text-white/60 max-w-2xl mx-auto">
+            Connects to your catalog, ERP, and branch-level inventory • Cross-branch part search included
+          </p>
         </div>
 
         <div className="mt-10 max-w-3xl mx-auto">
@@ -421,28 +425,28 @@ function Hero({ onOpenVideo }) {
 function Features() {
   const items = [
     {
-      title: "Technical search that understands specs",
-      desc: "Buyers search like engineers: \"3-phase 480V stainless steel pump.\" Nobi's semantic search finds exact matches without endless filters.",
+      title: "Find the right part fast",
+      desc: "Service techs search like: \"replacement motor for Trane RTU\" or \"compatible bearing for Copeland compressor.\" Nobi finds exact matches across all branches instantly.",
       icon: <SearchIcon className="h-4 w-4" />,
       animation: "technical-search",
     },
     {
-      title: "Capture quote requests automatically",
-      desc: "Turn product questions into qualified RFQs. Nobi captures project context, specs, and contact info—then routes to your sales team.",
-      icon: <FileText className="h-4 w-4" />,
-      animation: "rfq-capture",
-    },
-    {
       title: "Suggest substitutes when parts are unavailable",
-      desc: "Out-of-stock doesn't mean lost sales. Nobi instantly recommends equivalent alternatives so buyers stay on-site instead of calling competitors.",
+      desc: "Part unavailable? Nobi instantly recommends cross-compatible alternatives from your catalog so repair jobs don't stall while techs call around.",
       icon: <Package className="h-4 w-4" />,
       animation: "substitutes",
     },
     {
       title: "Answer compatibility questions",
-      desc: "Reduce support load by answering \"will this work with X?\" queries instantly. Nobi references your specs and compatibility data.",
+      desc: "Reduce counter calls by answering \"will this work with X?\" instantly. Nobi references OEM specs, compatibility data, and your cross-reference tables.",
       icon: <Settings className="h-4 w-4" />,
       animation: "compatibility",
+    },
+    {
+      title: "Quote and order faster",
+      desc: "Turn urgent part requests into quotes fast. Nobi captures quantities, compatibility requirements, and branch preferences then routes to your counter team.",
+      icon: <FileText className="h-4 w-4" />,
+      animation: "rfq-capture",
     },
   ];
 
@@ -472,10 +476,10 @@ function Features() {
       <div className="mx-auto max-w-6xl px-6">
         <p className="text-sm font-semibold text-fuchsia-600">Features</p>
         <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight mt-2 text-balance">
-          Help buyers find, quote, and order.
+          Nobi gives your customers a faster way to find parts
         </h2>
         <p className="mt-3 text-black/70 dark:text-white/70">
-          Nobi acts like your best counter-person—guiding buyers to the right products and capturing opportunities you'd otherwise miss.
+        Nobi searches your catalog + cross-branch inventory to find replacement parts fast — reducing counter calls and helping repair jobs stay on schedule.
         </p>
 
         <div className="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
@@ -520,9 +524,9 @@ function Features() {
 
 function HowItWorks() {
   const steps = [
-    { h: "Install the script", p: "Add two code snippets to your site. Nobi reads your catalog and learns your products." },
-    { h: "Configure entry points", p: "Choose where Nobi appears: search bar, product pages, quote forms, or custom triggers." },
-    { h: "Track performance", p: "Monitor RFQ capture, search quality, and support deflection in a simple dashboard." },
+    { h: "Connect your catalog + inventory", p: "Nobi reads your catalog, ERP, and branch-level stock to answer \"do you have it?\" instantly across all locations." },
+    { h: "Configure search entry points", p: "Choose where Nobi appears: search bar, product pages, or as a floating assistant. Works on mobile and desktop." },
+    { h: "Track parts searches + RFQs", p: "See which parts buyers search for most, where inventory gaps cause friction, and how many repair orders Nobi captures." },
   ];
   return (
     <section id="how" className="scroll-mt-20 py-20 border-t border-black/5 dark:border-white/5">
@@ -543,24 +547,24 @@ function HowItWorks() {
 
 function Insights({ onOpenForm }) {
   const intents = [
-    { label: "Requesting quote / pricing", value: 156 },
-    { label: "Checking availability / lead time", value: 132 },
-    { label: "Asking about compatibility", value: 98 },
-    { label: "Looking for substitutes", value: 76 },
+    { label: "Finding replacement parts", value: 156 },
+    { label: "Checking cross-branch availability", value: 132 },
+    { label: "Looking for compatible substitutes", value: 98 },
+    { label: "Urgent / same-day needs", value: 76 },
   ];
 
   const objections = [
-    { label: "Out of stock / long lead time", value: 84 },
-    { label: "Unclear specs / compatibility", value: 62 },
-    { label: "Need volume pricing", value: 41 },
-    { label: "Delivery timing concerns", value: 38 },
+    { label: "Part unavailable at primary branch", value: 84 },
+    { label: "Unclear compatibility for replacement", value: 62 },
+    { label: "Can't find discontinued part number", value: 41 },
+    { label: "Need it today / emergency repair", value: 38 },
   ];
 
   const categories = [
-    { label: "HVAC components", value: 142 },
-    { label: "Electrical supplies", value: 118 },
-    { label: "Industrial pumps & motors", value: 89 },
-    { label: "Control systems", value: 67 },
+    { label: "HVAC repair parts", value: 142 },
+    { label: "Electrical components", value: 118 },
+    { label: "Pumps & motor replacements", value: 89 },
+    { label: "Bearings & seals", value: 67 },
   ];
 
   const max = (arr) => Math.max(...arr.map((d) => d.value));
@@ -584,10 +588,10 @@ function Insights({ onOpenForm }) {
           <div>
             <p className="text-sm font-semibold text-fuchsia-600">Insights</p>
             <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight mt-2">
-              Understand what buyers really need.
+              See what parts buyers search for most.
             </h2>
             <p className="mt-3 text-black/70 dark:text-white/70">
-              Nobi captures buyer intent in real conversations—giving your sales and product teams actionable intelligence.
+              Nobi captures repair and replacement part searches—showing you which inventory gaps cause friction and where buyers need help.
             </p>
           </div>
         </div>
@@ -619,13 +623,13 @@ function Insights({ onOpenForm }) {
               </div>
               <div className="mt-3 space-y-3 text-sm text-black/80 dark:text-white/90">
                 <blockquote className="rounded-xl p-3 bg-black/5 dark:bg-white/10">
-                  "Do you have a 200 amp panel outdoor rated in stock at the Dallas branch?"
+                  "Replacement compressor for 2018 Carrier RTU — do any branches have it today?"
                 </blockquote>
                 <blockquote className="rounded-xl p-3 bg-black/5 dark:bg-white/10">
                   "What's the substitute for Carrier part #38MGRQ36D3 if that's backordered?"
                 </blockquote>
                 <blockquote className="rounded-xl p-3 bg-black/5 dark:bg-white/10">
-                  "I need a 3-phase 480V motor compatible with a centrifugal pump—what options do you have?"
+                  "Compatible bearing for Trane centrifugal chiller model CGAM — need it this week"
                 </blockquote>
               </div>
             </div>
@@ -933,7 +937,7 @@ export default function HomePage() {
   const { onOpen: onOpenForm } = useDemoForm();
   
   useEffect(() => {
-    document.title = "Nobi: digital counter-person for industrial distributors";
+    document.title = "Nobi: AI parts finder for repair-focused distributors";
   }, []);
 
   return (
