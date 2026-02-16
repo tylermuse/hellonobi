@@ -501,8 +501,8 @@ export function CompatibilityAnimation({ isActive }) {
           <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg overflow-hidden border border-slate-200 dark:border-slate-700 max-w-[180px] md:max-w-none mx-auto md:mx-0">
             <div className="aspect-square bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-700 dark:to-slate-800 p-3 sm:p-4 flex items-center justify-center">
               <img
-                src="/media/carrier-condenser-coil.png"
-                alt="Carrier 38MGRQ36D3 3-Ton Condenser Coil"
+                src="/media/carrier-25vna4.png"
+                alt="Carrier 25VNA4 3-Ton Heat Pump"
                 className="w-full h-full object-contain"
               />
             </div>
