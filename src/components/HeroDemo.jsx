@@ -66,7 +66,7 @@ const EQUIPMENT = [
     price: "$3,450",
     availability: "Ships tomorrow",
     location: "Phoenix",
-    img: "/media/carrier-25vna4.png",
+    img: "/media/carrier-condenser-coil.png",
   },
   {
     title: "Trane XR14 3-Ton",
