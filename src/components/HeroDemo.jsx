@@ -111,7 +111,7 @@ const VERTICAL_CONTENT = {
         price: "$940",
         availability: "Tempe • Transfer today",
         location: "Tempe",
-        img: "/media/lennox-ml14xc1.png",
+        img: "/media/leeson-motor.png",
       },
     ],
     rfqQuery: "Need quote for motor replacement • urgent",
