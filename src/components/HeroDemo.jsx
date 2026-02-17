@@ -358,7 +358,7 @@ function RFQCaptureDemo({ isActive, vertical = 'auto' }) {
         
         // Simulate form filling
         timers.push(setTimeout(() => setFormData(d => ({ ...d, name: "Mike Johnson" })), 2000));
-        timers.push(setTimeout(() => setFormData(d => ({ ...d, company: rfqCompany })), 2300));
+        timers.push(setTimeout(() => setFormData(d => ({ ...d, company: content.rfqCompany })), 2300));
         timers.push(setTimeout(() => setFormData(d => ({ ...d, phone: "(602) 555-0123" })), 2600));
         timers.push(setTimeout(() => setFormData(d => ({ ...d, jobsiteZip: "85004" })), 2900));
         timers.push(setTimeout(() => setFormData(d => ({ ...d, timeline: "This week" })), 3200));
@@ -398,9 +398,9 @@ function RFQCaptureDemo({ isActive, vertical = 'auto' }) {
             <div className="flex items-start gap-2 text-sm text-black/80 dark:text-white/80">
               <FileText className="h-4 w-4 mt-0.5 text-fuchsia-600 flex-shrink-0" />
               <div>
-                <p className="font-medium mb-2">{rfqMessage}</p>
+                <p className="font-medium mb-2">{content.rfqMessage}</p>
                 <p className="text-black/60 dark:text-white/60">
-                  {rfqSubMessage}
+                  {content.rfqSubMessage}
                 </p>
               </div>
             </div>
