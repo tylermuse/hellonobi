@@ -2,7 +2,131 @@ import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Sparkles, FileText, CheckCircle2 } from "lucide-react";
 
-const DEMO_QUERY = "replacement alternator • 2019 Toyota Camry 2.5L • any location today";
+// Vertical-specific content
+const VERTICAL_CONTENT = {
+  auto: {
+    label: "Auto Parts",
+    query: "replacement alternator • 2019 Toyota Camry 2.5L • any location today",
+    searchMessage: "Found 3 compatible alternators for 2019 Camry 2.5L. Checked inventory across all locations, verified direct-fit compatibility, and filtered by availability today.",
+    equipment: [
+      {
+        title: "Denso 210-5320 Alternator",
+        specs: "130A • OEM Direct Fit",
+        price: "$285",
+        availability: "Pickup today",
+        location: "Phoenix Main",
+        img: "/media/denso-alternator.png",
+      },
+      {
+        title: "Bosch AL0890X Alternator",
+        specs: "130A • Remanufactured",
+        price: "$195",
+        availability: "Phoenix North • Will-call",
+        location: "Phoenix North",
+        img: "/media/bosch-alternator.png",
+      },
+      {
+        title: "TYC 2-13992 Alternator",
+        specs: "130A • New Aftermarket",
+        price: "$165",
+        availability: "Tempe • Transfer 2hrs",
+        location: "Tempe",
+        img: "/media/tyc-alternator.png",
+      },
+    ],
+    rfqQuery: "Need quote for brake job • 2018 Honda Accord",
+    rfqProject: "Front & rear brake pads + rotors",
+    rfqCompany: "Valley Auto Service",
+    rfqMessage: "I can help you get a quote for a brake job on your 2018 Honda Accord.",
+    rfqSubMessage: "To provide an accurate quote, I'll need a few details:",
+    locationContext: "Phoenix Auto Parts",
+    accountType: "Shop account pricing",
+    compatibilityQuestion: "Do these brake pads fit 2018 Accord Sport trim?",
+    compatibilityAnswer: "Yes, Akebono ACT1089 fits all 2018 Accord trims including Sport. These are ceramic, low-dust pads. Want OEM or performance upgrade?",
+  },
+  hvac: {
+    label: "HVAC",
+    query: "replacement 3-ton compressor • Carrier compatible • any location today",
+    searchMessage: "Found 3 compatible compressors for Carrier units. Checked inventory across all locations and verified direct replacement compatibility.",
+    equipment: [
+      {
+        title: "Copeland ZP36K5E-PFV",
+        specs: "3-ton • Scroll Compressor",
+        price: "$1,285",
+        availability: "Pickup today",
+        location: "Phoenix Main",
+        img: "/media/mrcool-heat-pump.png",
+      },
+      {
+        title: "Tecumseh AKA4440EXD",
+        specs: "3-ton • Scroll Compressor",
+        price: "$1,150",
+        availability: "Phoenix North • Will-call",
+        location: "Phoenix North",
+        img: "/media/trane-xr14.png",
+      },
+      {
+        title: "Emerson CR36K6E-PFV",
+        specs: "3-ton • Scroll Compressor",
+        price: "$1,325",
+        availability: "Tempe • Transfer 2hrs",
+        location: "Tempe",
+        img: "/media/lennox-ml14xc1.png",
+      },
+    ],
+    rfqQuery: "Need quote for emergency compressor replacement",
+    rfqProject: "Compressor replacement",
+    rfqCompany: "Phoenix HVAC Co",
+    rfqMessage: "I can help you get a quote for an emergency compressor replacement.",
+    rfqSubMessage: "To expedite your quote, I'll need a few details:",
+    locationContext: "Phoenix HVAC Supply",
+    accountType: "Contractor pricing",
+    compatibilityQuestion: "What air handler pairs with the Carrier 25VNA4?",
+    compatibilityAnswer: "Carrier FB4CNF036 and FB4CNF042 are factory-matched air handlers for the 25VNA4. Want variable-speed or lowest cost?",
+  },
+  electrical: {
+    label: "Electrical",
+    query: "replacement 480V motor • 3-phase • any location Phoenix",
+    searchMessage: "Found 3 replacement motors matching your specs. Checked all Phoenix locations, filtered by voltage/phase, and verified cross-compatibility.",
+    equipment: [
+      {
+        title: "Baldor M3615T Motor",
+        specs: "3-phase, 480V, 5HP",
+        price: "$890",
+        availability: "Pickup today",
+        location: "Phoenix Main",
+        img: "/media/mrcool-heat-pump.png",
+      },
+      {
+        title: "WEG 00536ET3E215T",
+        specs: "3-phase, 460-480V, 5HP",
+        price: "$825",
+        availability: "Phoenix North • Will-call",
+        location: "Phoenix North",
+        img: "/media/trane-xr14.png",
+      },
+      {
+        title: "Leeson C145T17FB6",
+        specs: "3-phase, 480V, 5HP",
+        price: "$940",
+        availability: "Tempe • Transfer today",
+        location: "Tempe",
+        img: "/media/lennox-ml14xc1.png",
+      },
+    ],
+    rfqQuery: "Need quote for motor replacement • urgent",
+    rfqProject: "480V motor replacement",
+    rfqCompany: "Phoenix Industrial Electric",
+    rfqMessage: "I can help you get a quote for an urgent motor replacement.",
+    rfqSubMessage: "To expedite your quote, I'll need a few details:",
+    locationContext: "Phoenix Electrical Supply",
+    accountType: "Commercial account pricing",
+    compatibilityQuestion: "Will this motor work with my existing VFD?",
+    compatibilityAnswer: "Yes, Baldor M3615T is VFD-rated (inverter duty). It's compatible with most 480V VFDs. Need encoder or standard shaft?",
+  },
+};
+
+const DEMO_QUERY = VERTICAL_CONTENT.auto.query;
 
 function Button({ variant = "primary", size = "md", className = "", children, ...props }) {
   const base =
@@ -58,42 +182,21 @@ function SearchBar({
   );
 }
 
-// Auto parts data
-const EQUIPMENT = [
-  {
-    title: "Denso 210-5320 Alternator",
-    specs: "130A • OEM Direct Fit",
-    price: "$285",
-    availability: "Pickup today",
-    location: "Phoenix Main",
-    img: "/media/denso-alternator.png",
-  },
-  {
-    title: "Bosch AL0890X Alternator",
-    specs: "130A • Remanufactured",
-    price: "$195",
-    availability: "Phoenix North • Will-call",
-    location: "Phoenix North",
-    img: "/media/bosch-alternator.png",
-  },
-  {
-    title: "TYC 2-13992 Alternator",
-    specs: "130A • New Aftermarket",
-    price: "$165",
-    availability: "Tempe • Transfer 2hrs",
-    location: "Tempe",
-    img: "/media/tyc-alternator.png",
-  },
-];
-
-const COMPATIBILITY_QUESTION = "What air handler pairs with the Carrier unit?";
-const COMPATIBILITY_ANSWER = "Carrier FB4CNF036 and FB4CNF042 are factory-matched air handlers for the 25VNA4. Want variable-speed or lowest cost?";
+const EQUIPMENT = VERTICAL_CONTENT.auto.equipment;
+const COMPATIBILITY_QUESTION = VERTICAL_CONTENT.auto.compatibilityQuestion;
+const COMPATIBILITY_ANSWER = VERTICAL_CONTENT.auto.compatibilityAnswer;
 
 // Demo 1: Technical Search
-function TechnicalSearchDemo({ isActive }) {
+function TechnicalSearchDemo({ isActive, vertical = 'auto' }) {
   const [query, setQuery] = useState("");
   const [showResults, setShowResults] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(-1);
+  
+  const content = VERTICAL_CONTENT[vertical];
+  const demoQuery = content.query;
+  const equipment = content.equipment;
+  const searchMessage = content.searchMessage;
+  const accountType = content.accountType;
 
   useEffect(() => {
     if (!isActive) {
@@ -108,8 +211,8 @@ function TechnicalSearchDemo({ isActive }) {
 
     // Type query
     const typeInterval = setInterval(() => {
-      if (i < DEMO_QUERY.length) {
-        setQuery(DEMO_QUERY.slice(0, i + 1));
+      if (i < demoQuery.length) {
+        setQuery(demoQuery.slice(0, i + 1));
         i++;
       } else {
         clearInterval(typeInterval);
@@ -120,7 +223,7 @@ function TechnicalSearchDemo({ isActive }) {
     timers.push(typeInterval);
 
     return () => timers.forEach(clearTimeout);
-  }, [isActive]);
+  }, [isActive, vertical]);
 
   return (
     <div className="space-y-4">
@@ -132,9 +235,9 @@ function TechnicalSearchDemo({ isActive }) {
             Connected: Catalog + Inventory
           </span>
           <span>•</span>
-          <span>Phoenix Branch</span>
+          <span>Phoenix Location</span>
           <span>•</span>
-          <span>Contractor tier pricing</span>
+          <span>{accountType}</span>
         </div>
       </div>
 
@@ -150,12 +253,12 @@ function TechnicalSearchDemo({ isActive }) {
           <div className="flex items-start gap-2 text-sm text-black/80 dark:text-white/80">
             <Sparkles className="h-4 w-4 mt-0.5 text-fuchsia-600 flex-shrink-0" />
             <p>
-              Found 3 compatible alternators for 2019 Camry 2.5L. Checked inventory across all locations, verified direct-fit compatibility, and filtered by availability today.
+              {searchMessage}
             </p>
           </div>
 
           <div className="space-y-2">
-            {EQUIPMENT.map((item, i) => (
+            {equipment.map((item, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, x: -10 }}
@@ -255,7 +358,7 @@ function RFQCaptureDemo({ isActive }) {
         
         // Simulate form filling
         timers.push(setTimeout(() => setFormData(d => ({ ...d, name: "Mike Johnson" })), 2000));
-        timers.push(setTimeout(() => setFormData(d => ({ ...d, company: "Phoenix HVAC Co" })), 2300));
+        timers.push(setTimeout(() => setFormData(d => ({ ...d, company: rfqCompany })), 2300));
         timers.push(setTimeout(() => setFormData(d => ({ ...d, phone: "(602) 555-0123" })), 2600));
         timers.push(setTimeout(() => setFormData(d => ({ ...d, jobsiteZip: "85004" })), 2900));
         timers.push(setTimeout(() => setFormData(d => ({ ...d, timeline: "This week" })), 3200));
@@ -295,9 +398,9 @@ function RFQCaptureDemo({ isActive }) {
             <div className="flex items-start gap-2 text-sm text-black/80 dark:text-white/80">
               <FileText className="h-4 w-4 mt-0.5 text-fuchsia-600 flex-shrink-0" />
               <div>
-                <p className="font-medium mb-2">I can help you get a quote for an emergency compressor replacement.</p>
+                <p className="font-medium mb-2">{rfqMessage}</p>
                 <p className="text-black/60 dark:text-white/60">
-                  To expedite your quote, I'll need a few details:
+                  {rfqSubMessage}
                 </p>
               </div>
             </div>
