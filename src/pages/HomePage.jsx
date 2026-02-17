@@ -7,6 +7,7 @@ import {
     Search as SearchIcon,
     Sparkles,
     Package,
+    Quote,
 } from "lucide-react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
