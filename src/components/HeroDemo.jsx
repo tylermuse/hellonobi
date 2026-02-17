@@ -533,10 +533,14 @@ function RFQCaptureDemo({ isActive, vertical = 'auto' }) {
 }
 
 // Demo 3: Compatibility Q&A
-function CompatibilityDemo({ isActive }) {
+function CompatibilityDemo({ isActive, vertical = 'auto' }) {
   const [question, setQuestion] = useState("");
   const [showAnswer, setShowAnswer] = useState(false);
   const [showSpecs, setShowSpecs] = useState(false);
+
+  const content = VERTICAL_CONTENT[vertical];
+  const compatQuestion = content.compatibilityQuestion;
+  const compatAnswer = content.compatibilityAnswer;
 
   useEffect(() => {
     if (!isActive) {
@@ -601,7 +605,7 @@ function CompatibilityDemo({ isActive }) {
 
         <div className="rounded-lg border border-black/10 dark:border-white/10 bg-white/50 dark:bg-white/5 px-3 py-2.5 min-h-[40px] text-sm">
           {question || <span className="text-black/40 dark:text-white/40">Type your question...</span>}
-          {question && question.length < COMPATIBILITY_QUESTION.length && (
+          {question && question.length < compatQuestion.length && (
             <span className="animate-pulse">|</span>
           )}
         </div>
@@ -615,7 +619,7 @@ function CompatibilityDemo({ isActive }) {
           >
             <div className="rounded-lg bg-gradient-to-br from-fuchsia-50 to-pink-50 dark:from-fuchsia-900/20 dark:to-pink-900/20 border border-fuchsia-100 dark:border-fuchsia-800 p-3">
               <p className="text-sm text-black/80 dark:text-white/80 leading-relaxed">
-                {COMPATIBILITY_ANSWER}
+                {compatAnswer}
               </p>
             </div>
             <div className="text-xs text-black/50 dark:text-white/50">
