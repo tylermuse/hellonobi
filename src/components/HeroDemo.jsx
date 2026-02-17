@@ -182,10 +182,6 @@ function SearchBar({
   );
 }
 
-const EQUIPMENT = VERTICAL_CONTENT.auto.equipment;
-const COMPATIBILITY_QUESTION = VERTICAL_CONTENT.auto.compatibilityQuestion;
-const COMPATIBILITY_ANSWER = VERTICAL_CONTENT.auto.compatibilityAnswer;
-
 // Demo 1: Technical Search
 function TechnicalSearchDemo({ isActive, vertical = 'auto' }) {
   const [query, setQuery] = useState("");
