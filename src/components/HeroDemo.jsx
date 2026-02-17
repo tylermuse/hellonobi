@@ -331,8 +331,6 @@ function RFQCaptureDemo({ isActive }) {
     quoteType: "",
   });
 
-  const RFQ_QUERY = "Need quote for emergency compressor replacement";
-
   useEffect(() => {
     if (!isActive) {
       setQuery("");
@@ -348,8 +346,8 @@ function RFQCaptureDemo({ isActive }) {
 
     // Type query
     const typeInterval = setInterval(() => {
-      if (i < RFQ_QUERY.length) {
-        setQuery(RFQ_QUERY.slice(0, i + 1));
+      if (i < content.rfqQuery.length) {
+        setQuery(content.rfqQuery.slice(0, i + 1));
         i++;
       } else {
         clearInterval(typeInterval);
