@@ -15,7 +15,6 @@ import Footer from "../components/Footer";
 import FAQList from "../components/FAQList.jsx";
 import { posts } from "../content/utils/mdxPostLoader";
 import HeroDemo from "../components/HeroDemo";
-import {VideoModal} from "../components/VideoModal";
 import {useDemoForm} from "../context/DemoFormContext";
 import DemoCTAButton from "../components/DemoCTAButton";
 import { TechnicalSearchAnimation, RFQCaptureAnimation, SubstitutesAnimation, CompatibilityAnimation } from "../components/FeatureAnimations";
@@ -359,7 +358,7 @@ function Logo({ className = "h-7 md:h-9 lg:h-10" }) {
   );
 }
 
-function Hero({ onOpenVideo }) {
+function Hero() {
   return (
     <section id="home" className="relative overflow-hidden">
       <div className="mx-auto max-w-7xl px-6 pt-10 sm:pt-12 lg:pt-16 pb-24">
@@ -375,18 +374,8 @@ function Hero({ onOpenVideo }) {
           Nobi improves search, reduces counter calls, and captures more repair orders online.
           </p>
 
-          <div className="grid grid-cols-[1fr_auto] items-center gap-1 max-w-xl mx-auto">
+          <div className="flex justify-center max-w-xl mx-auto">
             <DemoCTAButton />
-            <Button
-              size="lg"
-              variant="ghost"
-              onClick={onOpenVideo}
-              className="whitespace-nowrap px-3"
-            >
-              <PlayCircle className="h-5 w-5" />
-              <span className="sm:hidden">Demo</span>
-              <span className="hidden sm:inline">See it in action</span>
-            </Button>
           </div>
 
           <p className="mt-6 text-sm text-black/60 dark:text-white/60 max-w-2xl mx-auto">
@@ -933,17 +922,16 @@ function LatestPosts() {
 }
 
 export default function HomePage() {
-  const [isVideoOpen, setIsVideoOpen] = useState(false);
   const { onOpen: onOpenForm } = useDemoForm();
   
   useEffect(() => {
     document.title = "Nobi: AI parts finder for repair-focused distributors";
   }, []);
-
+  
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-slate-50 dark:from-[#0a0a0a] dark:to-black text-black dark:text-white">
       <Header />
-      <Hero onOpenVideo={() => setIsVideoOpen(true)} />
+      <Hero />
       <Features />
       <Insights onOpenForm={onOpenForm} />
       <HowItWorks />
@@ -965,12 +953,6 @@ export default function HomePage() {
         </a>
       </div>
       <Footer />
-
-      <VideoModal
-        open={isVideoOpen}
-        onClose={() => setIsVideoOpen(false)}
-        youtube="https://www.youtube.com/watch?v=RKqGC3CVZd0"
-      />
     </div>
   );
 }
