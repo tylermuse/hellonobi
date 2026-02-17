@@ -4,8 +4,6 @@ import {
     BarChart3,
     FileText,
     Settings,
-    PlayCircle,
-    Quote,
     Search as SearchIcon,
     Sparkles,
     Package,
