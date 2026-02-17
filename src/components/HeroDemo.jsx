@@ -698,6 +698,8 @@ function CompatibilityDemo({ isActive }) {
 
 export default function HeroDemo({ className = "" }) {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [vertical, setVertical] = useState('auto');
+  
   const slides = [
     { id: "search", label: "Technical Search" },
     { id: "rfq", label: "RFQ Capture" },
@@ -710,6 +712,24 @@ export default function HeroDemo({ className = "" }) {
   return (
     <div className={`${className}`}>
       <div className="mx-auto w-full max-w-4xl">
+        {/* Vertical Switcher */}
+        <div className="flex items-center justify-center gap-2 mb-4">
+          <span className="text-sm text-black/60 dark:text-white/60 mr-2">See it for:</span>
+          {Object.entries(VERTICAL_CONTENT).map(([key, value]) => (
+            <button
+              key={key}
+              onClick={() => setVertical(key)}
+              className={`px-4 py-2 rounded-full text-sm font-medium transition ${
+                vertical === key
+                  ? "bg-gradient-to-r from-fuchsia-500 to-pink-500 text-white shadow-sm"
+                  : "bg-white/50 dark:bg-white/5 text-black/70 dark:text-white/70 border border-black/10 dark:border-white/10 hover:bg-white dark:hover:bg-white/10"
+              }`}
+            >
+              {value.label}
+            </button>
+          ))}
+        </div>
+
         <div className="rounded-3xl shadow-2xl border border-black/5 dark:border-white/10 bg-gradient-to-br from-violet-50 via-white to-emerald-50 dark:from-violet-900/20 dark:via-zinc-900 dark:to-emerald-900/10 p-3 sm:p-8">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
             <div className="text-xs uppercase tracking-[0.35em] text-black/50 dark:text-white/60">
@@ -741,13 +761,13 @@ export default function HeroDemo({ className = "" }) {
               style={{ transform: `translateX(-${activeIndex * 100}%)` }}
             >
               <div className="w-full shrink-0">
-                <TechnicalSearchDemo isActive={activeIndex === 0} />
+                <TechnicalSearchDemo isActive={activeIndex === 0} vertical={vertical} />
               </div>
               <div className="w-full shrink-0">
-                <RFQCaptureDemo isActive={activeIndex === 1} />
+                <RFQCaptureDemo isActive={activeIndex === 1} vertical={vertical} />
               </div>
               <div className="w-full shrink-0">
-                <CompatibilityDemo isActive={activeIndex === 2} />
+                <CompatibilityDemo isActive={activeIndex === 2} vertical={vertical} />
               </div>
             </div>
           </div>
