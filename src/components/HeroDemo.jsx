@@ -95,7 +95,7 @@ const VERTICAL_CONTENT = {
         price: "$890",
         availability: "Pickup today",
         location: "Phoenix Main",
-        img: "/media/mrcool-heat-pump.png",
+        img: "/media/baldor-motor.png",
       },
       {
         title: "WEG 00536ET3E215T",
@@ -103,7 +103,7 @@ const VERTICAL_CONTENT = {
         price: "$825",
         availability: "Phoenix North • Will-call",
         location: "Phoenix North",
-        img: "/media/trane-xr14.png",
+        img: "/media/weg-motor.png",
       },
       {
         title: "Leeson C145T17FB6",
