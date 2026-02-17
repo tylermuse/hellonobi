@@ -376,10 +376,10 @@ function RFQCaptureDemo({ isActive }) {
         <div className="flex items-center gap-3 flex-wrap">
           <span className="inline-flex items-center gap-1.5">
             <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span>
-            Account: Phoenix HVAC Co
+            Account: {content.rfqCompany}
           </span>
           <span>•</span>
-          <span>Contractor pricing active</span>
+          <span>{content.accountType}</span>
         </div>
       </div>
 
@@ -549,8 +549,8 @@ function CompatibilityDemo({ isActive }) {
 
     // Type question
     const typeInterval = setInterval(() => {
-      if (i < COMPATIBILITY_QUESTION.length) {
-        setQuestion(COMPATIBILITY_QUESTION.slice(0, i + 1));
+      if (i < compatQuestion.length) {
+        setQuestion(compatQuestion.slice(0, i + 1));
         i++;
       } else {
         clearInterval(typeInterval);
@@ -561,7 +561,7 @@ function CompatibilityDemo({ isActive }) {
     timers.push(typeInterval);
 
     return () => timers.forEach(clearTimeout);
-  }, [isActive]);
+  }, [isActive, vertical]);
 
   return (
     <div className="space-y-4">
