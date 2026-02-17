@@ -317,7 +317,7 @@ function TechnicalSearchDemo({ isActive, vertical = 'auto' }) {
 }
 
 // Demo 2: RFQ Capture
-function RFQCaptureDemo({ isActive }) {
+function RFQCaptureDemo({ isActive, vertical = 'auto' }) {
   const [query, setQuery] = useState("");
   const [showResponse, setShowResponse] = useState(false);
   const [showForm, setShowForm] = useState(false);
@@ -330,6 +330,8 @@ function RFQCaptureDemo({ isActive }) {
     timeline: "",
     quoteType: "",
   });
+
+  const content = VERTICAL_CONTENT[vertical];
 
   useEffect(() => {
     if (!isActive) {
