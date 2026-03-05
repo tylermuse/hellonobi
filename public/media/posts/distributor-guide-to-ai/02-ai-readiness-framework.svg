@@ -1,0 +1,60 @@
+<svg viewBox="0 0 1200 500" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, sans-serif">
+  <rect width="1200" height="500" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="600" y="38" text-anchor="middle" font-size="22" fill="#1e293b" font-weight="700">AI Readiness Maturity Framework</text>
+  <text x="600" y="58" text-anchor="middle" font-size="13" fill="#64748b">Where does your operation stand today?</text>
+
+  <!-- Staircase structure -->
+  <!-- Step 1 - Manual (red, bottom-left) -->
+  <rect x="80" y="350" width="240" height="100" rx="8" fill="white" stroke="#fecaca" stroke-width="2"/>
+  <rect x="80" y="350" width="240" height="6" rx="3" fill="#ef4444"/>
+  <rect x="80" y="444" width="240" height="6" rx="3" fill="#ef4444" opacity="0.3"/>
+  <text x="200" y="382" text-anchor="middle" font-size="11" fill="#ef4444" font-weight="700" letter-spacing="1.5">STEP 1</text>
+  <text x="200" y="402" text-anchor="middle" font-size="17" fill="#1e293b" font-weight="700">Manual</text>
+  <text x="200" y="422" text-anchor="middle" font-size="11" fill="#64748b">Paper catalogs, tribal knowledge</text>
+  <text x="200" y="436" text-anchor="middle" font-size="11" fill="#64748b">Phone calls for every lookup</text>
+
+  <!-- Step 2 - Basic Digital (amber) -->
+  <rect x="340" y="260" width="240" height="100" rx="8" fill="white" stroke="#fde68a" stroke-width="2"/>
+  <rect x="340" y="260" width="240" height="6" rx="3" fill="#f59e0b"/>
+  <rect x="340" y="354" width="240" height="6" rx="3" fill="#f59e0b" opacity="0.3"/>
+  <!-- Fill connecting riser -->
+  <rect x="340" y="354" width="240" height="96" rx="0" fill="#fffbeb" opacity="0.4"/>
+  <text x="460" y="292" text-anchor="middle" font-size="11" fill="#d97706" font-weight="700" letter-spacing="1.5">STEP 2</text>
+  <text x="460" y="312" text-anchor="middle" font-size="17" fill="#1e293b" font-weight="700">Basic Digital</text>
+  <text x="460" y="332" text-anchor="middle" font-size="11" fill="#64748b">ERP search, spreadsheets</text>
+  <text x="460" y="346" text-anchor="middle" font-size="11" fill="#64748b">Basic e-commerce catalog</text>
+
+  <!-- Step 3 - AI-Assisted (blue) -->
+  <rect x="600" y="170" width="240" height="100" rx="8" fill="white" stroke="#bfdbfe" stroke-width="2"/>
+  <rect x="600" y="170" width="240" height="6" rx="3" fill="#3b82f6"/>
+  <rect x="600" y="264" width="240" height="96" rx="0" fill="#eff6ff" opacity="0.4"/>
+  <text x="720" y="202" text-anchor="middle" font-size="11" fill="#3b82f6" font-weight="700" letter-spacing="1.5">STEP 3</text>
+  <text x="720" y="222" text-anchor="middle" font-size="17" fill="#1e293b" font-weight="700">AI-Assisted</text>
+  <text x="720" y="242" text-anchor="middle" font-size="11" fill="#64748b">AI copilot, smart search</text>
+  <text x="720" y="256" text-anchor="middle" font-size="11" fill="#64748b">Automated part identification</text>
+
+  <!-- Step 4 - AI-Integrated (green, top) -->
+  <rect x="860" y="80" width="240" height="100" rx="8" fill="white" stroke="#bbf7d0" stroke-width="2"/>
+  <rect x="860" y="80" width="240" height="6" rx="3" fill="#22c55e"/>
+  <rect x="860" y="174" width="240" height="96" rx="0" fill="#f0fdf4" opacity="0.4"/>
+  <text x="980" y="112" text-anchor="middle" font-size="11" fill="#22c55e" font-weight="700" letter-spacing="1.5">STEP 4</text>
+  <text x="980" y="132" text-anchor="middle" font-size="17" fill="#1e293b" font-weight="700">AI-Integrated</text>
+  <text x="980" y="152" text-anchor="middle" font-size="11" fill="#64748b">Full AI operations end-to-end</text>
+  <text x="980" y="166" text-anchor="middle" font-size="11" fill="#64748b">Predictive, self-improving</text>
+
+  <!-- "YOU ARE HERE" arrow pointing at Step 2 -->
+  <rect x="340" y="455" width="160" height="30" rx="15" fill="#f59e0b"/>
+  <text x="420" y="475" text-anchor="middle" font-size="12" fill="white" font-weight="700">YOU ARE HERE</text>
+  <polygon points="420,455 412,445 428,445" fill="#f59e0b"/>
+
+  <!-- "LEADERS" arrow at Step 3-4 -->
+  <rect x="710" y="80" width="130" height="26" rx="13" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="775" y="97" text-anchor="middle" font-size="11" fill="#2563eb" font-weight="700">LEADERS</text>
+  <polygon points="840,93 850,87 850,99" fill="#3b82f6"/>
+
+  <!-- Ascending arrow along the stairs -->
+  <path d="M100 460 L980 75" stroke="#e2e8f0" stroke-width="1.5" stroke-dasharray="8,5" fill="none"/>
+  <polygon points="980,75 972,88 985,85" fill="#cbd5e1"/>
+</svg>

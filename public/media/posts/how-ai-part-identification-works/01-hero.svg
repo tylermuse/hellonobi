@@ -1,0 +1,167 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" font-family="system-ui, -apple-system, sans-serif">
+  <defs>
+    <filter id="transShadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="6" flood-color="#94a3b8" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="processZone" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#eff6ff" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#dbeafe" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#eff6ff" stop-opacity="0.3"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="500" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="600" y="42" text-anchor="middle" fill="#1e293b" font-size="24" font-weight="700">From Vague Request to Verified Part Number</text>
+  <text x="600" y="66" text-anchor="middle" fill="#64748b" font-size="13">How AI transforms natural language into accurate product identification</text>
+
+  <!-- Processing zone background -->
+  <rect x="410" y="90" width="380" height="340" rx="20" fill="url(#processZone)" stroke="#bfdbfe" stroke-width="1" stroke-dasharray="6,4"/>
+  <text x="600" y="116" text-anchor="middle" fill="#3b82f6" font-size="11" font-weight="600" letter-spacing="1">AI PROCESSING</text>
+
+  <!-- LEFT: Messy input -->
+  <g filter="url(#transShadow)">
+    <rect x="40" y="140" width="340" height="240" rx="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+
+    <!-- Rough speech bubble feel -->
+    <rect x="60" y="160" width="300" height="80" rx="12" fill="#fef3c7" stroke="#fcd34d" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <text x="210" y="192" text-anchor="middle" fill="#92400e" font-size="17" font-weight="600" font-style="italic">"brass thing for</text>
+    <text x="210" y="214" text-anchor="middle" fill="#92400e" font-size="17" font-weight="600" font-style="italic">the water heater"</text>
+
+    <!-- Problem indicators -->
+    <g transform="translate(60, 260)">
+      <rect x="0" y="0" width="130" height="26" rx="6" fill="#fef2f2" stroke="#fecaca" stroke-width="1"/>
+      <text x="65" y="18" text-anchor="middle" fill="#dc2626" font-size="10" font-weight="500">No part number</text>
+      <rect x="140" y="0" width="110" height="26" rx="6" fill="#fef2f2" stroke="#fecaca" stroke-width="1"/>
+      <text x="195" y="18" text-anchor="middle" fill="#dc2626" font-size="10" font-weight="500">No brand</text>
+      <rect x="0" y="34" width="100" height="26" rx="6" fill="#fef2f2" stroke="#fecaca" stroke-width="1"/>
+      <text x="50" y="52" text-anchor="middle" fill="#dc2626" font-size="10" font-weight="500">Vague sizing</text>
+      <rect x="110" y="34" width="140" height="26" rx="6" fill="#fef2f2" stroke="#fecaca" stroke-width="1"/>
+      <text x="180" y="52" text-anchor="middle" fill="#dc2626" font-size="10" font-weight="500">Slang / colloquial</text>
+    </g>
+
+    <text x="210" y="360" text-anchor="middle" fill="#94a3b8" font-size="11" font-weight="500">Typical counter request</text>
+  </g>
+
+  <!-- CENTER: Processing visualization -->
+  <!-- Neural net / processing lines -->
+  <g transform="translate(440, 145)">
+    <!-- Input nodes -->
+    <circle cx="20" cy="40" r="6" fill="#bfdbfe" stroke="#3b82f6" stroke-width="1.5"/>
+    <circle cx="20" cy="80" r="6" fill="#bfdbfe" stroke="#3b82f6" stroke-width="1.5"/>
+    <circle cx="20" cy="120" r="6" fill="#bfdbfe" stroke="#3b82f6" stroke-width="1.5"/>
+    <circle cx="20" cy="160" r="6" fill="#bfdbfe" stroke="#3b82f6" stroke-width="1.5"/>
+
+    <!-- Hidden layer 1 -->
+    <circle cx="110" cy="60" r="8" fill="#93c5fd" stroke="#3b82f6" stroke-width="1.5"/>
+    <circle cx="110" cy="110" r="8" fill="#93c5fd" stroke="#3b82f6" stroke-width="1.5"/>
+    <circle cx="110" cy="160" r="8" fill="#93c5fd" stroke="#3b82f6" stroke-width="1.5"/>
+
+    <!-- Hidden layer 2 -->
+    <circle cx="200" cy="60" r="8" fill="#60a5fa" stroke="#3b82f6" stroke-width="1.5"/>
+    <circle cx="200" cy="110" r="8" fill="#60a5fa" stroke="#3b82f6" stroke-width="1.5"/>
+    <circle cx="200" cy="160" r="8" fill="#60a5fa" stroke="#3b82f6" stroke-width="1.5"/>
+
+    <!-- Output nodes -->
+    <circle cx="290" cy="40" r="6" fill="#3b82f6" stroke="#1d4ed8" stroke-width="1.5"/>
+    <circle cx="290" cy="80" r="6" fill="#3b82f6" stroke="#1d4ed8" stroke-width="1.5"/>
+    <circle cx="290" cy="120" r="6" fill="#3b82f6" stroke="#1d4ed8" stroke-width="1.5"/>
+    <circle cx="290" cy="160" r="6" fill="#3b82f6" stroke="#1d4ed8" stroke-width="1.5"/>
+
+    <!-- Connections (subset for visual) -->
+    <line x1="26" y1="40" x2="102" y2="60" stroke="#bfdbfe" stroke-width="1" opacity="0.6"/>
+    <line x1="26" y1="40" x2="102" y2="110" stroke="#bfdbfe" stroke-width="1" opacity="0.3"/>
+    <line x1="26" y1="80" x2="102" y2="60" stroke="#bfdbfe" stroke-width="1" opacity="0.4"/>
+    <line x1="26" y1="80" x2="102" y2="110" stroke="#bfdbfe" stroke-width="1" opacity="0.6"/>
+    <line x1="26" y1="120" x2="102" y2="110" stroke="#bfdbfe" stroke-width="1" opacity="0.6"/>
+    <line x1="26" y1="120" x2="102" y2="160" stroke="#bfdbfe" stroke-width="1" opacity="0.4"/>
+    <line x1="26" y1="160" x2="102" y2="160" stroke="#bfdbfe" stroke-width="1" opacity="0.6"/>
+
+    <line x1="118" y1="60" x2="192" y2="60" stroke="#93c5fd" stroke-width="1" opacity="0.6"/>
+    <line x1="118" y1="60" x2="192" y2="110" stroke="#93c5fd" stroke-width="1" opacity="0.3"/>
+    <line x1="118" y1="110" x2="192" y2="60" stroke="#93c5fd" stroke-width="1" opacity="0.3"/>
+    <line x1="118" y1="110" x2="192" y2="110" stroke="#93c5fd" stroke-width="1" opacity="0.6"/>
+    <line x1="118" y1="110" x2="192" y2="160" stroke="#93c5fd" stroke-width="1" opacity="0.3"/>
+    <line x1="118" y1="160" x2="192" y2="110" stroke="#93c5fd" stroke-width="1" opacity="0.3"/>
+    <line x1="118" y1="160" x2="192" y2="160" stroke="#93c5fd" stroke-width="1" opacity="0.6"/>
+
+    <line x1="208" y1="60" x2="284" y2="40" stroke="#60a5fa" stroke-width="1" opacity="0.6"/>
+    <line x1="208" y1="60" x2="284" y2="80" stroke="#60a5fa" stroke-width="1" opacity="0.3"/>
+    <line x1="208" y1="110" x2="284" y2="80" stroke="#60a5fa" stroke-width="1" opacity="0.6"/>
+    <line x1="208" y1="110" x2="284" y2="120" stroke="#60a5fa" stroke-width="1" opacity="0.6"/>
+    <line x1="208" y1="160" x2="284" y2="120" stroke="#60a5fa" stroke-width="1" opacity="0.3"/>
+    <line x1="208" y1="160" x2="284" y2="160" stroke="#60a5fa" stroke-width="1" opacity="0.6"/>
+
+    <!-- Labels for extraction -->
+    <text x="155" y="218" text-anchor="middle" fill="#3b82f6" font-size="10" font-weight="600">NLP + Semantic</text>
+    <text x="155" y="232" text-anchor="middle" fill="#3b82f6" font-size="10" font-weight="600">Understanding</text>
+  </g>
+
+  <!-- RIGHT: Clean product card -->
+  <g filter="url(#transShadow)">
+    <rect x="820" y="140" width="340" height="240" rx="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+    <rect x="820" y="140" width="340" height="6" rx="3" fill="#3b82f6"/>
+
+    <!-- Product image placeholder -->
+    <rect x="844" y="168" width="80" height="80" rx="10" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="1"/>
+    <rect x="862" y="188" width="44" height="32" rx="4" fill="#e2e8f0"/>
+    <text x="884" y="236" text-anchor="middle" fill="#94a3b8" font-size="8">IMG</text>
+
+    <!-- Product info -->
+    <text x="940" y="190" fill="#1e293b" font-size="15" font-weight="700">SharkBite SB-2401</text>
+    <text x="940" y="210" fill="#475569" font-size="12">3/4" Brass Push-to-Connect</text>
+    <text x="940" y="228" fill="#475569" font-size="12">Water Heater Adapter</text>
+
+    <!-- Spec badges -->
+    <g transform="translate(844, 262)">
+      <rect x="0" y="0" width="68" height="22" rx="4" fill="#eff6ff"/>
+      <text x="34" y="15" text-anchor="middle" fill="#3b82f6" font-size="10" font-weight="500">Brass</text>
+      <rect x="74" y="0" width="50" height="22" rx="4" fill="#eff6ff"/>
+      <text x="99" y="15" text-anchor="middle" fill="#3b82f6" font-size="10" font-weight="500">3/4"</text>
+      <rect x="130" y="0" width="50" height="22" rx="4" fill="#f0fdf4"/>
+      <text x="155" y="15" text-anchor="middle" fill="#16a34a" font-size="10" font-weight="500">47 qty</text>
+      <rect x="186" y="0" width="62" height="22" rx="4" fill="#faf5ff"/>
+      <text x="217" y="15" text-anchor="middle" fill="#7c3aed" font-size="10" font-weight="500">$12.85</text>
+    </g>
+
+    <!-- Confidence bar -->
+    <g transform="translate(844, 300)">
+      <text x="0" y="0" fill="#94a3b8" font-size="10" font-weight="500">Match confidence</text>
+      <rect x="0" y="8" width="280" height="8" rx="4" fill="#f1f5f9"/>
+      <rect x="0" y="8" width="274" height="8" rx="4" fill="#3b82f6"/>
+      <text x="284" y="16" fill="#3b82f6" font-size="10" font-weight="700">98%</text>
+    </g>
+
+    <!-- Alternatives count -->
+    <rect x="844" y="332" width="292" height="30" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="990" y="351" text-anchor="middle" fill="#475569" font-size="11">+ 2 verified alternatives from other manufacturers</text>
+  </g>
+
+  <!-- Arrows connecting sections -->
+  <g>
+    <line x1="388" y1="260" x2="432" y2="260" stroke="#94a3b8" stroke-width="2"/>
+    <polygon points="430,254 442,260 430,266" fill="#94a3b8"/>
+  </g>
+  <g>
+    <line x1="758" y1="260" x2="812" y2="260" stroke="#3b82f6" stroke-width="2"/>
+    <polygon points="810,254 822,260 810,266" fill="#3b82f6"/>
+  </g>
+
+  <!-- Bottom labels -->
+  <rect x="80" y="440" width="140" height="36" rx="8" fill="#fef3c7"/>
+  <text x="150" y="463" text-anchor="middle" fill="#92400e" font-size="12" font-weight="600">CHAOS</text>
+
+  <rect x="530" y="440" width="140" height="36" rx="8" fill="#dbeafe"/>
+  <text x="600" y="463" text-anchor="middle" fill="#1e40af" font-size="12" font-weight="600">INTELLIGENCE</text>
+
+  <rect x="980" y="440" width="140" height="36" rx="8" fill="#dcfce7"/>
+  <text x="1050" y="463" text-anchor="middle" fill="#166534" font-size="12" font-weight="600">CLARITY</text>
+
+  <!-- Small connecting arrows -->
+  <line x1="224" y1="458" x2="524" y2="458" stroke="#e2e8f0" stroke-width="1.5"/>
+  <polygon points="522,453 530,458 522,463" fill="#e2e8f0"/>
+  <line x1="674" y1="458" x2="974" y2="458" stroke="#e2e8f0" stroke-width="1.5"/>
+  <polygon points="972,453 980,458 972,463" fill="#e2e8f0"/>
+</svg>

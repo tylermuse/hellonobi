@@ -1,0 +1,91 @@
+<svg viewBox="0 0 1200 500" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, sans-serif">
+  <rect width="1200" height="500" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="600" y="38" text-anchor="middle" font-size="22" fill="#1e293b" font-weight="700">Two Approaches to Knowledge Capture</text>
+  <text x="600" y="58" text-anchor="middle" font-size="13" fill="#64748b">Traditional documentation vs. AI-powered passive capture</text>
+
+  <!-- VS divider -->
+  <line x1="600" y1="80" x2="600" y2="460" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="6,4"/>
+  <circle cx="600" cy="250" r="20" fill="white" stroke="#e2e8f0" stroke-width="2"/>
+  <text x="600" y="256" text-anchor="middle" font-size="13" fill="#94a3b8" font-weight="700">VS</text>
+
+  <!-- LEFT: Active Capture (amber) -->
+  <rect x="60" y="80" width="480" height="50" rx="8" fill="#fffbeb" stroke="#fde68a" stroke-width="1"/>
+  <text x="300" y="112" text-anchor="middle" font-size="17" fill="#92400e" font-weight="700">Active Capture</text>
+
+  <!-- Stack items -->
+  <rect x="80" y="150" width="440" height="44" rx="6" fill="white" stroke="#fde68a" stroke-width="1"/>
+  <circle cx="108" cy="172" r="12" fill="#fffbeb"/>
+  <text x="108" y="177" text-anchor="middle" font-size="12" fill="#d97706">1</text>
+  <text x="130" y="177" font-size="14" fill="#1e293b" font-weight="500">Write documentation from scratch</text>
+
+  <rect x="80" y="202" width="440" height="44" rx="6" fill="white" stroke="#fde68a" stroke-width="1"/>
+  <circle cx="108" cy="224" r="12" fill="#fffbeb"/>
+  <text x="108" y="229" text-anchor="middle" font-size="12" fill="#d97706">2</text>
+  <text x="130" y="229" font-size="14" fill="#1e293b" font-weight="500">Build and maintain internal wiki</text>
+
+  <rect x="80" y="254" width="440" height="44" rx="6" fill="white" stroke="#fde68a" stroke-width="1"/>
+  <circle cx="108" cy="276" r="12" fill="#fffbeb"/>
+  <text x="108" y="281" text-anchor="middle" font-size="12" fill="#d97706">3</text>
+  <text x="130" y="281" font-size="14" fill="#1e293b" font-weight="500">Record training videos and sessions</text>
+
+  <rect x="80" y="306" width="440" height="44" rx="6" fill="white" stroke="#fde68a" stroke-width="1"/>
+  <circle cx="108" cy="328" r="12" fill="#fffbeb"/>
+  <text x="108" y="333" text-anchor="middle" font-size="12" fill="#d97706">4</text>
+  <text x="130" y="333" font-size="14" fill="#1e293b" font-weight="500">Update manuals quarterly</text>
+
+  <!-- Effort meter - HIGH -->
+  <text x="100" y="385" font-size="11" fill="#475569" font-weight="600">EFFORT REQUIRED</text>
+  <rect x="220" y="374" width="120" height="14" rx="7" fill="#fef2f2"/>
+  <rect x="220" y="374" width="110" height="14" rx="7" fill="#ef4444"/>
+  <text x="350" y="385" font-size="11" fill="#ef4444" font-weight="700">HIGH</text>
+
+  <!-- Freshness meter - LOW -->
+  <text x="100" y="415" font-size="11" fill="#475569" font-weight="600">STAYS CURRENT</text>
+  <rect x="220" y="404" width="120" height="14" rx="7" fill="#f1f5f9"/>
+  <rect x="220" y="404" width="30" height="14" rx="7" fill="#94a3b8"/>
+  <text x="350" y="415" font-size="11" fill="#94a3b8" font-weight="700">LOW</text>
+
+  <!-- Dots rating for effort -->
+  <text x="100" y="445" font-size="11" fill="#94a3b8" font-style="italic">Outdated within months</text>
+
+  <!-- RIGHT: Passive Capture (green) -->
+  <rect x="660" y="80" width="480" height="50" rx="8" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
+  <text x="900" y="112" text-anchor="middle" font-size="17" fill="#166534" font-weight="700">Passive Capture</text>
+
+  <!-- Stack items -->
+  <rect x="680" y="150" width="440" height="44" rx="6" fill="white" stroke="#bbf7d0" stroke-width="1"/>
+  <circle cx="708" cy="172" r="12" fill="#f0fdf4"/>
+  <text x="708" y="177" text-anchor="middle" font-size="12" fill="#16a34a">1</text>
+  <text x="730" y="177" font-size="14" fill="#1e293b" font-weight="500">Daily queries automatically captured</text>
+
+  <rect x="680" y="202" width="440" height="44" rx="6" fill="white" stroke="#bbf7d0" stroke-width="1"/>
+  <circle cx="708" cy="224" r="12" fill="#f0fdf4"/>
+  <text x="708" y="229" text-anchor="middle" font-size="12" fill="#16a34a">2</text>
+  <text x="730" y="229" font-size="14" fill="#1e293b" font-weight="500">Corrections learned in real-time</text>
+
+  <rect x="680" y="254" width="440" height="44" rx="6" fill="white" stroke="#bbf7d0" stroke-width="1"/>
+  <circle cx="708" cy="276" r="12" fill="#f0fdf4"/>
+  <text x="708" y="281" text-anchor="middle" font-size="12" fill="#16a34a">3</text>
+  <text x="730" y="281" font-size="14" fill="#1e293b" font-weight="500">Patterns recognized across interactions</text>
+
+  <rect x="680" y="306" width="440" height="44" rx="6" fill="white" stroke="#bbf7d0" stroke-width="1"/>
+  <circle cx="708" cy="328" r="12" fill="#f0fdf4"/>
+  <text x="708" y="333" text-anchor="middle" font-size="12" fill="#16a34a">4</text>
+  <text x="730" y="333" font-size="14" fill="#1e293b" font-weight="500">Edge cases recorded as they happen</text>
+
+  <!-- Effort meter - LOW -->
+  <text x="700" y="385" font-size="11" fill="#475569" font-weight="600">EFFORT REQUIRED</text>
+  <rect x="830" y="374" width="120" height="14" rx="7" fill="#f1f5f9"/>
+  <rect x="830" y="374" width="25" height="14" rx="7" fill="#22c55e"/>
+  <text x="960" y="385" font-size="11" fill="#22c55e" font-weight="700">LOW</text>
+
+  <!-- Freshness meter - ALWAYS CURRENT -->
+  <text x="700" y="415" font-size="11" fill="#475569" font-weight="600">STAYS CURRENT</text>
+  <rect x="830" y="404" width="120" height="14" rx="7" fill="#f0fdf4"/>
+  <rect x="830" y="404" width="120" height="14" rx="7" fill="#22c55e"/>
+  <text x="960" y="415" font-size="11" fill="#16a34a" font-weight="700">ALWAYS</text>
+
+  <text x="700" y="445" font-size="11" fill="#16a34a" font-style="italic">Gets better every day</text>
+</svg>

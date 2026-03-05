@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" font-family="system-ui, -apple-system, sans-serif">
+  <!-- Background -->
+  <rect width="1200" height="500" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="600" y="42" text-anchor="middle" fill="#1e293b" font-size="22" font-weight="700">How Does an AI Copilot Compare?</text>
+  <text x="600" y="64" text-anchor="middle" fill="#64748b" font-size="13">Feature comparison across part identification methods</text>
+
+  <!-- Table -->
+  <!-- Header row -->
+  <rect x="60" y="88" width="340" height="48" rx="10" fill="#f1f5f9"/>
+  <text x="230" y="117" text-anchor="middle" fill="#475569" font-size="13" font-weight="700">FACTOR</text>
+
+  <rect x="400" y="88" width="260" height="48" fill="#eff6ff"/>
+  <text x="530" y="117" text-anchor="middle" fill="#3b82f6" font-size="13" font-weight="700">AI COPILOT</text>
+
+  <rect x="660" y="88" width="240" height="48" fill="#fffbeb"/>
+  <text x="780" y="117" text-anchor="middle" fill="#d97706" font-size="13" font-weight="700">ERP SEARCH</text>
+
+  <rect x="900" y="88" width="240" height="48" rx="10" fill="#f1f5f9"/>
+  <text x="1020" y="117" text-anchor="middle" fill="#475569" font-size="13" font-weight="700">TRIBAL KNOWLEDGE</text>
+
+  <!-- Row 1 -->
+  <rect x="60" y="140" width="1080" height="56" fill="#ffffff"/>
+  <line x1="60" y1="196" x2="1140" y2="196" stroke="#f1f5f9" stroke-width="1"/>
+  <text x="80" y="173" fill="#1e293b" font-size="14" font-weight="500">Understands vague or</text>
+  <text x="80" y="189" fill="#1e293b" font-size="14" font-weight="500">colloquial requests</text>
+  <circle cx="530" cy="168" r="14" fill="#dcfce7"/>
+  <text x="530" y="174" text-anchor="middle" fill="#16a34a" font-size="16" font-weight="700">&#x2713;</text>
+  <circle cx="780" cy="168" r="14" fill="#fef2f2"/>
+  <text x="780" y="174" text-anchor="middle" fill="#dc2626" font-size="16" font-weight="700">&#x2717;</text>
+  <circle cx="1020" cy="168" r="14" fill="#dcfce7"/>
+  <text x="1020" y="174" text-anchor="middle" fill="#16a34a" font-size="16" font-weight="700">&#x2713;</text>
+
+  <!-- Row 2 -->
+  <rect x="60" y="196" width="1080" height="56" fill="#f8fafc"/>
+  <line x1="60" y1="252" x2="1140" y2="252" stroke="#f1f5f9" stroke-width="1"/>
+  <text x="80" y="229" fill="#1e293b" font-size="14" font-weight="500">Searches full catalog</text>
+  <circle cx="530" cy="224" r="14" fill="#dcfce7"/>
+  <text x="530" y="230" text-anchor="middle" fill="#16a34a" font-size="16" font-weight="700">&#x2713;</text>
+  <circle cx="780" cy="224" r="14" fill="#dcfce7"/>
+  <text x="780" y="230" text-anchor="middle" fill="#16a34a" font-size="16" font-weight="700">&#x2713;</text>
+  <circle cx="1020" cy="224" r="14" fill="#fef3c7"/>
+  <text x="1020" y="230" text-anchor="middle" fill="#d97706" font-size="16" font-weight="700">~</text>
+
+  <!-- Row 3 -->
+  <rect x="60" y="252" width="1080" height="56" fill="#ffffff"/>
+  <line x1="60" y1="308" x2="1140" y2="308" stroke="#f1f5f9" stroke-width="1"/>
+  <text x="80" y="285" fill="#1e293b" font-size="14" font-weight="500">Cross-references manufacturers</text>
+  <circle cx="530" cy="280" r="14" fill="#dcfce7"/>
+  <text x="530" y="286" text-anchor="middle" fill="#16a34a" font-size="16" font-weight="700">&#x2713;</text>
+  <circle cx="780" cy="280" r="14" fill="#fef3c7"/>
+  <text x="780" y="286" text-anchor="middle" fill="#d97706" font-size="16" font-weight="700">~</text>
+  <circle cx="1020" cy="280" r="14" fill="#fef3c7"/>
+  <text x="1020" y="286" text-anchor="middle" fill="#d97706" font-size="16" font-weight="700">~</text>
+
+  <!-- Row 4 -->
+  <rect x="60" y="308" width="1080" height="56" fill="#f8fafc"/>
+  <line x1="60" y1="364" x2="1140" y2="364" stroke="#f1f5f9" stroke-width="1"/>
+  <text x="80" y="341" fill="#1e293b" font-size="14" font-weight="500">Available 24/7</text>
+  <circle cx="530" cy="336" r="14" fill="#dcfce7"/>
+  <text x="530" y="342" text-anchor="middle" fill="#16a34a" font-size="16" font-weight="700">&#x2713;</text>
+  <circle cx="780" cy="336" r="14" fill="#dcfce7"/>
+  <text x="780" y="342" text-anchor="middle" fill="#16a34a" font-size="16" font-weight="700">&#x2713;</text>
+  <circle cx="1020" cy="336" r="14" fill="#fef2f2"/>
+  <text x="1020" y="342" text-anchor="middle" fill="#dc2626" font-size="16" font-weight="700">&#x2717;</text>
+
+  <!-- Row 5 -->
+  <rect x="60" y="364" width="1080" height="56" fill="#ffffff"/>
+  <rect x="60" y="416" width="1080" height="4" rx="2" fill="#f1f5f9"/>
+  <text x="80" y="397" fill="#1e293b" font-size="14" font-weight="500">Scales with headcount</text>
+  <circle cx="530" cy="392" r="14" fill="#dcfce7"/>
+  <text x="530" y="398" text-anchor="middle" fill="#16a34a" font-size="16" font-weight="700">&#x2713;</text>
+  <circle cx="780" cy="392" r="14" fill="#dcfce7"/>
+  <text x="780" y="398" text-anchor="middle" fill="#16a34a" font-size="16" font-weight="700">&#x2713;</text>
+  <circle cx="1020" cy="392" r="14" fill="#fef2f2"/>
+  <text x="1020" y="398" text-anchor="middle" fill="#dc2626" font-size="16" font-weight="700">&#x2717;</text>
+
+  <!-- Score summary -->
+  <rect x="60" y="432" width="1080" height="52" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="230" y="463" text-anchor="middle" fill="#475569" font-size="13" font-weight="600">OVERALL SCORE</text>
+
+  <rect x="478" y="443" width="104" height="30" rx="15" fill="#dcfce7" stroke="#86efac" stroke-width="1"/>
+  <text x="530" y="463" text-anchor="middle" fill="#16a34a" font-size="14" font-weight="700">5 / 5</text>
+
+  <rect x="728" y="443" width="104" height="30" rx="15" fill="#fef3c7" stroke="#fde68a" stroke-width="1"/>
+  <text x="780" y="463" text-anchor="middle" fill="#d97706" font-size="14" font-weight="700">3 / 5</text>
+
+  <rect x="968" y="443" width="104" height="30" rx="15" fill="#fef2f2" stroke="#fecaca" stroke-width="1"/>
+  <text x="1020" y="463" text-anchor="middle" fill="#dc2626" font-size="14" font-weight="700">2 / 5</text>
+</svg>

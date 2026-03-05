@@ -1,0 +1,70 @@
+<svg viewBox="0 0 1200 500" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, sans-serif">
+  <!-- White background -->
+  <rect width="1200" height="500" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="600" y="42" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">AI Adoption by Business Function</text>
+  <text x="600" y="66" text-anchor="middle" font-size="13" fill="#64748b">% of distributors using AI by function (2026)</text>
+
+  <!-- Gridlines -->
+  <line x1="320" y1="95" x2="320" y2="440" stroke="#f1f5f9" stroke-width="1"/>
+  <line x1="460" y1="95" x2="460" y2="440" stroke="#f1f5f9" stroke-width="1"/>
+  <line x1="600" y1="95" x2="600" y2="440" stroke="#f1f5f9" stroke-width="1"/>
+  <line x1="740" y1="95" x2="740" y2="440" stroke="#f1f5f9" stroke-width="1"/>
+  <line x1="880" y1="95" x2="880" y2="440" stroke="#f1f5f9" stroke-width="1"/>
+  <line x1="1020" y1="95" x2="1020" y2="440" stroke="#f1f5f9" stroke-width="1"/>
+
+  <!-- Grid labels -->
+  <text x="320" y="460" text-anchor="middle" font-size="10" fill="#94a3b8">0%</text>
+  <text x="460" y="460" text-anchor="middle" font-size="10" fill="#94a3b8">15%</text>
+  <text x="600" y="460" text-anchor="middle" font-size="10" fill="#94a3b8">30%</text>
+  <text x="740" y="460" text-anchor="middle" font-size="10" fill="#94a3b8">45%</text>
+  <text x="880" y="460" text-anchor="middle" font-size="10" fill="#94a3b8">60%</text>
+  <text x="1020" y="460" text-anchor="middle" font-size="10" fill="#94a3b8">75%</text>
+
+  <!-- Axis -->
+  <line x1="320" y1="440" x2="1050" y2="440" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- Bar 1: Demand Forecasting - 65% -->
+  <text x="310" y="130" text-anchor="end" font-size="13" font-weight="500" fill="#1e293b">Demand Forecasting</text>
+  <rect x="320" y="112" width="607" height="42" rx="4" fill="#2563eb"/>
+  <rect x="320" y="112" width="607" height="21" rx="4" fill="#3b82f6" opacity="0.4"/>
+  <text x="937" y="139" text-anchor="start" font-size="14" font-weight="700" fill="#2563eb">65%</text>
+
+  <!-- Bar 2: Inventory Optimization - 55% -->
+  <text x="310" y="190" text-anchor="end" font-size="13" font-weight="500" fill="#1e293b">Inventory Optimization</text>
+  <rect x="320" y="172" width="513" height="42" rx="4" fill="#3b82f6"/>
+  <rect x="320" y="172" width="513" height="21" rx="4" fill="#60a5fa" opacity="0.4"/>
+  <text x="843" y="199" text-anchor="start" font-size="14" font-weight="700" fill="#3b82f6">55%</text>
+
+  <!-- Bar 3: Customer Service - 45% -->
+  <text x="310" y="250" text-anchor="end" font-size="13" font-weight="500" fill="#1e293b">Customer Service</text>
+  <rect x="320" y="232" width="420" height="42" rx="4" fill="#0d9488"/>
+  <rect x="320" y="232" width="420" height="21" rx="4" fill="#14b8a6" opacity="0.4"/>
+  <text x="750" y="259" text-anchor="start" font-size="14" font-weight="700" fill="#0d9488">45%</text>
+
+  <!-- Bar 4: Pricing - 40% -->
+  <text x="310" y="310" text-anchor="end" font-size="13" font-weight="500" fill="#1e293b">Pricing</text>
+  <rect x="320" y="292" width="373" height="42" rx="4" fill="#14b8a6"/>
+  <rect x="320" y="292" width="373" height="21" rx="4" fill="#2dd4bf" opacity="0.4"/>
+  <text x="703" y="319" text-anchor="start" font-size="14" font-weight="700" fill="#14b8a6">40%</text>
+
+  <!-- Bar 5: Employee Tools - 25% with EMERGING badge -->
+  <text x="310" y="370" text-anchor="end" font-size="13" font-weight="500" fill="#1e293b">Employee Tools</text>
+  <rect x="320" y="352" width="233" height="42" rx="4" fill="#4f46e5"/>
+  <rect x="320" y="352" width="233" height="21" rx="4" fill="#6366f1" opacity="0.4"/>
+  <text x="563" y="379" text-anchor="start" font-size="14" font-weight="700" fill="#4f46e5">25%</text>
+  <rect x="600" y="363" width="72" height="20" rx="10" fill="#ede9fe" stroke="#c4b5fd" stroke-width="1"/>
+  <text x="636" y="377" text-anchor="middle" font-size="9" font-weight="600" fill="#6d28d9">EMERGING</text>
+
+  <!-- Bar 6: Knowledge Mgmt - 15% with EARLY badge -->
+  <text x="310" y="430" text-anchor="end" font-size="13" font-weight="500" fill="#1e293b">Knowledge Mgmt</text>
+  <rect x="320" y="412" width="140" height="42" rx="4" fill="#6366f1"/>
+  <rect x="320" y="412" width="140" height="21" rx="4" fill="#818cf8" opacity="0.4"/>
+  <text x="470" y="439" text-anchor="start" font-size="14" font-weight="700" fill="#6366f1">15%</text>
+  <rect x="510" y="423" width="55" height="20" rx="10" fill="#ede9fe" stroke="#c4b5fd" stroke-width="1"/>
+  <text x="537" y="437" text-anchor="middle" font-size="9" font-weight="600" fill="#6d28d9">EARLY</text>
+
+  <!-- Bottom accent -->
+  <rect x="0" y="492" width="1200" height="8" fill="#4f46e5" opacity="0.06"/>
+</svg>

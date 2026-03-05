@@ -1,0 +1,100 @@
+<svg viewBox="0 0 1200 500" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, sans-serif">
+  <!-- White background -->
+  <rect width="1200" height="500" fill="#ffffff"/>
+
+  <!-- Title bar -->
+  <rect x="0" y="0" width="1200" height="55" fill="#f8fafc"/>
+  <text x="600" y="35" text-anchor="middle" font-size="20" font-weight="700" fill="#1e293b">AI in Distribution: 2026 Snapshot</text>
+  <line x1="0" y1="55" x2="1200" y2="55" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- TOP LEFT: 83% donut chart -->
+  <rect x="30" y="75" width="340" height="195" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="200" y="100" text-anchor="middle" font-size="11" font-weight="600" fill="#475569" letter-spacing="1">AI ADOPTION RATE</text>
+
+  <!-- Donut chart -->
+  <circle cx="150" cy="170" r="52" fill="none" stroke="#e2e8f0" stroke-width="14"/>
+  <circle cx="150" cy="170" r="52" fill="none" stroke="#4f46e5" stroke-width="14" stroke-dasharray="271 55" stroke-dashoffset="82" stroke-linecap="round"/>
+  <text x="150" y="166" text-anchor="middle" font-size="28" font-weight="700" fill="#4f46e5">83%</text>
+  <text x="150" y="184" text-anchor="middle" font-size="9" fill="#64748b">of distributors</text>
+
+  <text x="260" y="148" font-size="11" fill="#475569">Exploring or actively</text>
+  <text x="260" y="164" font-size="11" fill="#475569">using AI in at least</text>
+  <text x="260" y="180" font-size="11" fill="#475569">one business function</text>
+  <text x="260" y="200" font-size="10" fill="#94a3b8">Up from 52% in 2024</text>
+
+  <!-- TOP RIGHT: Trend line 2021-2026 -->
+  <rect x="400" y="75" width="370" height="195" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="585" y="100" text-anchor="middle" font-size="11" font-weight="600" fill="#475569" letter-spacing="1">ADOPTION TREND</text>
+
+  <!-- Chart axes -->
+  <line x1="440" y1="240" x2="740" y2="240" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="440" y1="115" x2="440" y2="240" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- Y-axis labels -->
+  <text x="432" y="240" text-anchor="end" font-size="8" fill="#94a3b8">0%</text>
+  <text x="432" y="199" text-anchor="end" font-size="8" fill="#94a3b8">25%</text>
+  <text x="432" y="158" text-anchor="end" font-size="8" fill="#94a3b8">50%</text>
+  <text x="432" y="118" text-anchor="end" font-size="8" fill="#94a3b8">75%</text>
+
+  <!-- X-axis labels -->
+  <text x="470" y="254" text-anchor="middle" font-size="8" fill="#94a3b8">2021</text>
+  <text x="530" y="254" text-anchor="middle" font-size="8" fill="#94a3b8">2022</text>
+  <text x="590" y="254" text-anchor="middle" font-size="8" fill="#94a3b8">2023</text>
+  <text x="650" y="254" text-anchor="middle" font-size="8" fill="#94a3b8">2024</text>
+  <text x="710" y="254" text-anchor="middle" font-size="8" fill="#94a3b8">2025</text>
+  <text x="740" y="254" text-anchor="middle" font-size="8" fill="#94a3b8">2026</text>
+
+  <!-- Gridlines -->
+  <line x1="440" y1="199" x2="740" y2="199" stroke="#f1f5f9" stroke-width="0.5"/>
+  <line x1="440" y1="158" x2="740" y2="158" stroke="#f1f5f9" stroke-width="0.5"/>
+  <line x1="440" y1="118" x2="740" y2="118" stroke="#f1f5f9" stroke-width="0.5"/>
+
+  <!-- Area fill under line -->
+  <polygon points="470,222 530,210 590,199 650,175 710,138 740,120 740,240 470,240" fill="#4f46e5" opacity="0.06"/>
+
+  <!-- Trend line: 15%, 22%, 33%, 52%, 72%, 83% -->
+  <polyline points="470,222 530,210 590,199 650,175 710,138 740,120" fill="none" stroke="#4f46e5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Data points -->
+  <circle cx="470" cy="222" r="3" fill="#4f46e5"/>
+  <circle cx="530" cy="210" r="3" fill="#4f46e5"/>
+  <circle cx="590" cy="199" r="3" fill="#4f46e5"/>
+  <circle cx="650" cy="175" r="4" fill="#4f46e5"/>
+  <circle cx="710" cy="138" r="4" fill="#4f46e5"/>
+  <circle cx="740" cy="120" r="5" fill="#4f46e5" stroke="#ffffff" stroke-width="2"/>
+  <text x="740" y="112" text-anchor="middle" font-size="9" font-weight="600" fill="#4f46e5">83%</text>
+
+  <!-- TOP RIGHT: ROI stat card -->
+  <rect x="800" y="75" width="370" height="195" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="985" y="100" text-anchor="middle" font-size="11" font-weight="600" fill="#475569" letter-spacing="1">AVERAGE ROI TIMELINE</text>
+
+  <text x="985" y="155" text-anchor="middle" font-size="42" font-weight="700" fill="#4f46e5">6-9</text>
+  <text x="985" y="180" text-anchor="middle" font-size="16" font-weight="500" fill="#1e293b">months</text>
+  <text x="985" y="200" text-anchor="middle" font-size="11" fill="#64748b">to positive ROI</text>
+
+  <line x1="880" y1="218" x2="1090" y2="218" stroke="#e2e8f0" stroke-width="0.5"/>
+  <text x="985" y="240" text-anchor="middle" font-size="10" fill="#94a3b8">Median across surveyed distributors</text>
+  <text x="985" y="255" text-anchor="middle" font-size="10" fill="#94a3b8">with 100+ employees</text>
+
+  <!-- BOTTOM: Top 3 use cases -->
+  <rect x="30" y="290" width="1140" height="185" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="600" y="318" text-anchor="middle" font-size="11" font-weight="600" fill="#475569" letter-spacing="1">TOP AI USE CASES IN DISTRIBUTION (2026)</text>
+
+  <!-- Bar 1: Demand Forecasting -->
+  <text x="60" y="355" font-size="12" font-weight="500" fill="#1e293b">Demand Forecasting</text>
+  <rect x="240" y="340" width="520" height="24" rx="4" fill="#4f46e5"/>
+  <text x="770" y="357" font-size="12" font-weight="600" fill="#4f46e5">65%</text>
+
+  <!-- Bar 2: Inventory Optimization -->
+  <text x="60" y="395" font-size="12" font-weight="500" fill="#1e293b">Inventory Optimization</text>
+  <rect x="240" y="380" width="440" height="24" rx="4" fill="#6366f1"/>
+  <text x="690" y="397" font-size="12" font-weight="600" fill="#6366f1">55%</text>
+
+  <!-- Bar 3: Customer Service AI -->
+  <text x="60" y="435" font-size="12" font-weight="500" fill="#1e293b">Customer Service AI</text>
+  <rect x="240" y="420" width="360" height="24" rx="4" fill="#818cf8"/>
+  <text x="610" y="437" font-size="12" font-weight="600" fill="#818cf8">45%</text>
+
+  <!-- Bottom accent -->
+  <rect x="0" y="492" width="1200" height="8" fill="#4f46e5" opacity="0.06"/>
+</svg>

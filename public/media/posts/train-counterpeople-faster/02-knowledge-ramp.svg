@@ -1,0 +1,135 @@
+<svg viewBox="0 0 1200 500" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, sans-serif">
+  <rect width="1200" height="500" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="600" y="38" text-anchor="middle" fill="#1e293b" font-size="22" font-weight="700">Knowledge Ramp: Learning Curve Comparison</text>
+  <text x="600" y="58" text-anchor="middle" fill="#475569" font-size="13">Proficiency (%) over time for new counterpeople</text>
+
+  <!-- Chart area background -->
+  <rect x="110" y="72" width="960" height="340" rx="0" fill="#fafbfc" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- Y-axis label -->
+  <text x="40" y="245" text-anchor="middle" fill="#64748b" font-size="12" font-weight="600" transform="rotate(-90,40,245)">PROFICIENCY %</text>
+
+  <!-- Y-axis grid lines and labels -->
+  <g font-size="11" fill="#64748b">
+    <text x="100" y="412" text-anchor="end">0%</text>
+    <line x1="110" y1="408" x2="1070" y2="408" stroke="#e2e8f0" stroke-width="1"/>
+
+    <text x="100" y="343" text-anchor="end">20%</text>
+    <line x1="110" y1="340" x2="1070" y2="340" stroke="#e2e8f0" stroke-width="1"/>
+
+    <text x="100" y="275" text-anchor="end">40%</text>
+    <line x1="110" y1="272" x2="1070" y2="272" stroke="#e2e8f0" stroke-width="1"/>
+
+    <text x="100" y="207" text-anchor="end">60%</text>
+    <line x1="110" y1="204" x2="1070" y2="204" stroke="#e2e8f0" stroke-width="1"/>
+
+    <text x="100" y="139" text-anchor="end">80%</text>
+    <line x1="110" y1="136" x2="1070" y2="136" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="8,4" opacity="0.5"/>
+
+    <text x="100" y="78" text-anchor="end">100%</text>
+    <line x1="110" y1="75" x2="1070" y2="75" stroke="#e2e8f0" stroke-width="1"/>
+  </g>
+
+  <!-- X-axis labels -->
+  <line x1="110" y1="408" x2="1070" y2="408" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="590" y="465" text-anchor="middle" fill="#64748b" font-size="12" font-weight="600">TIME (MONTHS)</text>
+  <g font-size="11" fill="#64748b">
+    <text x="110" y="428" text-anchor="middle">0</text>
+    <text x="210" y="428" text-anchor="middle">3</text>
+    <text x="310" y="428" text-anchor="middle">6</text>
+    <text x="410" y="428" text-anchor="middle">9</text>
+    <text x="510" y="428" text-anchor="middle">12</text>
+    <text x="610" y="428" text-anchor="middle">15</text>
+    <text x="710" y="428" text-anchor="middle">18</text>
+    <text x="810" y="428" text-anchor="middle">21</text>
+    <text x="910" y="428" text-anchor="middle">24</text>
+  </g>
+  <!-- X-axis tick marks -->
+  <g stroke="#94a3b8" stroke-width="1">
+    <line x1="110" y1="408" x2="110" y2="414"/>
+    <line x1="210" y1="408" x2="210" y2="414"/>
+    <line x1="310" y1="408" x2="310" y2="414"/>
+    <line x1="410" y1="408" x2="410" y2="414"/>
+    <line x1="510" y1="408" x2="510" y2="414"/>
+    <line x1="610" y1="408" x2="610" y2="414"/>
+    <line x1="710" y1="408" x2="710" y2="414"/>
+    <line x1="810" y1="408" x2="810" y2="414"/>
+    <line x1="910" y1="408" x2="910" y2="414"/>
+  </g>
+
+  <!-- Shaded "Knowledge Advantage" area between curves -->
+  <defs>
+    <linearGradient id="gapFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+  <!-- Area between: AI top edge then traditional bottom edge reversed -->
+  <path d="M110,405 C150,370 180,290 210,220 Q240,170 270,155 Q310,138 350,130 Q410,120 510,112 Q610,108 710,105 Q810,103 910,102
+           L910,102
+           L910,142 Q810,155 710,170 Q610,200 510,235 Q410,275 310,310 Q260,340 210,360 Q170,380 140,395 Z"
+        fill="url(#gapFill)"/>
+
+  <!-- "Knowledge Advantage" label in gap area -->
+  <text x="520" y="185" text-anchor="middle" fill="#10b981" font-size="11" font-weight="600" opacity="0.7">KNOWLEDGE</text>
+  <text x="520" y="199" text-anchor="middle" fill="#10b981" font-size="11" font-weight="600" opacity="0.7">ADVANTAGE</text>
+
+  <!-- Traditional curve (amber, gradual S-curve) -->
+  <!-- 0mo=3%, 3mo=12%, 6mo=22%, 9mo=35%, 12mo=48%, 15mo=60%, 18mo=72%, 21mo=80%, 24mo=85% -->
+  <path d="M110,398 C140,388 170,375 210,368 Q250,350 270,335 Q310,310 350,290 Q410,260 510,240 Q560,225 610,210 Q660,195 710,175 Q760,162 810,150 Q850,143 910,138"
+        fill="none" stroke="#f59e0b" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Traditional data points -->
+  <circle cx="110" cy="398" r="5" fill="#f59e0b" stroke="#ffffff" stroke-width="2"/>
+  <circle cx="210" cy="368" r="5" fill="#f59e0b" stroke="#ffffff" stroke-width="2"/>
+  <circle cx="310" cy="330" r="5" fill="#f59e0b" stroke="#ffffff" stroke-width="2"/>
+  <circle cx="410" cy="283" r="5" fill="#f59e0b" stroke="#ffffff" stroke-width="2"/>
+  <circle cx="510" cy="240" r="5" fill="#f59e0b" stroke="#ffffff" stroke-width="2"/>
+  <circle cx="610" cy="206" r="5" fill="#f59e0b" stroke="#ffffff" stroke-width="2"/>
+  <circle cx="710" cy="170" r="5" fill="#f59e0b" stroke="#ffffff" stroke-width="2"/>
+  <circle cx="810" cy="143" r="6" fill="#f59e0b" stroke="#ffffff" stroke-width="2.5"/>
+  <circle cx="910" cy="135" r="5" fill="#f59e0b" stroke="#ffffff" stroke-width="2"/>
+
+  <!-- 80% marker on traditional -->
+  <rect x="817" y="120" width="80" height="22" rx="4" fill="#fffbeb" stroke="#f59e0b" stroke-width="1"/>
+  <text x="857" y="135" text-anchor="middle" fill="#92400e" font-size="10" font-weight="700">80% at 21mo</text>
+
+  <!-- AI-Augmented curve (green, steep S-curve) -->
+  <!-- 0mo=3%, 3mo=55%, 6mo=82%, 9mo=90%, 12mo=93%, 15mo=94%, 18mo=95% -->
+  <path d="M110,398 Q145,340 180,270 Q200,230 230,190 Q260,160 310,140 Q360,125 410,118 Q460,112 510,108 Q610,105 710,103 Q810,102 910,101"
+        fill="none" stroke="#10b981" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- AI data points -->
+  <circle cx="110" cy="398" r="5" fill="#10b981" stroke="#ffffff" stroke-width="2"/>
+  <circle cx="210" cy="222" r="5" fill="#10b981" stroke="#ffffff" stroke-width="2"/>
+  <circle cx="310" cy="137" r="6" fill="#10b981" stroke="#ffffff" stroke-width="2.5"/>
+  <circle cx="410" cy="118" r="5" fill="#10b981" stroke="#ffffff" stroke-width="2"/>
+  <circle cx="510" cy="108" r="5" fill="#10b981" stroke="#ffffff" stroke-width="2"/>
+  <circle cx="610" cy="105" r="5" fill="#10b981" stroke="#ffffff" stroke-width="2"/>
+  <circle cx="710" cy="103" r="5" fill="#10b981" stroke="#ffffff" stroke-width="2"/>
+
+  <!-- 80% marker on AI curve -->
+  <rect x="252" y="114" width="72" height="22" rx="4" fill="#ecfdf5" stroke="#10b981" stroke-width="1"/>
+  <text x="288" y="129" text-anchor="middle" fill="#065f46" font-size="10" font-weight="700">80% at 6mo</text>
+
+  <!-- Gap annotation -->
+  <line x1="510" y1="240" x2="510" y2="108" stroke="#64748b" stroke-width="1" stroke-dasharray="4,3"/>
+  <rect x="525" y="155" width="100" height="38" rx="6" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="575" y="170" text-anchor="middle" fill="#1e293b" font-size="10" font-weight="700">35% gap</text>
+  <text x="575" y="184" text-anchor="middle" fill="#64748b" font-size="9">at 12 months</text>
+
+  <!-- Legend -->
+  <rect x="920" y="78" width="140" height="70" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="932" y1="100" x2="955" y2="100" stroke="#10b981" stroke-width="3" stroke-linecap="round"/>
+  <text x="962" y="104" fill="#1e293b" font-size="10">AI-Augmented</text>
+  <line x1="932" y1="120" x2="955" y2="120" stroke="#f59e0b" stroke-width="3" stroke-linecap="round"/>
+  <text x="962" y="124" fill="#1e293b" font-size="10">Traditional</text>
+  <rect x="932" y="133" width="14" height="10" rx="2" fill="#10b981" opacity="0.15"/>
+  <text x="952" y="142" fill="#64748b" font-size="9">Knowledge gap</text>
+
+  <!-- Bottom insight bar -->
+  <rect x="110" y="478" width="960" height="2" rx="1" fill="#10b981" opacity="0.3"/>
+  <text x="590" y="495" text-anchor="middle" fill="#10b981" font-size="12" font-weight="600">AI-augmented new hires reach 80% proficiency 3.5x faster than traditional training</text>
+</svg>

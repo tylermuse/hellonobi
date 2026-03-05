@@ -1,0 +1,80 @@
+<svg viewBox="0 0 1200 500" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, sans-serif">
+  <rect width="1200" height="500" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="600" y="38" text-anchor="middle" font-size="22" fill="#1e293b" font-weight="700">Before &amp; After AI Implementation</text>
+  <text x="600" y="58" text-anchor="middle" font-size="13" fill="#64748b">Measurable impact across key distribution metrics</text>
+
+  <!-- Table header -->
+  <rect x="80" y="80" width="340" height="44" rx="6" fill="#f8fafc"/>
+  <text x="250" y="107" text-anchor="middle" font-size="14" fill="#475569" font-weight="700">METRIC</text>
+
+  <rect x="440" y="80" width="240" height="44" rx="6" fill="#f1f5f9"/>
+  <text x="560" y="107" text-anchor="middle" font-size="14" fill="#64748b" font-weight="700">Before AI</text>
+
+  <!-- Arrow column -->
+  <rect x="700" y="80" width="80" height="44" rx="6" fill="#f8fafc"/>
+
+  <rect x="800" y="80" width="320" height="44" rx="6" fill="#f0fdf4"/>
+  <text x="960" y="107" text-anchor="middle" font-size="14" fill="#16a34a" font-weight="700">With AI</text>
+
+  <!-- Row 1 - Part Lookup -->
+  <rect x="80" y="134" width="1040" height="60" rx="0" fill="white"/>
+  <line x1="80" y1="194" x2="1120" y2="194" stroke="#f1f5f9" stroke-width="1"/>
+  <text x="100" y="170" font-size="15" fill="#1e293b" font-weight="600">Part Lookup Time</text>
+  <text x="100" y="186" font-size="11" fill="#94a3b8">Average time to identify correct part</text>
+  <text x="560" y="172" text-anchor="middle" font-size="22" fill="#64748b" font-weight="700">5 min</text>
+  <!-- Green arrow -->
+  <polygon points="720,164 760,164 740,150" fill="#22c55e" opacity="0.3"/>
+  <polygon points="725,164 755,164 740,155" fill="#22c55e"/>
+  <text x="960" y="172" text-anchor="middle" font-size="22" fill="#16a34a" font-weight="700">30 sec</text>
+  <rect x="1040" y="155" width="60" height="22" rx="11" fill="#dcfce7"/>
+  <text x="1070" y="170" text-anchor="middle" font-size="10" fill="#16a34a" font-weight="700">-90%</text>
+
+  <!-- Row 2 - Forecast Accuracy (alt bg) -->
+  <rect x="80" y="194" width="1040" height="60" rx="0" fill="#fafbfc"/>
+  <line x1="80" y1="254" x2="1120" y2="254" stroke="#f1f5f9" stroke-width="1"/>
+  <text x="100" y="230" font-size="15" fill="#1e293b" font-weight="600">Forecast Accuracy</text>
+  <text x="100" y="246" font-size="11" fill="#94a3b8">Demand prediction precision</text>
+  <text x="560" y="232" text-anchor="middle" font-size="22" fill="#64748b" font-weight="700">70%</text>
+  <polygon points="725,224 755,224 740,215" fill="#22c55e"/>
+  <text x="960" y="232" text-anchor="middle" font-size="22" fill="#16a34a" font-weight="700">92%</text>
+  <rect x="1040" y="215" width="60" height="22" rx="11" fill="#dcfce7"/>
+  <text x="1070" y="230" text-anchor="middle" font-size="10" fill="#16a34a" font-weight="700">+31%</text>
+
+  <!-- Row 3 - Overstock Rate -->
+  <rect x="80" y="254" width="1040" height="60" rx="0" fill="white"/>
+  <line x1="80" y1="314" x2="1120" y2="314" stroke="#f1f5f9" stroke-width="1"/>
+  <text x="100" y="290" font-size="15" fill="#1e293b" font-weight="600">Overstock Rate</text>
+  <text x="100" y="306" font-size="11" fill="#94a3b8">Excess inventory percentage</text>
+  <text x="560" y="292" text-anchor="middle" font-size="22" fill="#64748b" font-weight="700">15%</text>
+  <polygon points="725,284 755,284 740,275" fill="#22c55e"/>
+  <text x="960" y="292" text-anchor="middle" font-size="22" fill="#16a34a" font-weight="700">5%</text>
+  <rect x="1040" y="275" width="60" height="22" rx="11" fill="#dcfce7"/>
+  <text x="1070" y="290" text-anchor="middle" font-size="10" fill="#16a34a" font-weight="700">-67%</text>
+
+  <!-- Row 4 - Pricing Updates (alt bg) -->
+  <rect x="80" y="314" width="1040" height="60" rx="0" fill="#fafbfc"/>
+  <line x1="80" y1="374" x2="1120" y2="374" stroke="#f1f5f9" stroke-width="1"/>
+  <text x="100" y="350" font-size="15" fill="#1e293b" font-weight="600">Pricing Updates</text>
+  <text x="100" y="366" font-size="11" fill="#94a3b8">Frequency of price adjustments</text>
+  <text x="560" y="352" text-anchor="middle" font-size="22" fill="#64748b" font-weight="700">Weekly</text>
+  <polygon points="725,344 755,344 740,335" fill="#22c55e"/>
+  <text x="960" y="352" text-anchor="middle" font-size="22" fill="#16a34a" font-weight="700">Real-time</text>
+  <rect x="1040" y="335" width="60" height="22" rx="11" fill="#dcfce7"/>
+  <text x="1070" y="350" text-anchor="middle" font-size="10" fill="#16a34a" font-weight="700">Live</text>
+
+  <!-- Row 5 - Customer Wait -->
+  <rect x="80" y="374" width="1040" height="60" rx="0" fill="white"/>
+  <line x1="80" y1="434" x2="1120" y2="434" stroke="#f1f5f9" stroke-width="1"/>
+  <text x="100" y="410" font-size="15" fill="#1e293b" font-weight="600">Customer Wait</text>
+  <text x="100" y="426" font-size="11" fill="#94a3b8">Average counter service time</text>
+  <text x="560" y="412" text-anchor="middle" font-size="22" fill="#64748b" font-weight="700">8 min</text>
+  <polygon points="725,404 755,404 740,395" fill="#22c55e"/>
+  <text x="960" y="412" text-anchor="middle" font-size="22" fill="#16a34a" font-weight="700">45 sec</text>
+  <rect x="1040" y="395" width="60" height="22" rx="11" fill="#dcfce7"/>
+  <text x="1070" y="410" text-anchor="middle" font-size="10" fill="#16a34a" font-weight="700">-91%</text>
+
+  <!-- Footer -->
+  <text x="600" y="470" text-anchor="middle" font-size="11" fill="#94a3b8">Based on reported metrics from AI-enabled distributors</text>
+</svg>

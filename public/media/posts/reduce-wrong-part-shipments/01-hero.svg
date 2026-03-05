@@ -1,0 +1,187 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" font-family="system-ui, -apple-system, sans-serif">
+  <defs>
+    <filter id="costShadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="6" flood-color="#94a3b8" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="redIntensity" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fecaca"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="500" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="600" y="40" text-anchor="middle" fill="#1e293b" font-size="24" font-weight="700">The True Cost of a Wrong Part Shipment</text>
+  <text x="600" y="62" text-anchor="middle" fill="#64748b" font-size="13">Every mis-ship triggers a costly cascade that compounds through the order lifecycle</text>
+
+  <!-- Cascade: 5 boxes left to right, growing in size -->
+
+  <!-- Box 1: Wrong Part -->
+  <g filter="url(#costShadow)">
+    <rect x="32" y="100" width="180" height="220" rx="14" fill="#ffffff" stroke="#fecaca" stroke-width="1.5"/>
+    <rect x="32" y="100" width="180" height="6" rx="3" fill="#fca5a5"/>
+    <text x="122" y="134" text-anchor="middle" fill="#dc2626" font-size="11" font-weight="700" letter-spacing="0.5">WRONG PART SENT</text>
+
+    <!-- Package X icon -->
+    <rect x="92" y="152" width="60" height="48" rx="6" fill="#fef2f2" stroke="#fecaca" stroke-width="1.5"/>
+    <line x1="105" y1="165" x2="139" y2="189" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="139" y1="165" x2="105" y2="189" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round"/>
+
+    <text x="122" y="228" text-anchor="middle" fill="#1e293b" font-size="28" font-weight="800">$0</text>
+    <text x="122" y="248" text-anchor="middle" fill="#64748b" font-size="11">Direct cost (yet)</text>
+    <text x="122" y="304" text-anchor="middle" fill="#94a3b8" font-size="10">The error begins</text>
+  </g>
+
+  <!-- Arrow 1 -->
+  <g transform="translate(216, 200)">
+    <line x1="0" y1="0" x2="24" y2="0" stroke="#fca5a5" stroke-width="2"/>
+    <polygon points="22,-5 32,0 22,5" fill="#fca5a5"/>
+  </g>
+
+  <!-- Box 2: Return Processing -->
+  <g filter="url(#costShadow)">
+    <rect x="252" y="90" width="192" height="230" rx="14" fill="#ffffff" stroke="#fca5a5" stroke-width="1.5"/>
+    <rect x="252" y="90" width="192" height="6" rx="3" fill="#f87171"/>
+    <text x="348" y="124" text-anchor="middle" fill="#dc2626" font-size="11" font-weight="700" letter-spacing="0.5">RETURN PROCESSING</text>
+
+    <!-- Line items -->
+    <g transform="translate(272, 142)">
+      <rect x="0" y="0" width="152" height="28" rx="6" fill="#fef2f2"/>
+      <text x="8" y="19" fill="#64748b" font-size="11">Return shipping</text>
+      <text x="144" y="19" text-anchor="end" fill="#dc2626" font-size="11" font-weight="600">$15</text>
+
+      <rect x="0" y="34" width="152" height="28" rx="6" fill="#fef2f2"/>
+      <text x="8" y="53" fill="#64748b" font-size="11">Staff time (30 min)</text>
+      <text x="144" y="53" text-anchor="end" fill="#dc2626" font-size="11" font-weight="600">$25</text>
+
+      <rect x="0" y="68" width="152" height="28" rx="6" fill="#fef2f2"/>
+      <text x="8" y="87" fill="#64748b" font-size="11">Restocking labor</text>
+      <text x="144" y="87" text-anchor="end" fill="#dc2626" font-size="11" font-weight="600">$12</text>
+    </g>
+
+    <text x="348" y="280" text-anchor="middle" fill="#dc2626" font-size="24" font-weight="800">$52</text>
+    <text x="348" y="300" text-anchor="middle" fill="#64748b" font-size="10">subtotal</text>
+  </g>
+
+  <!-- Arrow 2 -->
+  <g transform="translate(448, 200)">
+    <line x1="0" y1="0" x2="24" y2="0" stroke="#f87171" stroke-width="2"/>
+    <polygon points="22,-5 32,0 22,5" fill="#f87171"/>
+  </g>
+
+  <!-- Box 3: Reshipment -->
+  <g filter="url(#costShadow)">
+    <rect x="484" y="80" width="192" height="240" rx="14" fill="#ffffff" stroke="#f87171" stroke-width="1.5"/>
+    <rect x="484" y="80" width="192" height="6" rx="3" fill="#ef4444"/>
+    <text x="580" y="114" text-anchor="middle" fill="#dc2626" font-size="11" font-weight="700" letter-spacing="0.5">RESHIPMENT</text>
+
+    <g transform="translate(504, 132)">
+      <rect x="0" y="0" width="152" height="28" rx="6" fill="#fef2f2"/>
+      <text x="8" y="19" fill="#64748b" font-size="11">Expedited shipping</text>
+      <text x="144" y="19" text-anchor="end" fill="#dc2626" font-size="11" font-weight="600">$35</text>
+
+      <rect x="0" y="34" width="152" height="28" rx="6" fill="#fef2f2"/>
+      <text x="8" y="53" fill="#64748b" font-size="11">Re-pick and pack</text>
+      <text x="144" y="53" text-anchor="end" fill="#dc2626" font-size="11" font-weight="600">$18</text>
+
+      <rect x="0" y="68" width="152" height="28" rx="6" fill="#fef2f2"/>
+      <text x="8" y="87" fill="#64748b" font-size="11">Quality check</text>
+      <text x="144" y="87" text-anchor="end" fill="#dc2626" font-size="11" font-weight="600">$10</text>
+    </g>
+
+    <text x="580" y="280" text-anchor="middle" fill="#dc2626" font-size="24" font-weight="800">$63</text>
+    <text x="580" y="300" text-anchor="middle" fill="#64748b" font-size="10">subtotal</text>
+  </g>
+
+  <!-- Arrow 3 -->
+  <g transform="translate(680, 200)">
+    <line x1="0" y1="0" x2="24" y2="0" stroke="#ef4444" stroke-width="2"/>
+    <polygon points="22,-5 32,0 22,5" fill="#ef4444"/>
+  </g>
+
+  <!-- Box 4: Customer Time -->
+  <g filter="url(#costShadow)">
+    <rect x="708" y="80" width="208" height="240" rx="14" fill="#ffffff" stroke="#ef4444" stroke-width="1.5"/>
+    <rect x="708" y="80" width="208" height="6" rx="3" fill="#dc2626"/>
+    <text x="812" y="114" text-anchor="middle" fill="#dc2626" font-size="11" font-weight="700" letter-spacing="0.5">CUSTOMER IMPACT</text>
+
+    <g transform="translate(728, 132)">
+      <rect x="0" y="0" width="168" height="28" rx="6" fill="#fef2f2"/>
+      <text x="8" y="19" fill="#64748b" font-size="11">Goodwill credit</text>
+      <text x="160" y="19" text-anchor="end" fill="#dc2626" font-size="11" font-weight="600">$25</text>
+
+      <rect x="0" y="34" width="168" height="28" rx="6" fill="#fef2f2"/>
+      <text x="8" y="53" fill="#64748b" font-size="11">Account mgr time</text>
+      <text x="160" y="53" text-anchor="end" fill="#dc2626" font-size="11" font-weight="600">$40</text>
+
+      <rect x="0" y="68" width="168" height="28" rx="6" fill="#fef2f2"/>
+      <text x="8" y="87" fill="#64748b" font-size="11">Job site delay cost</text>
+      <text x="160" y="87" text-anchor="end" fill="#dc2626" font-size="11" font-weight="600">$200</text>
+    </g>
+
+    <text x="812" y="280" text-anchor="middle" fill="#dc2626" font-size="24" font-weight="800">$265</text>
+    <text x="812" y="300" text-anchor="middle" fill="#64748b" font-size="10">subtotal</text>
+  </g>
+
+  <!-- Arrow 4 -->
+  <g transform="translate(920, 200)">
+    <line x1="0" y1="0" x2="24" y2="0" stroke="#dc2626" stroke-width="2"/>
+    <polygon points="22,-5 32,0 22,5" fill="#dc2626"/>
+  </g>
+
+  <!-- Box 5: Churn Risk (biggest) -->
+  <g filter="url(#costShadow)">
+    <rect x="948" y="80" width="220" height="240" rx="14" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+    <rect x="948" y="80" width="220" height="6" rx="3" fill="#991b1b"/>
+    <text x="1058" y="114" text-anchor="middle" fill="#991b1b" font-size="11" font-weight="700" letter-spacing="0.5">RISK OF CHURN</text>
+
+    <g transform="translate(968, 132)">
+      <rect x="0" y="0" width="180" height="28" rx="6" fill="#fef2f2"/>
+      <text x="8" y="19" fill="#64748b" font-size="11">Customer churn risk</text>
+      <text x="172" y="19" text-anchor="end" fill="#991b1b" font-size="11" font-weight="600">$2,000+</text>
+
+      <rect x="0" y="34" width="180" height="28" rx="6" fill="#fef2f2"/>
+      <text x="8" y="53" fill="#64748b" font-size="11">Referral damage</text>
+      <text x="172" y="53" text-anchor="end" fill="#991b1b" font-size="11" font-weight="600">$500+</text>
+    </g>
+
+    <text x="1058" y="268" text-anchor="middle" fill="#991b1b" font-size="28" font-weight="800">$2,500+</text>
+    <text x="1058" y="290" text-anchor="middle" fill="#64748b" font-size="10">lifetime value at risk</text>
+  </g>
+
+  <!-- TOTAL BAR at bottom -->
+  <g filter="url(#costShadow)">
+    <rect x="60" y="350" width="1080" height="56" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+    <rect x="60" y="350" width="1080" height="4" rx="2" fill="url(#redIntensity)"/>
+
+    <text x="100" y="385" fill="#475569" font-size="12" font-weight="600">TOTAL COST PER INCIDENT:</text>
+
+    <text x="340" y="385" fill="#dc2626" font-size="14" font-weight="700">$52</text>
+    <text x="380" y="385" fill="#94a3b8" font-size="14">+</text>
+    <text x="410" y="385" fill="#dc2626" font-size="14" font-weight="700">$63</text>
+    <text x="450" y="385" fill="#94a3b8" font-size="14">+</text>
+    <text x="484" y="385" fill="#dc2626" font-size="14" font-weight="700">$265</text>
+    <text x="530" y="385" fill="#94a3b8" font-size="14">=</text>
+
+    <rect x="556" y="362" width="120" height="36" rx="18" fill="#fef2f2" stroke="#fecaca" stroke-width="1.5"/>
+    <text x="616" y="386" text-anchor="middle" fill="#dc2626" font-size="20" font-weight="800">$380+</text>
+
+    <text x="698" y="380" fill="#475569" font-size="12">direct cost per wrong shipment</text>
+    <text x="698" y="396" fill="#94a3b8" font-size="11">+ $2,500+ in churn risk</text>
+  </g>
+
+  <!-- Bottom stats row -->
+  <rect x="60" y="424" width="340" height="56" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="230" y="448" text-anchor="middle" fill="#475569" font-size="11" font-weight="500">Industry average wrong-ship rate</text>
+  <text x="230" y="468" text-anchor="middle" fill="#dc2626" font-size="16" font-weight="700">2-5% of all orders</text>
+
+  <rect x="420" y="424" width="340" height="56" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="590" y="448" text-anchor="middle" fill="#475569" font-size="11" font-weight="500">Annual cost for mid-size distributor</text>
+  <text x="590" y="468" text-anchor="middle" fill="#dc2626" font-size="16" font-weight="700">$150K - $500K</text>
+
+  <rect x="780" y="424" width="360" height="56" rx="12" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+  <text x="960" y="448" text-anchor="middle" fill="#475569" font-size="11" font-weight="500">AI-assisted error reduction</text>
+  <text x="960" y="468" text-anchor="middle" fill="#16a34a" font-size="16" font-weight="700">65-80% fewer wrong shipments</text>
+</svg>

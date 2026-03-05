@@ -1,0 +1,168 @@
+export const meta = {
+  title: "How AI Part Identification Works for Wholesale Distributors",
+  slug: "how-ai-part-identification-works",
+  date: "2026-03-14",
+  publishedAt: "2026-03-14",
+  description: "Learn how AI interprets vague customer requests, searches catalog data, and returns verified SKUs for wholesale distributors.",
+  excerpt: "Learn how AI interprets vague customer requests, searches catalog data, and returns verified SKUs for wholesale distributors.",
+  tags: ["AI", "part identification", "wholesale distribution", "technology"],
+  author: "Nobi Team",
+  heroImage: "/media/posts/how-ai-part-identification-works/01-hero.svg",
+  featured: false,
+  draft: false,
+  faqItems: [
+    {
+      question: "How does AI part identification differ from keyword search?",
+      answer: "Keyword search requires exact matches on part numbers, brand names, or catalog descriptions. AI part identification understands the intent behind a request, so a customer can describe a part using trade language, slang, or vague physical descriptions and still get the right SKU. It interprets context rather than just matching text strings.",
+    },
+    {
+      question: "Does AI part identification work with our existing ERP or catalog system?",
+      answer: "Yes. AI copilots like Nobi integrate with your existing catalog and inventory data. They don't replace your ERP — they sit on top of it and make the data more accessible to your counter staff and inside sales team.",
+    },
+    {
+      question: "How accurate is AI at identifying parts from vague descriptions?",
+      answer: "Accuracy depends on the quality of your catalog data and how well the AI has been trained on your product domain. In practice, AI copilots consistently outperform keyword search on vague or incomplete requests because they can cross-reference multiple data points — size, material, application, manufacturer — to narrow down the right part.",
+    },
+    {
+      question: "Will AI replace our experienced counterpeople?",
+      answer: "No. AI is a tool that supports your team, not a replacement. Your experienced people still bring judgment, customer relationships, and hands-on knowledge that AI can't replicate. What AI does is make your newer employees more effective and reduce the load on your veterans.",
+    },
+    {
+      question: "What happens when the AI can't find a match?",
+      answer: "A well-built AI copilot will tell the user when it's uncertain rather than guessing. It can suggest the closest alternatives, flag the request for review, or recommend that the employee consult a specialist. Transparency about confidence levels is a key feature.",
+    },
+    {
+      question: "How long does it take to implement AI part identification?",
+      answer: "Implementation timelines vary depending on the complexity of your catalog and the integration points with your existing systems. Many distributors are operational within weeks, not months. The heaviest lift is usually getting your catalog data into a clean, structured format.",
+    },
+  ],
+};
+
+Every counterperson in wholesale distribution has had a call like this: a contractor phones in and says, "I need the brass thing that goes on the water heater — the one with the threads on both ends." No part number. No manufacturer. No model. Just a description that could match a dozen items in your catalog.
+
+Your veteran employee knows exactly what the customer means. They've seen it a hundred times. They pull up the right SKU in thirty seconds.
+
+But what happens when that veteran is out sick? Or when the new hire takes the call? They type "brass water heater" into the ERP and get either nothing or a wall of loosely related results. The customer waits. The line backs up. Sometimes the wrong part ships.
+
+This is the problem AI part identification solves. Not by replacing your best people, but by giving everyone on your team the ability to translate vague requests into verified part numbers.
+
+## Why Keyword Search Falls Short
+
+Traditional search in distribution works the way it always has: you type words, the system looks for those exact words in your catalog, and it returns whatever matches. If the customer gives you a part number, it works fine. If they describe what they need in plain language, it breaks down fast.
+
+Here's why. Your catalog might list a product as "3/4 in. Brass Dielectric Union, FIP x MIP." The customer calls it "the brass fitting for the hot water heater line." A keyword search engine sees zero overlap between those phrases. No match. No result.
+
+This is not a flaw in your catalog data. It's a fundamental limitation of how keyword search works. It matches characters, not concepts. It has no understanding of what a part actually is, what it does, or how people in the trades talk about it.
+
+According to [McKinsey research on digital tools in B2B distribution](https://www.mckinsey.com/industries/advanced-electronics/our-insights/how-industrial-distributors-can-win-in-a-digital-world), the gap between how customers describe what they need and how products are cataloged is one of the biggest friction points in the ordering process.
+
+## How AI Interprets a Vague Request
+
+AI part identification works fundamentally differently from keyword search. Instead of matching text strings, it processes the meaning behind a request. Here's what happens step by step when a customer says, "I need the brass thing for the water heater."
+
+<img src="/media/posts/how-ai-part-identification-works/01-hero.svg" alt="Diagram showing how AI interprets a vague customer request by analyzing material, application, and context to identify the correct part" className="w-full rounded-2xl border border-black/10 dark:border-white/10 shadow-sm" loading="lazy" />
+
+### Step 1: Understanding the Request
+
+The AI uses [natural language processing](https://en.wikipedia.org/wiki/Natural_language_processing) to break the request into components it can work with. From "I need the brass thing for the water heater," it extracts:
+
+- **Material**: Brass
+- **Application**: Water heater
+- **Part type**: Fitting or connector (inferred from "thing" plus the application context)
+- **Intent**: The customer needs a specific component, not a water heater itself
+
+This is more than synonym matching. The AI understands that "brass thing" in the context of water heaters most likely refers to a fitting, union, or connector — not a brass decorative item or a brass valve for an unrelated system.
+
+### Step 2: Searching Your Catalog
+
+With those extracted attributes, the AI searches your catalog using a technique called semantic search. Rather than looking for exact keyword matches, it uses mathematical representations of meaning — called [vector embeddings](https://en.wikipedia.org/wiki/Word_embedding) — to find products that are conceptually related to the request.
+
+This means it can connect "brass thing for the water heater" to catalog entries like:
+
+- 3/4 in. Brass Dielectric Union, FIP x MIP
+- 1/2 in. Brass Water Heater Connector
+- 3/4 in. Push-Fit Brass Water Heater Supply Line
+
+It ranks these by relevance, weighing how closely each product matches the combination of material, application, and part type.
+
+### Step 3: Cross-Referencing Manufacturers
+
+In distribution, the same part often exists across multiple manufacturers. A brass dielectric union from Watts, Webstone, and BrassCraft might all fit the same application but carry different part numbers in your system.
+
+The AI cross-references across manufacturers, so if one brand is out of stock, it can immediately suggest the equivalent from another supplier. This is something that would take an experienced counterperson a few minutes and a new employee much longer.
+
+### Step 4: Applying Context and Constraints
+
+If the AI knows the customer typically orders residential plumbing supplies, it weighs residential products higher. If the customer specified a size earlier in the conversation — "3/4 inch line" — the AI carries that context forward. If your branch stocks certain brands preferentially, the AI factors that in too.
+
+This contextual awareness is what separates AI part identification from a slightly better search box. It's not just finding parts that match a description. It's finding the right part for this customer, from your catalog, right now.
+
+<img src="/media/posts/how-ai-part-identification-works/02-query-to-sku.svg" alt="Pipeline diagram showing the translation from a customer's natural language request through NLP processing, semantic search, cross-referencing, and contextual filtering to arrive at a verified SKU" className="w-full rounded-2xl border border-black/10 dark:border-white/10 shadow-sm" loading="lazy" />
+
+### Step 5: Returning a Verified SKU
+
+The final output is not a list of possible matches for the employee to sort through. It's a ranked set of results with the most likely correct part at the top, along with key details: part number, manufacturer, price, availability, and any relevant specifications. The counterperson confirms the selection with the customer, and the order moves forward.
+
+## The Technology Behind It (Without the Jargon)
+
+You don't need to understand the math to use AI part identification, but it helps to know what's happening at a high level so you can evaluate solutions.
+
+**Natural Language Processing (NLP)** is what lets the AI read and interpret human language. It handles slang, abbreviations, trade terms, and incomplete sentences. When a plumber says "I need a PRV," NLP figures out that means a pressure reducing valve.
+
+**Embeddings** are how the AI represents meaning numerically. Every product in your catalog and every customer request gets converted into a set of numbers that capture what it means. Products and requests that are semantically similar end up close together in this numerical space, which is how the AI finds matches even when the words are completely different.
+
+**Catalog integration** is what grounds the AI in your actual inventory. Without it, the AI is just a language model making guesses. With it, every result is tied to a real product in your system — with a real SKU, a real price, and real availability.
+
+The [National Association of Wholesaler-Distributors](https://www.naw.org/) has identified catalog data quality and accessibility as a key competitive differentiator for distributors investing in digital tools. AI part identification is one of the most direct ways to unlock the value sitting in your catalog data.
+
+## What This Means for Your Team
+
+The practical impact shows up in three areas.
+
+**New employees become productive faster.** Instead of spending 12 to 18 months learning your catalog by osmosis, a new hire can lean on the AI copilot to handle the requests they haven't seen before. They still learn over time, but they're useful from day one. For more on the challenge of getting new hires up to speed, see our article on [the real cost of employee turnover in wholesale distribution](/blog/employee-turnover-cost-wholesale-distribution).
+
+**Veteran employees handle more volume.** Your experienced people spend less time fielding basic identification questions from newer team members and more time on the complex orders and customer relationships that actually require their expertise.
+
+**Order accuracy improves.** When the AI surfaces a verified SKU instead of leaving the counterperson to scroll through search results and guess, [fewer wrong parts ship](/blog/reduce-wrong-part-shipments). That means fewer returns, fewer reshipments, and fewer frustrated customers.
+
+## AI Part Identification vs. Just Googling It
+
+Some distributors wonder why they can't just let employees Google part numbers or use a manufacturer's website. The answer comes down to three things: speed, accuracy, and catalog specificity.
+
+Google doesn't know what's in your warehouse. It doesn't know your pricing. It doesn't know which manufacturer your branch prefers or which products are on allocation. An AI copilot trained on your catalog does.
+
+A general-purpose search engine might help an employee identify what type of part the customer needs. But it won't give them your SKU, your price, or your availability. That last mile — from "I think it's a dielectric union" to "it's SKU 47832, we have 14 in stock, priced at $12.50" — is where AI part identification delivers real operational value.
+
+## Getting Started
+
+If your team handles vague customer requests daily — and in distribution, that's essentially every counter and phone interaction — then AI part identification is worth evaluating. The question isn't whether the technology works. It's whether your catalog data is ready for it and whether the solution integrates cleanly with your existing systems.
+
+Start by looking at your most common failure points: the requests that lead to callbacks, wrong shipments, or lost orders. Those are the interactions where AI delivers the fastest ROI.
+
+**[See how Nobi works →](/)**
+
+## Frequently Asked Questions
+
+### How does AI part identification differ from keyword search?
+
+Keyword search requires exact matches on part numbers, brand names, or catalog descriptions. AI part identification understands the intent behind a request, so a customer can describe a part using trade language, slang, or vague physical descriptions and still get the right SKU. It interprets context rather than just matching text strings.
+
+### Does AI part identification work with our existing ERP or catalog system?
+
+Yes. AI copilots like Nobi integrate with your existing catalog and inventory data. They don't replace your ERP — they sit on top of it and make the data more accessible to your counter staff and inside sales team.
+
+### How accurate is AI at identifying parts from vague descriptions?
+
+Accuracy depends on the quality of your catalog data and how well the AI has been trained on your product domain. In practice, AI copilots consistently outperform keyword search on vague or incomplete requests because they can cross-reference multiple data points — size, material, application, manufacturer — to narrow down the right part.
+
+### Will AI replace our experienced counterpeople?
+
+No. AI is a tool that supports your team, not a replacement. Your experienced people still bring judgment, customer relationships, and hands-on knowledge that AI can't replicate. What AI does is make your newer employees more effective and reduce the load on your veterans.
+
+### What happens when the AI can't find a match?
+
+A well-built AI copilot will tell the user when it's uncertain rather than guessing. It can suggest the closest alternatives, flag the request for review, or recommend that the employee consult a specialist. Transparency about confidence levels is a key feature.
+
+### How long does it take to implement AI part identification?
+
+Implementation timelines vary depending on the complexity of your catalog and the integration points with your existing systems. Many distributors are operational within weeks, not months. The heaviest lift is usually getting your catalog data into a clean, structured format.

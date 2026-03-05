@@ -1,0 +1,107 @@
+<svg viewBox="0 0 1200 500" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, sans-serif">
+  <!-- White background -->
+  <rect width="1200" height="500" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="600" y="38" text-anchor="middle" font-size="20" font-weight="700" fill="#1e293b">Different Tools for Different Channels</text>
+  <text x="600" y="58" text-anchor="middle" font-size="12" fill="#64748b">Why customer-facing search and employee-facing AI serve different needs</text>
+
+  <!-- LEFT ZONE: Customer-Facing -->
+  <rect x="40" y="80" width="530" height="390" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="305" y="110" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">Customer-Facing (Online)</text>
+  <text x="305" y="128" text-anchor="middle" font-size="11" fill="#2563eb" font-weight="500">HawkSearch, Algolia, Coveo</text>
+
+  <!-- Website mockup -->
+  <rect x="80" y="145" width="450" height="280" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <!-- Browser bar -->
+  <rect x="80" y="145" width="450" height="28" rx="8" fill="#f1f5f9"/>
+  <rect x="80" y="165" width="450" height="8" fill="#f1f5f9"/>
+  <circle cx="98" cy="159" r="4" fill="#fca5a5"/>
+  <circle cx="112" cy="159" r="4" fill="#fcd34d"/>
+  <circle cx="126" cy="159" r="4" fill="#86efac"/>
+  <rect x="180" y="152" width="200" height="14" rx="7" fill="#ffffff" stroke="#e2e8f0" stroke-width="0.5"/>
+  <text x="280" y="163" text-anchor="middle" font-size="7" fill="#94a3b8">www.distributor-store.com</text>
+
+  <!-- Search bar -->
+  <rect x="110" y="185" width="390" height="32" rx="6" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="130" y="206" font-size="11" fill="#94a3b8">Search products...</text>
+  <rect x="460" y="189" width="32" height="24" rx="4" fill="#2563eb"/>
+  <text x="476" y="205" text-anchor="middle" font-size="10" fill="#ffffff">Go</text>
+
+  <!-- Filter sidebar -->
+  <rect x="110" y="230" width="100" height="175" rx="4" fill="#f8fafc" stroke="#e2e8f0" stroke-width="0.5"/>
+  <text x="120" y="248" font-size="9" font-weight="600" fill="#475569">FILTERS</text>
+  <rect x="120" y="256" width="8" height="8" rx="1" fill="#ffffff" stroke="#94a3b8" stroke-width="0.5"/>
+  <text x="134" y="264" font-size="8" fill="#64748b">Brass</text>
+  <rect x="120" y="270" width="8" height="8" rx="1" fill="#2563eb" stroke="#2563eb" stroke-width="0.5"/>
+  <text x="134" y="278" font-size="8" fill="#64748b">1/2 inch</text>
+  <rect x="120" y="284" width="8" height="8" rx="1" fill="#ffffff" stroke="#94a3b8" stroke-width="0.5"/>
+  <text x="134" y="292" font-size="8" fill="#64748b">Ball Valve</text>
+  <text x="120" y="315" font-size="9" font-weight="600" fill="#475569">BRAND</text>
+  <rect x="120" y="323" width="8" height="8" rx="1" fill="#2563eb" stroke="#2563eb" stroke-width="0.5"/>
+  <text x="134" y="331" font-size="8" fill="#64748b">Watts</text>
+  <rect x="120" y="337" width="8" height="8" rx="1" fill="#ffffff" stroke="#94a3b8" stroke-width="0.5"/>
+  <text x="134" y="345" font-size="8" fill="#64748b">Apollo</text>
+
+  <!-- Product grid -->
+  <rect x="222" y="230" width="110" height="85" rx="4" fill="#f8fafc" stroke="#e2e8f0" stroke-width="0.5"/>
+  <rect x="232" y="240" width="90" height="40" rx="2" fill="#e2e8f0"/>
+  <text x="277" y="295" text-anchor="middle" font-size="7" fill="#475569">Brass Ball Valve</text>
+  <text x="277" y="308" text-anchor="middle" font-size="8" font-weight="600" fill="#2563eb">$24.99</text>
+
+  <rect x="342" y="230" width="110" height="85" rx="4" fill="#f8fafc" stroke="#e2e8f0" stroke-width="0.5"/>
+  <rect x="352" y="240" width="90" height="40" rx="2" fill="#e2e8f0"/>
+  <text x="397" y="295" text-anchor="middle" font-size="7" fill="#475569">Gate Valve 1/2"</text>
+  <text x="397" y="308" text-anchor="middle" font-size="8" font-weight="600" fill="#2563eb">$18.50</text>
+
+  <rect x="222" y="325" width="110" height="85" rx="4" fill="#f8fafc" stroke="#e2e8f0" stroke-width="0.5"/>
+  <rect x="232" y="335" width="90" height="40" rx="2" fill="#e2e8f0"/>
+  <text x="277" y="390" text-anchor="middle" font-size="7" fill="#475569">Check Valve 1/2"</text>
+  <text x="277" y="403" text-anchor="middle" font-size="8" font-weight="600" fill="#2563eb">$31.75</text>
+
+  <rect x="342" y="325" width="110" height="85" rx="4" fill="#f8fafc" stroke="#e2e8f0" stroke-width="0.5"/>
+  <rect x="352" y="335" width="90" height="40" rx="2" fill="#e2e8f0"/>
+  <text x="397" y="390" text-anchor="middle" font-size="7" fill="#475569">Butterfly Valve</text>
+  <text x="397" y="403" text-anchor="middle" font-size="8" font-weight="600" fill="#2563eb">$42.00</text>
+
+  <!-- Dotted divider -->
+  <line x1="600" y1="85" x2="600" y2="465" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="6,4"/>
+
+  <!-- RIGHT ZONE: Employee-Facing -->
+  <rect x="630" y="80" width="530" height="390" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="895" y="110" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">Employee-Facing (Counter/Phone)</text>
+  <text x="895" y="128" text-anchor="middle" font-size="11" fill="#2563eb" font-weight="500">AI Copilot (Nobi)</text>
+
+  <!-- Chat interface mockup -->
+  <rect x="680" y="145" width="430" height="280" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+  <!-- Chat header -->
+  <rect x="680" y="145" width="430" height="32" rx="8" fill="#2563eb"/>
+  <rect x="680" y="169" width="430" height="8" fill="#2563eb"/>
+  <circle cx="700" cy="161" r="5" fill="#60a5fa"/>
+  <text x="715" y="165" font-size="10" font-weight="600" fill="#ffffff">Nobi AI Copilot</text>
+  <circle cx="1090" cy="161" r="4" fill="#34d399"/>
+
+  <!-- Verbal request bubble -->
+  <rect x="820" y="190" width="275" height="44" rx="12" fill="#eff6ff"/>
+  <text x="957" y="208" text-anchor="middle" font-size="10" fill="#1e40af">"Customer needs a three-quarter inch</text>
+  <text x="957" y="222" text-anchor="middle" font-size="10" fill="#1e40af">brass ball valve, like the Watts one"</text>
+
+  <!-- AI structured response -->
+  <rect x="695" y="248" width="290" height="160" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="710" y="270" font-size="10" font-weight="700" fill="#1e293b">Best Match (97.2%)</text>
+  <text x="710" y="288" font-size="10" fill="#2563eb" font-weight="500">SKU: WBV-075-BR</text>
+  <text x="710" y="304" font-size="9" fill="#475569">Watts 3/4" Full Port Brass Ball Valve</text>
+  <line x1="710" y1="314" x2="970" y2="314" stroke="#e2e8f0" stroke-width="0.5"/>
+  <text x="710" y="330" font-size="9" font-weight="600" fill="#475569">Cross-references:</text>
+  <text x="710" y="345" font-size="9" fill="#64748b">Apollo 70-103 | Nibco T-585-70</text>
+  <line x1="710" y1="355" x2="970" y2="355" stroke="#e2e8f0" stroke-width="0.5"/>
+  <circle cx="715" cy="372" r="4" fill="#22c55e"/>
+  <text x="725" y="376" font-size="9" fill="#16a34a" font-weight="500">In Stock: 34 units</text>
+  <text x="710" y="398" font-size="9" fill="#64748b">Price: $28.50 | List: $42.00</text>
+
+  <!-- Input bar -->
+  <rect x="695" y="385" width="400" height="28" rx="6" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.5"/>
+
+  <!-- Bottom subtitle -->
+  <text x="600" y="488" text-anchor="middle" font-size="12" font-weight="500" fill="#475569">Both tools add value -- the key is matching the tool to the channel</text>
+</svg>

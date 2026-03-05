@@ -1,0 +1,72 @@
+<svg viewBox="0 0 1200 500" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, sans-serif">
+  <!-- White background -->
+  <rect width="1200" height="500" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="600" y="40" text-anchor="middle" font-size="20" font-weight="700" fill="#1e293b">General AI vs. Purpose-Built AI for Parts Identification</text>
+
+  <!-- LEFT COLUMN: General AI (ChatGPT) -->
+  <rect x="80" y="65" width="480" height="400" rx="12" fill="#ffffff" stroke="#fca5a5" stroke-width="1.5"/>
+  <!-- Header -->
+  <rect x="80" y="65" width="480" height="50" rx="12" fill="#fef2f2"/>
+  <rect x="80" y="103" width="480" height="12" fill="#fef2f2"/>
+  <text x="320" y="97" text-anchor="middle" font-size="16" font-weight="700" fill="#dc2626">General AI (ChatGPT)</text>
+
+  <!-- Row 1 -->
+  <circle cx="120" cy="155" r="12" fill="#fef2f2" stroke="#fca5a5" stroke-width="1"/>
+  <text x="120" y="160" text-anchor="middle" font-size="14" font-weight="700" fill="#dc2626">X</text>
+  <text x="145" y="160" font-size="13" fill="#475569">Searches the internet, not your catalog</text>
+
+  <!-- Row 2 -->
+  <circle cx="120" cy="210" r="12" fill="#fef2f2" stroke="#fca5a5" stroke-width="1"/>
+  <text x="120" y="215" text-anchor="middle" font-size="14" font-weight="700" fill="#dc2626">X</text>
+  <text x="145" y="215" font-size="13" fill="#475569">May hallucinate part numbers</text>
+
+  <!-- Row 3 -->
+  <circle cx="120" cy="265" r="12" fill="#fef2f2" stroke="#fca5a5" stroke-width="1"/>
+  <text x="120" y="270" text-anchor="middle" font-size="14" font-weight="700" fill="#dc2626">X</text>
+  <text x="145" y="270" font-size="13" fill="#475569">No cross-reference data available</text>
+
+  <!-- Row 4 -->
+  <circle cx="120" cy="320" r="12" fill="#fef2f2" stroke="#fca5a5" stroke-width="1"/>
+  <text x="120" y="325" text-anchor="middle" font-size="14" font-weight="700" fill="#dc2626">X</text>
+  <text x="145" y="325" font-size="13" fill="#475569">No inventory or stock awareness</text>
+
+  <!-- Bottom verdict -->
+  <rect x="140" y="380" width="360" height="36" rx="8" fill="#fef2f2"/>
+  <text x="320" y="403" text-anchor="middle" font-size="12" font-weight="600" fill="#dc2626">Risk: Wrong parts, returns, lost trust</text>
+
+  <!-- RIGHT COLUMN: Purpose-Built AI -->
+  <rect x="640" y="65" width="480" height="400" rx="12" fill="#ffffff" stroke="#86efac" stroke-width="1.5"/>
+  <!-- Header -->
+  <rect x="640" y="65" width="480" height="50" rx="12" fill="#f0fdf4"/>
+  <rect x="640" y="103" width="480" height="12" fill="#f0fdf4"/>
+  <text x="880" y="97" text-anchor="middle" font-size="16" font-weight="700" fill="#16a34a">Purpose-Built AI</text>
+
+  <!-- Row 1 -->
+  <circle cx="680" cy="155" r="12" fill="#f0fdf4" stroke="#86efac" stroke-width="1"/>
+  <text x="680" y="160" text-anchor="middle" font-size="14" font-weight="700" fill="#16a34a">&#10003;</text>
+  <text x="705" y="160" font-size="13" fill="#475569">Searches your actual catalog data</text>
+
+  <!-- Row 2 -->
+  <circle cx="680" cy="210" r="12" fill="#f0fdf4" stroke="#86efac" stroke-width="1"/>
+  <text x="680" y="215" text-anchor="middle" font-size="14" font-weight="700" fill="#16a34a">&#10003;</text>
+  <text x="705" y="215" font-size="13" fill="#475569">Returns verified, real SKUs</text>
+
+  <!-- Row 3 -->
+  <circle cx="680" cy="265" r="12" fill="#f0fdf4" stroke="#86efac" stroke-width="1"/>
+  <text x="680" y="270" text-anchor="middle" font-size="14" font-weight="700" fill="#16a34a">&#10003;</text>
+  <text x="705" y="270" font-size="13" fill="#475569">Cross-references across brands</text>
+
+  <!-- Row 4 -->
+  <circle cx="680" cy="320" r="12" fill="#f0fdf4" stroke="#86efac" stroke-width="1"/>
+  <text x="680" y="325" text-anchor="middle" font-size="14" font-weight="700" fill="#16a34a">&#10003;</text>
+  <text x="705" y="325" font-size="13" fill="#475569">Shows real-time stock levels</text>
+
+  <!-- Bottom verdict -->
+  <rect x="700" y="380" width="360" height="36" rx="8" fill="#f0fdf4"/>
+  <text x="880" y="403" text-anchor="middle" font-size="12" font-weight="600" fill="#16a34a">Result: Right part, first time, every time</text>
+
+  <!-- Bottom accent line -->
+  <rect x="0" y="492" width="1200" height="8" fill="#e2e8f0"/>
+</svg>

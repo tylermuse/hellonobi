@@ -1,0 +1,228 @@
+export const meta = {
+  title: "How to Evaluate AI Tools for Your Distribution Business",
+  slug: "evaluate-ai-tools-distribution",
+  date: "2026-05-05",
+  publishedAt: "2026-05-05",
+  description: "A practical buyer's guide for evaluating AI tools in industrial distribution. Criteria, red flags, and questions to ask vendors before you commit.",
+  excerpt: "A practical buyer's guide for evaluating AI tools in industrial distribution. Criteria, red flags, and questions to ask vendors before you commit.",
+  tags: ["AI evaluation", "buying guide", "distribution technology", "decision"],
+  author: "Nobi Team",
+  heroImage: "/media/posts/evaluate-ai-tools-distribution/01-hero.svg",
+  featured: false,
+  draft: false,
+  faqItems: [
+    {
+      question: "What is the most important criterion when evaluating AI for distribution?",
+      answer: "Catalog integration. The single most important question is whether the AI tool searches your actual product data or generates answers from general training data. Tools that search your catalog return real, orderable SKUs. Tools that generate answers from general knowledge risk hallucinating part numbers that do not exist. Everything else, including trade language understanding and cross-referencing, depends on this foundation.",
+    },
+    {
+      question: "How long should an AI pilot take before you see results?",
+      answer: "A well-designed AI tool for distribution should show measurable results within 30 to 60 days of deployment. Look for improvements in lookup speed, reduction in zero-result searches, and employee feedback on usability. If a vendor tells you it takes six months or longer to see any impact, ask what specifically requires that much time and whether the delay is due to integration complexity or fundamental product limitations.",
+    },
+    {
+      question: "Should I require an AI vendor to integrate with my ERP?",
+      answer: "Yes, but understand the levels of integration. At minimum, the tool should be able to ingest and search your product catalog data. Ideal integration includes real-time inventory visibility, pricing access, and order history. Full ERP integration with write access for order creation is the deepest level but is not always necessary for an initial deployment.",
+    },
+    {
+      question: "What is the difference between customer-facing and employee-facing AI?",
+      answer: "Customer-facing AI tools power eCommerce search and product discovery on your website. They help customers find products through filters, faceted navigation, and self-service browsing. Employee-facing AI tools help your counter staff and inside sales team identify products from vague verbal descriptions, cross-reference across manufacturers, and handle the interpretive work that customers cannot do on their own.",
+    },
+    {
+      question: "How do I calculate ROI on an AI tool for distribution?",
+      answer: "Measure three things: time saved per lookup multiplied by hourly labor cost, revenue recovered from sales that would have been lost to failed lookups, and retention impact from reduced employee frustration and improved new hire ramp time. Most distributors find that the time savings alone justify the investment, with recovered revenue and retention benefits providing additional return.",
+    },
+    {
+      question: "What are the biggest red flags when evaluating AI vendors?",
+      answer: "Watch for vendors who cannot explain where their AI gets its data, who require more than 90 days for basic deployment, who cannot provide references from other distributors, who avoid discussing hallucination rates, or who position their tool as a replacement for your ERP rather than a complement to it. Also be cautious of vendors whose primary experience is in eCommerce search rather than employee-facing tools.",
+    },
+  ],
+};
+
+The AI tool market for B2B distribution is growing fast, and separating genuinely useful products from well-marketed demos is getting harder. Every vendor claims to use AI. Every pitch deck promises transformation. But when you are evaluating tools for a distribution business where wrong part numbers cost real money, you need a framework that cuts through the marketing.
+
+This guide provides that framework. It covers the criteria that matter, the red flags to watch for, and the specific questions to ask vendors before you sign anything.
+
+## Start With the Problem, Not the Technology
+
+<img src="/media/posts/evaluate-ai-tools-distribution/01-hero.svg" alt="Evaluation checklist illustration showing key criteria for assessing AI tools in distribution, organized by priority from catalog integration at the top to deployment model at the bottom" className="w-full rounded-2xl border border-black/10 dark:border-white/10 shadow-sm" loading="lazy" />
+
+Before evaluating any tool, get clear on the specific problem you are solving. "We want AI" is not a problem statement. These are problem statements:
+
+- Our counterpeople spend 5 to 15 minutes per complex lookup because our ERP search is keyword-based
+- We lose sales when a customer asks for a brand we do not carry and our team cannot find the equivalent
+- New hires take 12 to 18 months to become productive at the counter because product knowledge takes years to build
+- Our best counterpeople are retiring and taking decades of tribal knowledge with them
+
+Each of these problems points to a different set of requirements. An AI tool that excels at cross-referencing might not solve your new-hire onboarding problem if it does not also handle trade language interpretation. A tool that speeds up keyword searches will not help if your real issue is that employees do not know what keywords to use.
+
+Define the problem first. Then evaluate tools against it.
+
+## The Seven Criteria That Matter
+
+### 1. Catalog Integration: Does It Use YOUR Data?
+
+This is the most important criterion, and it is non-negotiable. An AI tool for distribution must search your actual product catalog, not the open internet.
+
+If the tool generates answers from general training data, it will hallucinate part numbers. We covered this extensively in our article on [why ChatGPT does not work for part identification](/blog/chatgpt-for-part-identification). The same risk applies to any AI tool that is not grounded in your specific catalog data.
+
+**Questions to ask the vendor:**
+- Where does the AI get its product data?
+- How frequently is the product data refreshed?
+- Can the tool return results that are not in my catalog?
+- What happens when a product is discontinued in my system?
+
+### 2. Trade Language Understanding
+
+Distribution has its own vocabulary. Plumbers say "fernco" when they mean flexible coupling. Electricians say "Romex" when they mean NM-B cable. HVAC techs say "mini-split" when they might mean any of a dozen configurations.
+
+A tool that only matches keywords will fail when customers use trade slang, regional terminology, or brand names as generic descriptors. The AI needs to understand that "unistrut" is a brand name used generically for metal framing channel, that "shark bite" means push-fit connector, and that "wirsbo" refers to PEX tubing regardless of actual manufacturer.
+
+**Questions to ask the vendor:**
+- How does the system handle trade slang and informal terminology?
+- Can you demonstrate a search using terms that do not appear in product descriptions?
+- How does the system learn new terminology specific to my market or region?
+
+### 3. Cross-Referencing Capability
+
+When a customer asks for Brand A and you carry Brand B, the tool needs to find the equivalent. This is not simple keyword matching. It requires understanding specifications, dimensions, materials, and performance ratings across manufacturers.
+
+For a deep dive into why this matters, see our article on [cross-referencing parts across manufacturers](/blog/cross-reference-parts-manufacturers).
+
+**Questions to ask the vendor:**
+- How does the system handle cross-reference requests?
+- Does it match on specifications or on pre-built lookup tables?
+- What happens when no pre-built cross-reference exists?
+- Can it cross-reference across product categories?
+
+### 4. ERP Compatibility
+
+The AI tool needs to work with your existing systems, not replace them. Your ERP is your source of truth for pricing, inventory, customer accounts, and order management. The AI layer sits on top, making the data inside the ERP more accessible.
+
+According to the [Industrial Distribution Association](https://www.ida-assoc.org/), the most common ERP systems in distribution include Epicor Prophet 21, Infor SXe, Eclipse, and SAP Business One. The AI tool should be compatible with your specific ERP or have a documented integration path.
+
+**Questions to ask the vendor:**
+- Which ERP systems do you currently integrate with?
+- What data does the integration require?
+- Is the integration read-only or does it include write access?
+- What is the implementation timeline for my specific ERP?
+
+### 5. Deployment Model
+
+How the tool gets deployed affects everything from security to user adoption. Key considerations include whether the tool is cloud-based or on-premises, how employees access it (browser, desktop app, mobile, integrated into ERP), and what the onboarding process looks like.
+
+**Questions to ask the vendor:**
+- How do employees access the tool day-to-day?
+- Does it require installing software on individual workstations?
+- Can it run on the same devices employees currently use at the counter?
+- What does the training requirement look like for end users?
+
+### 6. Data Security
+
+Your product catalog, pricing structures, customer data, and purchasing patterns are proprietary business assets. Any AI tool you adopt will have access to some or all of this data. You need to understand exactly what data the tool accesses, where it is stored, and how it is protected.
+
+This is especially important given the trend of employees using general AI tools like ChatGPT for work tasks, which we covered in our article on [why general AI fails for part identification](/blog/chatgpt-for-part-identification). A purpose-built tool should offer better data governance than employees typing proprietary information into a consumer AI product.
+
+According to the [NIST Cybersecurity Framework](https://www.nist.gov/cyberframework), organizations should evaluate third-party tools against established data handling standards, particularly when those tools process proprietary business information.
+
+**Questions to ask the vendor:**
+- Where is my data stored?
+- Is my data used to train models that serve other customers?
+- What certifications or compliance standards do you meet?
+- Can I delete my data if I terminate the relationship?
+
+### 7. ROI Measurement
+
+You need to be able to measure whether the tool is actually delivering value. This requires baseline metrics before deployment and clear tracking after.
+
+**Questions to ask the vendor:**
+- What metrics do you track to demonstrate value?
+- Can you provide case studies with quantified results from other distributors?
+- What is the typical time to measurable ROI?
+- How do you measure accuracy?
+
+## The Scoring Framework
+
+<img src="/media/posts/evaluate-ai-tools-distribution/02-criteria-matrix.svg" alt="Scoring matrix showing how to rate AI tools across seven criteria including catalog integration, trade language understanding, cross-referencing, ERP compatibility, deployment model, data security, and ROI measurement, each scored on a 1-5 scale" className="w-full rounded-2xl border border-black/10 dark:border-white/10 shadow-sm" loading="lazy" />
+
+Use a simple scoring matrix to compare tools objectively. Rate each tool on each of the seven criteria above using a 1-to-5 scale:
+
+- **5:** Fully meets the criterion with proven capability
+- **4:** Meets the criterion with minor limitations
+- **3:** Partially meets the criterion, some gaps
+- **2:** Significant gaps in this area
+- **1:** Does not address this criterion
+
+Weight the criteria based on your specific problem statement. If cross-referencing is your primary pain point, weight that criterion more heavily. If data security is paramount due to government contracts, weight that accordingly.
+
+A tool that scores a 5 on trade language understanding but a 1 on catalog integration is not suitable for distribution part identification, regardless of how impressive the demo looks.
+
+## Red Flags to Watch For
+
+Not every AI pitch is what it seems. Watch for these warning signs during the evaluation process.
+
+**"Our AI works with any data."** This usually means the tool is not specifically designed for distribution data. General-purpose AI that "works with any data" is precisely the type most likely to hallucinate part numbers.
+
+**No distributor references.** If a vendor cannot connect you with at least two or three distribution customers who are actively using the product in production, not in a pilot, proceed with caution.
+
+**Demos only on curated datasets.** Ask to run the demo on your own data with your own queries. Any vendor confident in their product should welcome this. If they insist on using only their demo data, ask why.
+
+**Vague answers about hallucination.** Every AI system has some error rate. A vendor who claims zero hallucination is either not being honest or does not understand the technology. The right answer is a specific accuracy rate with an explanation of how errors are handled.
+
+**"Replace your ERP" positioning.** An AI tool for product identification should complement your ERP, not replace it. If a vendor suggests you can eliminate your ERP, that is a fundamental misunderstanding of how distribution operations work.
+
+**Implementation timelines over six months.** For a product identification tool, initial deployment should be achievable within 30 to 90 days. Longer timelines may indicate integration challenges, immature product, or scope creep.
+
+## Customer-Facing vs. Employee-Facing: Know the Difference
+
+One of the most common evaluation mistakes is conflating customer-facing search tools with employee-facing AI copilots. They solve different problems.
+
+Customer-facing tools like [HawkSearch](https://www.hawksearch.com/), Algolia, and Coveo power the search bar on your eCommerce website. They help customers find products through filters, faceted navigation, and typed queries. They are optimized for self-service browsing.
+
+Employee-facing tools help your counterpeople and inside sales team interpret vague verbal requests, cross-reference across manufacturers, and find the right SKU from incomplete information. They are optimized for the interpretive, conversational work that happens at the counter and on the phone.
+
+Both have value. They are not interchangeable. If your primary problem is employee productivity at the counter, a customer-facing eCommerce search tool will not solve it. For a deeper comparison of these categories, see our article on [HawkSearch alternatives for distributors who need employee-side AI](/blog/hawksearch-alternatives-distributors).
+
+## The Evaluation Checklist
+
+Use this checklist when meeting with vendors:
+
+- [ ] Confirm the tool searches your catalog data, not general internet data
+- [ ] Test with real queries using trade slang and vague descriptions
+- [ ] Test cross-referencing between manufacturers you stock
+- [ ] Verify ERP compatibility with your specific system
+- [ ] Review data handling and security practices
+- [ ] Ask for distributor customer references (not just pilots)
+- [ ] Request a pilot on your own data with your own queries
+- [ ] Establish baseline metrics before deployment
+- [ ] Define success criteria and measurement timeline
+- [ ] Review contract terms for data ownership and deletion
+
+## Making the Decision
+
+The AI tool market for distribution is still maturing. That means some vendors are further along than others, and some products are more proven than others. Approach the evaluation with healthy skepticism, clear criteria, and a willingness to test before you commit.
+
+The distributors who get the most value from AI are the ones who start with a specific problem, evaluate tools rigorously, and deploy with clear success metrics. The ones who struggle are the ones who buy AI because it sounds innovative without connecting it to a measurable business outcome.
+
+According to a [McKinsey report on AI in B2B](https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/ai-powered-marketing-and-sales-reach-new-heights-with-generative-ai), the companies seeing the highest returns from AI are those that deploy it in areas with clear, measurable workflows rather than broad, undefined use cases. Distribution part identification is exactly that kind of focused, measurable workflow.
+
+**[See how Nobi works →](/)**
+
+## Frequently Asked Questions
+
+### What is the most important criterion when evaluating AI for distribution?
+Catalog integration. The single most important question is whether the AI tool searches your actual product data or generates answers from general training data. Tools that search your catalog return real, orderable SKUs. Tools that generate answers from general knowledge risk hallucinating part numbers that do not exist. Everything else, including trade language understanding and cross-referencing, depends on this foundation.
+
+### How long should an AI pilot take before you see results?
+A well-designed AI tool for distribution should show measurable results within 30 to 60 days of deployment. Look for improvements in lookup speed, reduction in zero-result searches, and employee feedback on usability. If a vendor tells you it takes six months or longer to see any impact, ask what specifically requires that much time and whether the delay is due to integration complexity or fundamental product limitations.
+
+### Should I require an AI vendor to integrate with my ERP?
+Yes, but understand the levels of integration. At minimum, the tool should be able to ingest and search your product catalog data. Ideal integration includes real-time inventory visibility, pricing access, and order history. Full ERP integration with write access for order creation is the deepest level but is not always necessary for an initial deployment.
+
+### What is the difference between customer-facing and employee-facing AI?
+Customer-facing AI tools power eCommerce search and product discovery on your website. They help customers find products through filters, faceted navigation, and self-service browsing. Employee-facing AI tools help your counter staff and inside sales team identify products from vague verbal descriptions, cross-reference across manufacturers, and handle the interpretive work that customers cannot do on their own.
+
+### How do I calculate ROI on an AI tool for distribution?
+Measure three things: time saved per lookup multiplied by hourly labor cost, revenue recovered from sales that would have been lost to failed lookups, and retention impact from reduced employee frustration and improved new hire ramp time. Most distributors find that the time savings alone justify the investment, with recovered revenue and retention benefits providing additional return.
+
+### What are the biggest red flags when evaluating AI vendors?
+Watch for vendors who cannot explain where their AI gets its data, who require more than 90 days for basic deployment, who cannot provide references from other distributors, who avoid discussing hallucination rates, or who position their tool as a replacement for your ERP rather than a complement to it. Also be cautious of vendors whose primary experience is in eCommerce search rather than employee-facing tools.

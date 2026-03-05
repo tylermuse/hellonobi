@@ -1,0 +1,67 @@
+<svg viewBox="0 0 1200 500" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, sans-serif">
+  <rect width="1200" height="500" fill="#f8fafc"/>
+
+  <!-- Title -->
+  <text x="600" y="38" text-anchor="middle" fill="#1e293b" font-size="22" font-weight="700">Post-Acquisition Catalog Complexity</text>
+  <text x="600" y="58" text-anchor="middle" fill="#475569" font-size="13">When two product catalogs merge, cross-category knowledge becomes the critical gap</text>
+
+  <!-- Venn Diagram -->
+  <!-- Left circle: Plumbing (blue) -->
+  <circle cx="430" cy="225" r="150" fill="#dbeafe" stroke="#3b82f6" stroke-width="2.5" opacity="0.8"/>
+  <text x="358" y="192" text-anchor="middle" fill="#1e40af" font-size="16" font-weight="700">Plumbing</text>
+  <text x="358" y="212" text-anchor="middle" fill="#1e40af" font-size="14" font-weight="700">Catalog</text>
+  <rect x="308" y="222" width="100" height="26" rx="13" fill="#1e40af" opacity="0.1"/>
+  <text x="358" y="240" text-anchor="middle" fill="#1e40af" font-size="13" font-weight="600">120K SKUs</text>
+  <text x="345" y="264" text-anchor="middle" fill="#3b82f6" font-size="10">Valves, Fittings, Pipe</text>
+  <text x="345" y="278" text-anchor="middle" fill="#3b82f6" font-size="10">Water Heaters, Pumps</text>
+
+  <!-- Right circle: HVAC (purple) -->
+  <circle cx="680" cy="225" r="150" fill="#ede9fe" stroke="#8b5cf6" stroke-width="2.5" opacity="0.8"/>
+  <text x="752" y="192" text-anchor="middle" fill="#5b21b6" font-size="16" font-weight="700">HVAC</text>
+  <text x="752" y="212" text-anchor="middle" fill="#5b21b6" font-size="14" font-weight="700">Catalog</text>
+  <rect x="702" y="222" width="100" height="26" rx="13" fill="#5b21b6" opacity="0.1"/>
+  <text x="752" y="240" text-anchor="middle" fill="#5b21b6" font-size="13" font-weight="600">80K SKUs</text>
+  <text x="765" y="264" text-anchor="middle" fill="#8b5cf6" font-size="10">Compressors, Ductwork</text>
+  <text x="765" y="278" text-anchor="middle" fill="#8b5cf6" font-size="10">Refrigerants, Controls</text>
+
+  <!-- Overlap zone -->
+  <rect x="518" y="188" width="74" height="68" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="555" y="210" text-anchor="middle" fill="#1e293b" font-size="11" font-weight="700">Cross-</text>
+  <text x="555" y="225" text-anchor="middle" fill="#1e293b" font-size="11" font-weight="700">Category</text>
+  <text x="555" y="248" text-anchor="middle" fill="#dc2626" font-size="22" font-weight="800">??</text>
+
+  <!-- Confused employees below -->
+  <g transform="translate(370, 400)">
+    <circle cx="0" cy="0" r="18" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+    <circle cx="0" cy="-4" r="6" fill="#94a3b8"/>
+    <rect x="-5" y="4" width="10" height="8" rx="3" fill="#94a3b8"/>
+    <circle cx="16" cy="-26" r="2.5" fill="#e2e8f0"/>
+    <circle cx="22" cy="-33" r="4" fill="#e2e8f0"/>
+    <rect x="20" y="-52" width="62" height="20" rx="6" fill="#fef2f2" stroke="#fca5a5" stroke-width="1"/>
+    <text x="51" y="-39" text-anchor="middle" fill="#dc2626" font-size="9" font-weight="600">Which valve?</text>
+  </g>
+
+  <g transform="translate(555, 412)">
+    <circle cx="0" cy="0" r="18" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+    <circle cx="0" cy="-4" r="6" fill="#94a3b8"/>
+    <rect x="-5" y="4" width="10" height="8" rx="3" fill="#94a3b8"/>
+    <circle cx="16" cy="-26" r="2.5" fill="#e2e8f0"/>
+    <circle cx="22" cy="-33" r="4" fill="#e2e8f0"/>
+    <rect x="20" y="-52" width="68" height="20" rx="6" fill="#fef2f2" stroke="#fca5a5" stroke-width="1"/>
+    <text x="54" y="-39" text-anchor="middle" fill="#dc2626" font-size="9" font-weight="600">New brands?</text>
+  </g>
+
+  <g transform="translate(740, 400)">
+    <circle cx="0" cy="0" r="18" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+    <circle cx="0" cy="-4" r="6" fill="#94a3b8"/>
+    <rect x="-5" y="4" width="10" height="8" rx="3" fill="#94a3b8"/>
+    <circle cx="-16" cy="-26" r="2.5" fill="#e2e8f0"/>
+    <circle cx="-22" cy="-33" r="4" fill="#e2e8f0"/>
+    <rect x="-86" y="-52" width="68" height="20" rx="6" fill="#fef2f2" stroke="#fca5a5" stroke-width="1"/>
+    <text x="-52" y="-39" text-anchor="middle" fill="#dc2626" font-size="9" font-weight="600">200K SKUs?!</text>
+  </g>
+
+  <!-- Bottom stat -->
+  <rect x="330" y="460" width="540" height="32" rx="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="600" y="481" text-anchor="middle" fill="#64748b" font-size="12">Combined catalog: <tspan fill="#1e293b" font-weight="700">200,000 SKUs</tspan> — No single employee knows them all</text>
+</svg>
