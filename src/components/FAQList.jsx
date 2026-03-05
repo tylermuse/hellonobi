@@ -4,15 +4,6 @@ import FAQ_ITEMS_CONST from "../constants/faqs";
 
 export const FAQ_ITEMS = FAQ_ITEMS_CONST;
 
-/**
- * Shared FAQ accordion.
- * Props:
- * - limit: number | undefined — slice the list
- * - id: string — section id
- * - title/description: optional heading copy
- * - headingAlign: "left" | "center"
- * - groupByCategory: boolean — show grouped lists with category headers
- */
 export default function FAQList({
   limit,
   id = "faq",
@@ -39,24 +30,21 @@ export default function FAQList({
 
   const withTargetBlank = (html = "") =>
     html
-      .replace(/<a\s+(?![^>]*target=)([^>]*?)>/gi, "<a $1 target=\"_blank\" rel=\"noopener noreferrer\">")
-      .replace(/<a([^>]*target=[\"']?_blank[\"']?)(?![^>]*rel=)([^>]*)>/gi, "<a$1 rel=\"noopener noreferrer\"$2>");
+      .replace(/<a(?![^>]*target=)([^>]*?)>/gi, '<a target="_blank" rel="noopener noreferrer"$1>')
+      .replace(/<a(?=[^>]*target=["']?_blank["']?)(?![^>]*rel=)([^>]*)>/gi, '<a rel="noopener noreferrer"$1>');
 
   return (
-    <section
-      id={id}
-      className={`scroll-mt-20 ${padding} ${borderClass} ${sectionClassName}`}
-    >
-      <div className="mx-auto max-w-6xl px-6">
+    <section id={id} className={`${padding} ${borderClass} ${sectionClassName}`}>
+      <div className="mx-auto max-w-3xl px-6">
         {(title || description) && (
-          <div className={`${headingAlignClass} mb-10`}>
+          <div className={`mb-10 ${headingAlignClass}`}>
             {title && (
-              <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight">
+              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-black dark:text-white">
                 {title}
               </h2>
             )}
             {description && (
-              <p className="mt-3 text-base sm:text-lg text-black/70 dark:text-white/70">
+              <p className="mt-3 text-base text-black/60 dark:text-white/60 max-w-xl">
                 {description}
               </p>
             )}
@@ -73,28 +61,18 @@ export default function FAQList({
                 return acc;
               }, {})
             ).map(([category, group]) => (
-              <div key={category} className="space-y-4">
-                <h3 className="text-xl font-semibold text-black dark:text-white">{category}</h3>
+              <div key={category}>
+                <h3 className="text-lg font-semibold text-black dark:text-white mb-4">{category}</h3>
                 <div className={listClass}>
                   {group.map((f) => (
-                    <details
-                      key={f.q}
-                      className="group rounded-2xl border border-black/10 dark:border-white/10 bg-white/70 dark:bg-white/5 shadow-sm"
-                    >
-                      <summary className="list-none cursor-pointer flex items-center justify-between gap-4 px-5 py-4 font-medium">
-                        <span>{f.q}</span>
-                        <ChevronDown
-                          className="h-5 w-5 text-black/40 dark:text-white/60 transition-transform duration-300 group-open:rotate-180"
-                          aria-hidden="true"
-                        />
+                    <details key={f.q} className="group rounded-2xl border border-black/10 dark:border-white/10 bg-white/70 dark:bg-white/5 shadow-sm">
+                      <summary className="flex items-center justify-between gap-4 p-5 cursor-pointer list-none text-left text-[15px] font-medium text-black dark:text-white">
+                        {f.q}
+                        <ChevronDown className="w-4 h-4 flex-shrink-0 text-black/40 dark:text-white/40 transition group-open:rotate-180" />
                       </summary>
-
-                      <div className="px-5 pb-5 -mt-1 text-sm text-black/70 dark:text-white/70">
+                      <div className="px-5 pb-5 text-sm text-black/60 dark:text-white/60 leading-relaxed faq-answer">
                         {typeof f.a === "string" ? (
-                          <p
-                            className="leading-relaxed faq-answer"
-                            dangerouslySetInnerHTML={{ __html: withTargetBlank(f.a) }}
-                          />
+                          <div dangerouslySetInnerHTML={{ __html: withTargetBlank(f.a) }} />
                         ) : (
                           f.a
                         )}
@@ -108,24 +86,14 @@ export default function FAQList({
         ) : (
           <div className={listClass}>
             {items.map((f) => (
-              <details
-                key={f.q}
-                className="group rounded-2xl border border-black/10 dark:border-white/10 bg-white/70 dark:bg-white/5 shadow-sm"
-              >
-                <summary className="list-none cursor-pointer flex items-center justify-between gap-4 px-5 py-4 font-medium">
-                  <span>{f.q}</span>
-                  <ChevronDown
-                    className="h-5 w-5 text-black/40 dark:text-white/60 transition-transform duration-300 group-open:rotate-180"
-                    aria-hidden="true"
-                  />
+              <details key={f.q} className="group rounded-2xl border border-black/10 dark:border-white/10 bg-white/70 dark:bg-white/5 shadow-sm">
+                <summary className="flex items-center justify-between gap-4 p-5 cursor-pointer list-none text-left text-[15px] font-medium text-black dark:text-white">
+                  {f.q}
+                  <ChevronDown className="w-4 h-4 flex-shrink-0 text-black/40 dark:text-white/40 transition group-open:rotate-180" />
                 </summary>
-
-                <div className="px-5 pb-5 -mt-1 text-sm text-black/70 dark:text-white/70">
+                <div className="px-5 pb-5 text-sm text-black/60 dark:text-white/60 leading-relaxed faq-answer">
                   {typeof f.a === "string" ? (
-                    <p
-                      className="leading-relaxed faq-answer"
-                      dangerouslySetInnerHTML={{ __html: withTargetBlank(f.a) }}
-                    />
+                    <div dangerouslySetInnerHTML={{ __html: withTargetBlank(f.a) }} />
                   ) : (
                     f.a
                   )}

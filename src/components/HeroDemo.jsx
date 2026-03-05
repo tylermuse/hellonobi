@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Sparkles, FileText, CheckCircle2 } from "lucide-react";
 
-// Vertical-specific content
 const VERTICAL_CONTENT = {
   auto: {
     label: "Auto Parts",
@@ -126,8 +125,6 @@ const VERTICAL_CONTENT = {
   },
 };
 
-const DEMO_QUERY = VERTICAL_CONTENT.auto.query;
-
 function Button({ variant = "primary", size = "md", className = "", children, ...props }) {
   const base =
     "inline-flex items-center justify-center gap-2 rounded-2xl font-medium transition active:scale-[.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-black/10 dark:focus-visible:ring-white/20";
@@ -138,56 +135,35 @@ function Button({ variant = "primary", size = "md", className = "", children, ..
     compact: "h-8 px-3 text-sm",
   };
   const variants = {
-    primary:
-      "bg-black text-white dark:bg-white dark:text-black hover:opacity-90 shadow-sm",
-    ghost:
-      "bg-transparent text-black/80 dark:text-white/90 hover:bg-black/5 dark:hover:bg-white/10",
-    outline:
-      "border border-black/10 dark:border-white/15 text-black dark:text-white hover:bg-black/5 dark:hover:bg-white/10",
-    ai: "bg-gradient-to-r from-fuchsia-500 to-pink-500 text-white hover:opacity-90 shadow-sm",
+    primary: "bg-black text-white dark:bg-white dark:text-black hover:opacity-90 shadow-sm",
+    ghost: "bg-transparent text-black/80 dark:text-white/90 hover:bg-black/5 dark:hover:bg-white/10",
+    outline: "border border-black/10 dark:border-white/15 text-black dark:text-white hover:bg-black/5 dark:hover:bg-white/10",
+    ai: "bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white hover:opacity-90 shadow-sm",
   };
   return (
-    <button className={[base, sizes[size], variants[variant], className].join(" ")} {...props}>
+    <button className={`${base} ${variants[variant] || ""} ${sizes[size] || ""} ${className}`} {...props}>
       {children}
     </button>
   );
 }
 
-function SearchBar({
-  query,
-  placeholder = "Search for parts, equipment, or specs...",
-  locked = true,
-}) {
+function SearchBar({ query, placeholder = "Search for parts, equipment, or specs...", locked = true }) {
   return (
-    <div className="w-full">
-      <div className="flex items-center gap-3 rounded-2xl border border-black/10 dark:border-white/15 bg-white/70 dark:bg-white/5 backdrop-blur px-4 h-14 shadow-sm">
-        <div className="flex-1 min-w-0 flex items-center gap-2">
-          <input
-            value={query}
-            readOnly={locked}
-            tabIndex={locked ? -1 : 0}
-            placeholder={placeholder}
-            className={`min-w-0 w-full bg-transparent outline-none text-[15px] placeholder:text-black/40 dark:placeholder:text-white/40 ${
-              locked ? "pointer-events-none select-none cursor-default" : ""
-            }`}
-            aria-readonly="true"
-          />
-        </div>
-        <Button variant="ai" size="compact" className="whitespace-nowrap px-4 h-9 sm:h-8">
-          <Sparkles className="h-4 w-4" />
-          <span>Search</span>
-        </Button>
+    <div className="relative">
+      <div className="flex items-center gap-2 rounded-2xl border border-black/10 dark:border-white/15 bg-white dark:bg-white/5 px-4 py-3 shadow-sm">
+        <Sparkles className="w-4 h-4 text-violet-500 flex-shrink-0" />
+        <span className="text-sm text-black/80 dark:text-white/80 truncate flex-1">{query || placeholder}</span>
+        <Button variant="primary" size="compact" className="flex-shrink-0">Search</Button>
       </div>
     </div>
   );
 }
 
-// Demo 1: Technical Search
 function TechnicalSearchDemo({ isActive, vertical = 'auto' }) {
   const [query, setQuery] = useState("");
   const [showResults, setShowResults] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(-1);
-  
+
   const content = VERTICAL_CONTENT[vertical];
   const demoQuery = content.query;
   const equipment = content.equipment;
@@ -201,11 +177,8 @@ function TechnicalSearchDemo({ isActive, vertical = 'auto' }) {
       setSelectedIndex(-1);
       return;
     }
-
     let i = 0;
     const timers = [];
-
-    // Type query
     const typeInterval = setInterval(() => {
       if (i < demoQuery.length) {
         setQuery(demoQuery.slice(0, i + 1));
@@ -217,91 +190,43 @@ function TechnicalSearchDemo({ isActive, vertical = 'auto' }) {
       }
     }, 35);
     timers.push(typeInterval);
-
     return () => timers.forEach(clearTimeout);
   }, [isActive, vertical]);
 
   return (
-    <div className="space-y-4">
-      {/* System Status Bar */}
-      <div className="flex items-center justify-between text-xs text-black/60 dark:text-white/60 px-1">
-        <div className="flex items-center gap-3 flex-wrap">
-          <span className="inline-flex items-center gap-1.5">
-            <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
-            Connected: Catalog + Inventory
-          </span>
-          <span>•</span>
-          <span>Phoenix Location</span>
-          <span>•</span>
-          <span>{accountType}</span>
+    <div className="space-y-4 p-4">
+      <div className="flex items-center justify-between text-[11px] text-black/40 dark:text-white/40">
+        <div className="flex items-center gap-1.5">
+          <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500" />
+          <span>Connected: Catalog + Inventory</span>
         </div>
+        <span>• <span className="text-black/60 dark:text-white/60">Phoenix Location</span> • <span className="text-black/60 dark:text-white/60">{accountType}</span></span>
       </div>
-
-      <SearchBar query={query} placeholder="Search for parts, equipment, or specs..." />
-
+      <SearchBar query={query} />
       {showResults && (
-        <motion.div
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
-          className="rounded-2xl border border-black/10 dark:border-white/10 bg-white/80 dark:bg-white/5 p-4 space-y-3"
-        >
-          <div className="flex items-start gap-2 text-sm text-black/80 dark:text-white/80">
-            <Sparkles className="h-4 w-4 mt-0.5 text-fuchsia-600 flex-shrink-0" />
-            <p>
-              {searchMessage}
-            </p>
+        <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} className="space-y-3">
+          <div className="flex items-start gap-2 text-xs text-black/60 dark:text-white/60 bg-violet-50/50 dark:bg-violet-500/5 rounded-xl p-3">
+            <Sparkles className="w-3.5 h-3.5 text-violet-500 flex-shrink-0 mt-0.5" />
+            <span>{searchMessage}</span>
           </div>
-
           <div className="space-y-2">
             {equipment.map((item, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, x: -10 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.3, delay: i * 0.15 }}
-                className={`rounded-xl border p-4 transition-all ${
-                  selectedIndex === i
-                    ? "border-fuchsia-400 bg-fuchsia-50/50 dark:bg-fuchsia-900/20 ring-2 ring-fuchsia-400/50"
-                    : "border-black/10 dark:border-white/10 bg-white/50 dark:bg-white/5"
+              <motion.div key={item.title} initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.15 }}
+                className={`flex items-center gap-3 rounded-xl border p-3 transition cursor-pointer ${
+                  i === selectedIndex ? "border-violet-200 bg-violet-50/50 dark:bg-violet-500/5 dark:border-violet-500/20" : "border-black/5 dark:border-white/10 bg-white dark:bg-white/5"
                 }`}
               >
-                <div className="flex items-start gap-4">
-                  {/* Product Image */}
-                  <div className="w-20 h-20 flex-shrink-0 rounded-lg overflow-hidden bg-white/80 dark:bg-white/10 border border-black/5 dark:border-white/10">
-                    <img
-                      src={item.img}
-                      alt={item.title}
-                      className="w-full h-full object-contain p-2"
-                      onError={(e) => {
-                        e.target.style.display = 'none';
-                      }}
-                    />
-                  </div>
-                  
-                  {/* Product Details */}
-                  <div className="flex-1 min-w-0">
-                    <h3 className="font-semibold text-black/90 dark:text-white/90">
-                      {item.title}
-                    </h3>
-                    <p className="text-sm text-black/60 dark:text-white/60 mt-0.5">
-                      {item.specs}
-                    </p>
-                    <div className="flex flex-col gap-1.5 mt-2 text-xs">
-                      <div className="flex items-center gap-3">
-                        <span className="text-black/70 dark:text-white/70 font-medium">
-                          {item.price}
-                        </span>
-                        <span className="inline-flex items-center gap-1 text-green-600 dark:text-green-400">
-                          <CheckCircle2 className="h-3 w-3" />
-                          {item.availability}
-                        </span>
-                      </div>
-                      <span className="text-black/50 dark:text-white/50">
-                        {item.location}
-                      </span>
-                    </div>
-                  </div>
+                <div className="w-12 h-12 rounded-lg bg-slate-100 dark:bg-white/10 flex-shrink-0 overflow-hidden">
+                  <img src={item.img} alt="" className="w-full h-full object-contain" onError={(e) => { e.target.style.display = 'none'; }} />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p className="text-sm font-medium text-black dark:text-white truncate">{item.title}</p>
+                  <p className="text-[11px] text-black/50 dark:text-white/50">{item.specs}</p>
+                </div>
+                <div className="text-right flex-shrink-0">
+                  <p className="text-sm font-semibold text-black dark:text-white">{item.price}</p>
+                  <p className="text-[10px] text-emerald-600 dark:text-emerald-400">{item.availability}</p>
+                  <p className="text-[10px] text-black/40 dark:text-white/40">{item.location}</p>
                 </div>
               </motion.div>
             ))}
@@ -312,47 +237,29 @@ function TechnicalSearchDemo({ isActive, vertical = 'auto' }) {
   );
 }
 
-// Demo 2: RFQ Capture
 function RFQCaptureDemo({ isActive, vertical = 'auto' }) {
   const [query, setQuery] = useState("");
   const [showResponse, setShowResponse] = useState(false);
   const [showForm, setShowForm] = useState(false);
   const [showConfirmation, setShowConfirmation] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    company: "",
-    phone: "",
-    jobsiteZip: "",
-    timeline: "",
-    quoteType: "",
-  });
-
+  const [formData, setFormData] = useState({ name: "", company: "", phone: "", jobsiteZip: "", timeline: "", quoteType: "" });
   const content = VERTICAL_CONTENT[vertical];
 
   useEffect(() => {
     if (!isActive) {
-      setQuery("");
-      setShowResponse(false);
-      setShowForm(false);
-      setShowConfirmation(false);
+      setQuery(""); setShowResponse(false); setShowForm(false); setShowConfirmation(false);
       setFormData({ name: "", company: "", phone: "", jobsiteZip: "", timeline: "", quoteType: "" });
       return;
     }
-
     let i = 0;
     const timers = [];
-
-    // Type query
     const typeInterval = setInterval(() => {
       if (i < content.rfqQuery.length) {
-        setQuery(content.rfqQuery.slice(0, i + 1));
-        i++;
+        setQuery(content.rfqQuery.slice(0, i + 1)); i++;
       } else {
         clearInterval(typeInterval);
         timers.push(setTimeout(() => setShowResponse(true), 600));
         timers.push(setTimeout(() => setShowForm(true), 1200));
-        
-        // Simulate form filling
         timers.push(setTimeout(() => setFormData(d => ({ ...d, name: "Mike Johnson" })), 2000));
         timers.push(setTimeout(() => setFormData(d => ({ ...d, company: content.rfqCompany })), 2300));
         timers.push(setTimeout(() => setFormData(d => ({ ...d, phone: "(602) 555-0123" })), 2600));
@@ -363,164 +270,58 @@ function RFQCaptureDemo({ isActive, vertical = 'auto' }) {
       }
     }, 40);
     timers.push(typeInterval);
-
     return () => timers.forEach(clearTimeout);
   }, [isActive]);
 
   return (
-    <div className="space-y-4">
-      {/* Account Context Bar */}
-      <div className="text-xs text-black/60 dark:text-white/60 px-1">
-        <div className="flex items-center gap-3 flex-wrap">
-          <span className="inline-flex items-center gap-1.5">
-            <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span>
-            Account: {content.rfqCompany}
-          </span>
-          <span>•</span>
-          <span>{content.accountType}</span>
+    <div className="space-y-3 p-4">
+      <div className="flex items-center justify-between text-[11px] text-black/40 dark:text-white/40">
+        <div className="flex items-center gap-1.5">
+          <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500" />
+          <span>Account: {content.rfqCompany}</span>
         </div>
+        <span>• <span className="text-black/60 dark:text-white/60">{content.accountType}</span></span>
       </div>
-
-      <SearchBar query={query} placeholder="Describe your repair need or request a quote..." />
-
+      <SearchBar query={query} />
       {showResponse && (
-        <motion.div
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
-          className="rounded-2xl border border-black/10 dark:border-white/10 bg-white/80 dark:bg-white/5 p-4"
-        >
-          <div className="space-y-2">
-            <div className="flex items-start gap-2 text-sm text-black/80 dark:text-white/80">
-              <FileText className="h-4 w-4 mt-0.5 text-fuchsia-600 flex-shrink-0" />
-              <div>
-                <p className="font-medium mb-2">{content.rfqMessage}</p>
-                <p className="text-black/60 dark:text-white/60">
-                  {content.rfqSubMessage}
-                </p>
-              </div>
-            </div>
-            <div className="text-xs text-black/50 dark:text-white/50 pl-6">
-              Will route to: Phoenix counter team • Priority response: same day
-            </div>
+        <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }}
+          className="flex items-start gap-2 text-xs text-black/60 dark:text-white/60 bg-violet-50/50 dark:bg-violet-500/5 rounded-xl p-3">
+          <Sparkles className="w-3.5 h-3.5 text-violet-500 flex-shrink-0 mt-0.5" />
+          <div>
+            <p>{content.rfqMessage}</p>
+            <p className="mt-1 text-black/40 dark:text-white/40">{content.rfqSubMessage}</p>
           </div>
         </motion.div>
       )}
-
       {showForm && (
-        <motion.div
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
-          className="rounded-2xl border border-fuchsia-200 dark:border-fuchsia-800 bg-white/80 dark:bg-white/5 p-5 space-y-4"
-        >
-          <div className="flex items-center gap-2">
-            <FileText className="h-5 w-5 text-fuchsia-600" />
-            <h3 className="font-semibold text-black/90 dark:text-white/90">
-              RFQ Summary (ready for sales)
-            </h3>
-          </div>
-
-          <div className="space-y-3">
-            <div className="grid grid-cols-2 gap-3">
-              <div>
-                <label className="block text-xs font-medium text-black/70 dark:text-white/70 mb-1">
-                  Contact Name
-                </label>
-                <input
-                  readOnly
-                  value={formData.name}
-                  className="w-full rounded-lg border border-black/10 dark:border-white/10 bg-white/50 dark:bg-white/5 px-3 py-2 text-sm"
-                  placeholder="Name..."
-                />
+        <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }}
+          className="rounded-xl border border-black/10 dark:border-white/10 bg-white dark:bg-white/5 p-3 space-y-2">
+          <p className="text-[11px] font-semibold text-black/60 dark:text-white/60">RFQ Summary (ready for sales)</p>
+          <div className="grid grid-cols-2 gap-2 text-[11px]">
+            {[
+              ["Contact Name", formData.name],
+              ["Company", formData.company],
+              ["Phone", formData.phone],
+              ["Jobsite ZIP", formData.jobsiteZip],
+              ["Timeline", formData.timeline],
+              ["Quote Type", formData.quoteType],
+            ].map(([label, value]) => (
+              <div key={label}>
+                <p className="text-black/40 dark:text-white/40">{label}</p>
+                <p className="text-black/80 dark:text-white/80 font-medium h-4">{value}</p>
               </div>
-
-              <div>
-                <label className="block text-xs font-medium text-black/70 dark:text-white/70 mb-1">
-                  Company
-                </label>
-                <input
-                  readOnly
-                  value={formData.company}
-                  className="w-full rounded-lg border border-black/10 dark:border-white/10 bg-white/50 dark:bg-white/5 px-3 py-2 text-sm"
-                  placeholder="Company..."
-                />
-              </div>
-            </div>
-
-            <div className="grid grid-cols-2 gap-3">
-              <div>
-                <label className="block text-xs font-medium text-black/70 dark:text-white/70 mb-1">
-                  Phone
-                </label>
-                <input
-                  readOnly
-                  value={formData.phone}
-                  className="w-full rounded-lg border border-black/10 dark:border-white/10 bg-white/50 dark:bg-white/5 px-3 py-2 text-sm"
-                  placeholder="Phone..."
-                />
-              </div>
-
-              <div>
-                <label className="block text-xs font-medium text-black/70 dark:text-white/70 mb-1">
-                  Jobsite ZIP
-                </label>
-                <input
-                  readOnly
-                  value={formData.jobsiteZip}
-                  className="w-full rounded-lg border border-black/10 dark:border-white/10 bg-white/50 dark:bg-white/5 px-3 py-2 text-sm"
-                  placeholder="ZIP..."
-                />
-              </div>
-            </div>
-
-            <div className="grid grid-cols-2 gap-3">
-              <div>
-                <label className="block text-xs font-medium text-black/70 dark:text-white/70 mb-1">
-                  Timeline
-                </label>
-                <input
-                  readOnly
-                  value={formData.timeline}
-                  className="w-full rounded-lg border border-black/10 dark:border-white/10 bg-white/50 dark:bg-white/5 px-3 py-2 text-sm"
-                  placeholder="Timeline..."
-                />
-              </div>
-
-              <div>
-                <label className="block text-xs font-medium text-black/70 dark:text-white/70 mb-1">
-                  Quote Type
-                </label>
-                <input
-                  readOnly
-                  value={formData.quoteType}
-                  className="w-full rounded-lg border border-black/10 dark:border-white/10 bg-white/50 dark:bg-white/5 px-3 py-2 text-sm"
-                  placeholder="Quote type..."
-                />
-              </div>
-            </div>
+            ))}
           </div>
         </motion.div>
       )}
-
       {showConfirmation && (
-        <motion.div
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
-          className="rounded-2xl border border-green-200 dark:border-green-800 bg-green-50/50 dark:bg-green-900/10 p-4"
-        >
-          <div className="flex items-start gap-3">
-            <CheckCircle2 className="h-5 w-5 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" />
-            <div className="space-y-2">
-              <p className="font-semibold text-sm text-black/90 dark:text-white/90">
-                RFQ Captured
-              </p>
-              <div className="text-sm text-black/70 dark:text-white/70 space-y-1">
-                <p><strong>Routed to:</strong> Phoenix Counter Team</p>
-                <p><strong>Priority:</strong> Emergency / same day</p>
-              </div>
-            </div>
+        <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }}
+          className="flex items-center gap-2 rounded-xl bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-200 dark:border-emerald-500/20 p-3">
+          <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
+          <div className="text-xs">
+            <p className="font-semibold text-emerald-800 dark:text-emerald-300">RFQ Captured</p>
+            <p className="text-emerald-600 dark:text-emerald-400">Routed to: Phoenix Counter Team</p>
+            <p className="text-emerald-600 dark:text-emerald-400">Priority: Emergency / same day</p>
           </div>
         </motion.div>
       )}
@@ -528,32 +329,23 @@ function RFQCaptureDemo({ isActive, vertical = 'auto' }) {
   );
 }
 
-// Demo 3: Compatibility Q&A
 function CompatibilityDemo({ isActive, vertical = 'auto' }) {
   const [question, setQuestion] = useState("");
   const [showAnswer, setShowAnswer] = useState(false);
   const [showSpecs, setShowSpecs] = useState(false);
-
   const content = VERTICAL_CONTENT[vertical];
   const compatQuestion = content.compatibilityQuestion;
   const compatAnswer = content.compatibilityAnswer;
 
   useEffect(() => {
     if (!isActive) {
-      setQuestion("");
-      setShowAnswer(false);
-      setShowSpecs(false);
-      return;
+      setQuestion(""); setShowAnswer(false); setShowSpecs(false); return;
     }
-
     let i = 0;
     const timers = [];
-
-    // Type question
     const typeInterval = setInterval(() => {
       if (i < compatQuestion.length) {
-        setQuestion(compatQuestion.slice(0, i + 1));
-        i++;
+        setQuestion(compatQuestion.slice(0, i + 1)); i++;
       } else {
         clearInterval(typeInterval);
         timers.push(setTimeout(() => setShowAnswer(true), 600));
@@ -561,137 +353,74 @@ function CompatibilityDemo({ isActive, vertical = 'auto' }) {
       }
     }, 45);
     timers.push(typeInterval);
-
     return () => timers.forEach(clearTimeout);
   }, [isActive, vertical]);
 
   return (
-    <div className="space-y-4">
-      {/* Context Bar */}
-      <div className="text-xs text-black/60 dark:text-white/60 px-1">
-        <div className="flex items-center gap-3 flex-wrap">
-          <span className="inline-flex items-center gap-1.5">
-            <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span>
-            Referencing: OEM spec sheets + compatibility matrix
-          </span>
-          <span>•</span>
-          <span>Phoenix inventory</span>
+    <div className="space-y-3 p-4">
+      <div className="flex items-center justify-between text-[11px] text-black/40 dark:text-white/40">
+        <div className="flex items-center gap-1.5">
+          <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500" />
+          <span>Referencing: OEM spec sheets + compatibility matrix</span>
+        </div>
+        <span>• <span className="text-black/60 dark:text-white/60">Phoenix inventory</span></span>
+      </div>
+
+      <div className="flex items-center gap-3 rounded-xl border border-black/5 dark:border-white/10 bg-white dark:bg-white/5 p-3">
+        <div className="w-12 h-12 rounded-lg bg-slate-100 dark:bg-white/10 flex-shrink-0 overflow-hidden">
+          <img src="/media/carrier-25vna4.png" alt="" className="w-full h-full object-contain" />
+        </div>
+        <div>
+          <p className="text-sm font-medium text-black dark:text-white">Carrier 25VNA4 3-Ton Heat Pump</p>
+          <p className="text-[11px] text-black/50 dark:text-white/50">16 SEER2 • Single Stage • $3,450</p>
         </div>
       </div>
 
-      <div className="rounded-2xl border border-black/10 dark:border-white/10 bg-white/70 dark:bg-white/5 p-4">
-        <div className="text-xs font-medium text-black/60 dark:text-white/60 mb-2">
-          Selected Product
-        </div>
-        <div className="font-semibold text-black/90 dark:text-white/90">
-          Carrier 25VNA4 3-Ton Heat Pump
-        </div>
-        <div className="text-sm text-black/60 dark:text-white/60 mt-1">
-          16 SEER2 • Single Stage • $3,450
-        </div>
-      </div>
-
-      <div className="rounded-2xl border border-fuchsia-200 dark:border-fuchsia-800 bg-white/80 dark:bg-white/5 p-4 space-y-3">
-        <div className="flex items-center gap-2">
-          <Sparkles className="h-5 w-5 text-fuchsia-600" />
-          <span className="text-sm font-medium text-black/70 dark:text-white/70">
-            Ask about compatibility
-          </span>
-        </div>
-
-        <div className="rounded-lg border border-black/10 dark:border-white/10 bg-white/50 dark:bg-white/5 px-3 py-2.5 min-h-[40px] text-sm">
-          {question || <span className="text-black/40 dark:text-white/40">Type your question...</span>}
-          {question && question.length < compatQuestion.length && (
-            <span className="animate-pulse">|</span>
+      <div className="rounded-xl border border-black/10 dark:border-white/15 bg-white dark:bg-white/5 px-4 py-3">
+        <p className="text-[11px] text-black/40 dark:text-white/40 mb-1">Ask about compatibility</p>
+        <p className="text-sm text-black/80 dark:text-white/80">
+          {question || <span className="text-black/30 dark:text-white/30">Ask a question...</span>}
+          {question.length > 0 && question.length < compatQuestion.length && (
+            <span className="animate-pulse ml-0.5">|</span>
           )}
-        </div>
-
-        {showAnswer && (
-          <motion.div
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4 }}
-            className="space-y-2"
-          >
-            <div className="rounded-lg bg-gradient-to-br from-fuchsia-50 to-pink-50 dark:from-fuchsia-900/20 dark:to-pink-900/20 border border-fuchsia-100 dark:border-fuchsia-800 p-3">
-              <p className="text-sm text-black/80 dark:text-white/80 leading-relaxed">
-                {compatAnswer}
-              </p>
-            </div>
-            <div className="text-xs text-black/50 dark:text-white/50">
-              Source: Carrier installation manual + compatibility database
-            </div>
-          </motion.div>
-        )}
-
-        {showSpecs && (
-          <motion.div
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4 }}
-            className="space-y-2"
-          >
-            <div className="text-xs font-semibold uppercase tracking-wider text-black/60 dark:text-white/60">
-              Compatible Air Handlers
-            </div>
-            <div className="space-y-2">
-              <div className="rounded-lg border border-black/10 dark:border-white/10 bg-white/50 dark:bg-white/5 p-3">
-                <div className="flex items-center gap-3">
-                  <div className="w-16 h-16 flex-shrink-0 rounded-lg overflow-hidden bg-white/80 dark:bg-white/10 border border-black/5 dark:border-white/10">
-                    <img
-                      src="/media/carrier-air-handler-new.png"
-                      alt="Carrier FB4CNF036"
-                      className="w-full h-full object-contain p-1"
-                    />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="font-medium text-sm text-black/90 dark:text-white/90">
-                      Carrier FB4CNF036
-                    </div>
-                    <div className="text-xs text-black/60 dark:text-white/60 mt-0.5">
-                      3-ton capacity • Variable speed
-                    </div>
-                    <div className="text-xs text-black/50 dark:text-white/50 mt-1">
-                      Phoenix • Pickup today
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="rounded-lg border border-black/10 dark:border-white/10 bg-white/50 dark:bg-white/5 p-3">
-                <div className="flex items-center gap-3">
-                  <div className="w-16 h-16 flex-shrink-0 rounded-lg overflow-hidden bg-white/80 dark:bg-white/10 border border-black/5 dark:border-white/10">
-                    <img
-                      src="/media/carrier-air-handler-new.png"
-                      alt="Carrier FB4CNF042"
-                      className="w-full h-full object-contain p-1"
-                    />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="font-medium text-sm text-black/90 dark:text-white/90">
-                      Carrier FB4CNF042
-                    </div>
-                    <div className="text-xs text-black/60 dark:text-white/60 mt-0.5">
-                      3.5-ton capacity • Variable speed
-                    </div>
-                    <div className="text-xs text-black/50 dark:text-white/50 mt-1">
-                      Phoenix • Ships tomorrow
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex gap-2 pt-2">
-              <Button size="sm" variant="ai" className="flex-1">
-                Add to RFQ
-              </Button>
-              <Button size="sm" variant="outline" className="flex-1">
-                Add to Cart
-              </Button>
-            </div>
-          </motion.div>
-        )}
+        </p>
       </div>
+
+      {showAnswer && (
+        <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }}
+          className="flex items-start gap-2 text-xs text-black/60 dark:text-white/60 bg-violet-50/50 dark:bg-violet-500/5 rounded-xl p-3">
+          <Sparkles className="w-3.5 h-3.5 text-violet-500 flex-shrink-0 mt-0.5" />
+          <div>
+            <p>{compatAnswer}</p>
+            <p className="mt-1 text-[10px] text-black/30 dark:text-white/30">Source: Carrier manual + compatibility database</p>
+          </div>
+        </motion.div>
+      )}
+
+      {showSpecs && (
+        <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} className="space-y-2">
+          <p className="text-[11px] font-semibold text-black/50 dark:text-white/50">Compatible Air Handlers</p>
+          {[
+            { name: "Carrier FB4CNF036", specs: "3-ton • Variable speed", avail: "Pickup today" },
+            { name: "Carrier FB4CNF042", specs: "3.5-ton • Variable speed", avail: "Ships tomorrow" },
+          ].map((item) => (
+            <div key={item.name} className="flex items-center gap-3 rounded-xl border border-black/5 dark:border-white/10 bg-white dark:bg-white/5 p-3">
+              <div className="w-10 h-10 rounded-lg bg-slate-100 dark:bg-white/10 flex-shrink-0 overflow-hidden">
+                <img src="/media/carrier-air-handler-new.png" alt="" className="w-full h-full object-contain" />
+              </div>
+              <div className="flex-1 min-w-0">
+                <p className="text-xs font-medium text-black dark:text-white">{item.name}</p>
+                <p className="text-[10px] text-black/50 dark:text-white/50">{item.specs}</p>
+              </div>
+              <div className="text-[10px] text-emerald-600 dark:text-emerald-400">{item.avail}</div>
+            </div>
+          ))}
+          <div className="flex gap-2">
+            <Button size="compact" variant="outline" className="flex-1 text-xs">Add to RFQ</Button>
+            <Button size="compact" className="flex-1 text-xs">Add to Cart</Button>
+          </div>
+        </motion.div>
+      )}
     </div>
   );
 }
@@ -699,7 +428,7 @@ function CompatibilityDemo({ isActive, vertical = 'auto' }) {
 export default function HeroDemo({ className = "" }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [vertical, setVertical] = useState('auto');
-  
+
   const slides = [
     { id: "search", label: "Technical Search" },
     { id: "rfq", label: "RFQ Capture" },
@@ -710,18 +439,16 @@ export default function HeroDemo({ className = "" }) {
   const goNext = () => setActiveIndex((i) => (i + 1) % slides.length);
 
   return (
-    <div className={`${className}`}>
-      <div className="mx-auto w-full max-w-4xl">
+    <div className={`w-full max-w-2xl mx-auto ${className}`}>
+      <div className="rounded-2xl border border-black/10 dark:border-white/10 bg-white/80 dark:bg-white/5 backdrop-blur-lg shadow-xl overflow-hidden">
         {/* Vertical Switcher */}
-        <div className="flex items-center justify-center gap-2 mb-4">
-          <span className="text-sm text-black/60 dark:text-white/60 mr-2">See it for:</span>
+        <div className="flex items-center gap-2 px-4 pt-4 pb-2">
+          <span className="text-xs text-black/40 dark:text-white/40 mr-1">See it for:</span>
           {Object.entries(VERTICAL_CONTENT).map(([key, value]) => (
-            <button
-              key={key}
-              onClick={() => setVertical(key)}
+            <button key={key} onClick={() => setVertical(key)}
               className={`px-4 py-2 rounded-full text-sm font-medium transition ${
                 vertical === key
-                  ? "bg-gradient-to-r from-fuchsia-500 to-pink-500 text-white shadow-sm"
+                  ? "bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white shadow-sm"
                   : "bg-white/50 dark:bg-white/5 text-black/70 dark:text-white/70 border border-black/10 dark:border-white/10 hover:bg-white dark:hover:bg-white/10"
               }`}
             >
@@ -730,47 +457,22 @@ export default function HeroDemo({ className = "" }) {
           ))}
         </div>
 
-        <div className="rounded-3xl shadow-2xl border border-black/5 dark:border-white/10 bg-gradient-to-br from-violet-50 via-white to-emerald-50 dark:from-violet-900/20 dark:via-zinc-900 dark:to-emerald-900/10 p-3 sm:p-8">
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
-            <div className="text-xs uppercase tracking-[0.35em] text-black/50 dark:text-white/60">
-              {slides[activeIndex].label}
-            </div>
-            <div className="flex items-center gap-2">
-              <button
-                type="button"
-                onClick={goPrev}
-                aria-label="Previous demo"
-                className="inline-flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-full border border-black/10 dark:border-white/10 bg-white/70 dark:bg-white/5 text-black/70 dark:text-white/70 hover:bg-black/5 dark:hover:bg-white/10"
-              >
-                <ChevronLeft className="h-4 w-4" />
-              </button>
-              <button
-                type="button"
-                onClick={goNext}
-                aria-label="Next demo"
-                className="inline-flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-full border border-black/10 dark:border-white/10 bg-white/70 dark:bg-white/5 text-black/70 dark:text-white/70 hover:bg-black/5 dark:hover:bg-white/10"
-              >
-                <ChevronRight className="h-4 w-4" />
-              </button>
-            </div>
+        <div className="flex items-center justify-between px-4 py-2 border-b border-black/5 dark:border-white/10">
+          <span className="text-sm font-semibold text-black dark:text-white">{slides[activeIndex].label}</span>
+          <div className="flex items-center gap-1">
+            <button onClick={goPrev} className="p-1 rounded-lg hover:bg-black/5 dark:hover:bg-white/10"><ChevronLeft className="w-4 h-4" /></button>
+            <button onClick={goNext} className="p-1 rounded-lg hover:bg-black/5 dark:hover:bg-white/10"><ChevronRight className="w-4 h-4" /></button>
           </div>
+        </div>
 
-          <div className="relative overflow-hidden">
-            <div
-              className="flex items-stretch transition-transform duration-500 ease-out"
-              style={{ transform: `translateX(-${activeIndex * 100}%)` }}
-            >
-              <div className="w-full shrink-0">
-                <TechnicalSearchDemo isActive={activeIndex === 0} vertical={vertical} />
-              </div>
-              <div className="w-full shrink-0">
-                <RFQCaptureDemo isActive={activeIndex === 1} vertical={vertical} />
-              </div>
-              <div className="w-full shrink-0">
-                <CompatibilityDemo isActive={activeIndex === 2} vertical={vertical} />
-              </div>
-            </div>
-          </div>
+        <div className="min-h-[380px]">
+          <AnimatePresence mode="wait">
+            <motion.div key={`${activeIndex}-${vertical}`} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.2 }}>
+              {activeIndex === 0 && <TechnicalSearchDemo isActive={true} vertical={vertical} />}
+              {activeIndex === 1 && <RFQCaptureDemo isActive={true} vertical={vertical} />}
+              {activeIndex === 2 && <CompatibilityDemo isActive={true} vertical={vertical} />}
+            </motion.div>
+          </AnimatePresence>
         </div>
       </div>
     </div>

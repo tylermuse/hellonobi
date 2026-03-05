@@ -34,12 +34,12 @@ function App() {
     <DemoFormProvider isOpen={isFormOpen} onOpen={() => setIsFormOpen(true)}>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/blog/:slug" element={<BlogPost />} />
-        <Route path="/why-nobi/better-search" element={<BetterSearch />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/faqs" element={<FAQs />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:slug" element={<BlogPost />} />
+        <Route path="/why-nobi/better-search" element={<BetterSearch />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <RequestDemoModal open={isFormOpen} onClose={() => setIsFormOpen(false)} />

@@ -1,10 +1,6 @@
 import React from "react";
 import Marquee from "react-fast-marquee";
 
-/**
- * Reusable scrolling logo strip with consistent sizing + spacing.
- * Keeps grayscale + hover reveal just like the homepage.
- */
 export default function LogoMarquee({
   logos = [],
   label = "",
@@ -24,42 +20,16 @@ export default function LogoMarquee({
   const items = duplicate ? [...logos, ...logos] : logos;
 
   return (
-    <div className={[className, border || rounded ? "overflow-hidden" : ""].filter(Boolean).join(" ")}>
+    <div className={className}>
       {label && (
-        <span className="text-xs uppercase tracking-[0.3em] text-black/50 dark:text-white/60 block mb-3">
+        <p className="text-center text-sm text-black/40 dark:text-white/40 mb-4">
           {label}
-        </span>
+        </p>
       )}
-      <div
-        className={[
-          "overflow-hidden",
-          paddingY,
-          border ? "border border-black/10 dark:border-white/10" : "",
-          rounded ? "rounded-lg" : "",
-        ]
-          .filter(Boolean)
-          .join(" ")}
-      >
-        <Marquee
-          speed={speed}
-          gradient={gradient}
-          gradientWidth={gradientWidth}
-          pauseOnHover={pauseOnHover}
-        >
+      <div className={`${paddingY} ${border ? "border-y border-black/5 dark:border-white/10" : ""} ${rounded ? "rounded-2xl" : ""}`}>
+        <Marquee speed={speed} gradient={gradient} gradientWidth={gradientWidth} pauseOnHover={pauseOnHover}>
           {items.map((logo, idx) => (
-            <img
-              key={`${logo.alt}-${idx}`}
-              src={logo.src}
-              alt={logo.alt}
-              className={[
-                "h-5 w-auto object-contain grayscale opacity-60 hover:opacity-100 transition mx-4",
-                itemClassName,
-              ]
-                .filter(Boolean)
-                .join(" ")}
-              loading="lazy"
-              decoding="async"
-            />
+            <img key={idx} src={logo.src} alt={logo.alt || ""} className={`h-8 mx-8 opacity-40 hover:opacity-100 transition grayscale hover:grayscale-0 ${itemClassName}`} />
           ))}
         </Marquee>
       </div>

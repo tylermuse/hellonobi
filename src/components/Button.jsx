@@ -22,10 +22,7 @@ export default function Button({
   };
 
   return (
-    <button
-      className={`${baseClasses} ${variants[variant]} ${sizes[size]} ${className}`}
-      {...props}
-    >
+    <button className={`${baseClasses} ${variants[variant] || ""} ${sizes[size] || ""} ${className}`} {...props}>
       {children}
     </button>
   );

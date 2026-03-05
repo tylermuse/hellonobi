@@ -2,106 +2,61 @@ import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, Sparkles, CheckCircle2, FileText, User, ArrowRight } from "lucide-react";
 
-// Animation 1: Technical Search
 export function TechnicalSearchAnimation({ isActive }) {
   const [query, setQuery] = useState("");
   const [showResults, setShowResults] = useState(false);
   const QUERY = "replacement 480V motor • 3-phase • any branch Phoenix";
 
   useEffect(() => {
-    if (!isActive) {
-      setQuery("");
-      setShowResults(false);
-      return;
-    }
-
+    if (!isActive) { setQuery(""); setShowResults(false); return; }
     let i = 0;
     const timers = [];
-
-    // Type the query
     const typeInterval = setInterval(() => {
-      if (i < QUERY.length) {
-        setQuery(QUERY.slice(0, i + 1));
-        i++;
-      } else {
-        clearInterval(typeInterval);
-        timers.push(setTimeout(() => setShowResults(true), 600));
-      }
+      if (i < QUERY.length) { setQuery(QUERY.slice(0, i + 1)); i++; }
+      else { clearInterval(typeInterval); timers.push(setTimeout(() => setShowResults(true), 600)); }
     }, 50);
     timers.push(typeInterval);
-
     return () => timers.forEach(clearTimeout);
   }, [isActive]);
 
   return (
-    <div className="w-full h-full bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 p-4 sm:p-6 flex items-center justify-center">
-      <div className="w-full space-y-4">
-        {/* System Status Bar */}
-        <div className="flex items-center justify-between text-[10px] sm:text-xs text-slate-600 dark:text-slate-400 px-1">
-          <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
-            <span className="inline-flex items-center gap-1">
-              <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
-              <span className="hidden sm:inline">Connected: Catalog + Inventory</span>
-              <span className="sm:hidden">Connected</span>
-            </span>
-            <span className="hidden sm:inline">•</span>
-            <span>Phoenix Branch</span>
-            <span className="hidden sm:inline">•</span>
-            <span className="hidden sm:inline">Contractor pricing</span>
+    <div className="rounded-2xl border border-black/10 dark:border-white/10 bg-white/80 dark:bg-white/5 backdrop-blur-lg shadow-lg overflow-hidden">
+      <div className="p-4 space-y-3">
+        <div className="flex items-center justify-between text-[11px] text-black/40 dark:text-white/40">
+          <div className="flex items-center gap-1.5">
+            <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500" />
+            <span>Connected: Catalog + Inventory</span> <span className="text-emerald-600 ml-1">Connected</span>
           </div>
+          <span>• <span className="text-black/60 dark:text-white/60">Phoenix Branch</span> • <span className="text-black/60 dark:text-white/60">Contractor pricing</span></span>
         </div>
-
-        {/* Search Bar */}
-        <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg p-3 sm:p-4 border border-slate-200 dark:border-slate-700">
-          <div className="flex items-center gap-2 sm:gap-3">
-            <Search className="h-4 w-4 sm:h-5 sm:w-5 text-slate-400" />
-            <input
-              readOnly
-              value={query}
-              className="flex-1 bg-transparent outline-none text-sm sm:text-base text-slate-900 dark:text-white"
-              placeholder="Search for equipment..."
-            />
-            <Sparkles className="h-4 w-4 sm:h-5 sm:w-5 text-fuchsia-600" />
-          </div>
+        <div className="flex items-center gap-2 rounded-2xl border border-black/10 dark:border-white/15 bg-white dark:bg-white/5 px-4 py-3 shadow-sm">
+          <Sparkles className="w-4 h-4 text-violet-500 flex-shrink-0" />
+          <span className="text-sm text-black/80 dark:text-white/80 truncate flex-1">{query || "Search for parts..."}</span>
         </div>
-
-        {/* Results */}
         <AnimatePresence>
           {showResults && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="space-y-3"
-            >
-              <div className="flex items-start gap-2 text-[11px] sm:text-xs text-slate-700 dark:text-slate-300 px-1">
-                <Sparkles className="h-3 w-3 sm:h-3.5 sm:w-3.5 mt-0.5 flex-shrink-0 text-fuchsia-600" />
-                <p>Found 3 replacement motors matching your specs. Checked all Phoenix branches, filtered by voltage/phase, and verified cross-compatibility.</p>
+            <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} className="space-y-2">
+              <div className="flex items-start gap-2 text-xs text-black/60 dark:text-white/60 bg-violet-50/50 dark:bg-violet-500/5 rounded-xl p-3">
+                <Sparkles className="w-3.5 h-3.5 text-violet-500 flex-shrink-0 mt-0.5" />
+                <span>Found 3 replacement motors matching your specs. Checked all Phoenix branches, filtered by voltage/phase, and verified cross-compatibility.</span>
               </div>
               {[
                 { name: "Baldor M3615T Motor", specs: "3-phase, 480V, 5HP", price: "$890", location: "Phoenix Main • Pickup today" },
                 { name: "WEG 00536ET3E215T", specs: "3-phase, 460-480V, 5HP", price: "$825", location: "Phoenix North • Will-call" },
                 { name: "Leeson C145T17FB6", specs: "3-phase, 480V, 5HP", price: "$940", location: "Tempe • Transfer today" },
               ].map((item, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: i * 0.2 }}
-                  className="bg-white dark:bg-slate-800 rounded-lg shadow p-4 border border-slate-200 dark:border-slate-700"
-                >
-                  <div className="flex items-center justify-between">
-                    <div className="flex-1">
-                      <h4 className="font-semibold text-slate-900 dark:text-white">{item.name}</h4>
-                      <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">{item.specs}</p>
-                      <p className="text-xs text-slate-500 dark:text-slate-400 mt-1.5">{item.location}</p>
-                    </div>
-                    <div className="text-right ml-4">
-                      <p className="font-semibold text-slate-900 dark:text-white">{item.price}</p>
-                      <span className="text-xs text-green-600 dark:text-green-400 flex items-center gap-1 mt-1 justify-end">
-                        <CheckCircle2 className="h-3 w-3" />
-                        In stock
-                      </span>
-                    </div>
+                <motion.div key={item.name} initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.12 }}
+                  className="flex items-center justify-between gap-3 rounded-xl border border-black/5 dark:border-white/10 bg-white dark:bg-white/5 p-3">
+                  <div className="min-w-0">
+                    <p className="text-sm font-medium text-black dark:text-white truncate">{item.name}</p>
+                    <p className="text-[11px] text-black/50 dark:text-white/50">{item.specs}</p>
+                    <p className="text-[10px] text-black/40 dark:text-white/40">{item.location}</p>
+                  </div>
+                  <div className="text-right flex-shrink-0">
+                    <p className="text-sm font-semibold text-black dark:text-white">{item.price}</p>
+                    <span className="inline-flex items-center gap-1 text-[10px] text-emerald-600 dark:text-emerald-400">
+                      <span className="w-1 h-1 rounded-full bg-emerald-500" />In stock
+                    </span>
                   </div>
                 </motion.div>
               ))}
@@ -113,24 +68,12 @@ export function TechnicalSearchAnimation({ isActive }) {
   );
 }
 
-// Animation 2: RFQ Capture
 export function RFQCaptureAnimation({ isActive }) {
   const [step, setStep] = useState(0);
-  const [formData, setFormData] = useState({
-    project: "",
-    company: "",
-    timeline: "",
-    jobsiteZip: "",
-    quoteType: "",
-  });
+  const [formData, setFormData] = useState({ project: "", company: "", timeline: "", jobsiteZip: "", quoteType: "" });
 
   useEffect(() => {
-    if (!isActive) {
-      setStep(0);
-      setFormData({ project: "", company: "", timeline: "", jobsiteZip: "", quoteType: "" });
-      return;
-    }
-
+    if (!isActive) { setStep(0); setFormData({ project: "", company: "", timeline: "", jobsiteZip: "", quoteType: "" }); return; }
     const timers = [];
     timers.push(setTimeout(() => setStep(1), 500));
     timers.push(setTimeout(() => setStep(2), 1200));
@@ -140,148 +83,53 @@ export function RFQCaptureAnimation({ isActive }) {
     timers.push(setTimeout(() => setFormData(d => ({ ...d, jobsiteZip: "85004" })), 2700));
     timers.push(setTimeout(() => setFormData(d => ({ ...d, quoteType: "Firm quote" })), 3000));
     timers.push(setTimeout(() => setStep(3), 3600));
-
     return () => timers.forEach(clearTimeout);
   }, [isActive]);
 
   return (
-    <div className="w-full h-full bg-gradient-to-br from-violet-50 to-fuchsia-50 dark:from-violet-950 dark:to-fuchsia-950 p-4 sm:p-6 flex items-center justify-center">
-      <div className="w-full max-w-md mx-auto space-y-4">
-        {/* Account Context Bar */}
-        <div className="text-[10px] sm:text-xs text-slate-600 dark:text-slate-400 px-1">
-          <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
-            <span className="inline-flex items-center gap-1">
-              <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span>
-              <span className="hidden sm:inline">Account: Phoenix HVAC Co</span>
-              <span className="sm:hidden">Phoenix HVAC Co</span>
-            </span>
-            <span className="hidden sm:inline">•</span>
-            <span className="hidden sm:inline">Contractor pricing</span>
+    <div className="rounded-2xl border border-black/10 dark:border-white/10 bg-white/80 dark:bg-white/5 backdrop-blur-lg shadow-lg overflow-hidden">
+      <div className="p-4 space-y-3">
+        <div className="flex items-center justify-between text-[11px] text-black/40 dark:text-white/40">
+          <div className="flex items-center gap-1.5">
+            <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500" />
+            <span>Account: Phoenix HVAC Co</span>
           </div>
+          <span>• <span className="text-black/60 dark:text-white/60">Contractor pricing</span></span>
         </div>
-        {/* Chat Message */}
-        <AnimatePresence mode="wait">
+        <AnimatePresence>
           {step >= 1 && (
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-4 border border-slate-200 dark:border-slate-700"
-            >
-              <div className="flex items-start gap-3">
-                <div className="w-8 h-8 rounded-full bg-gradient-to-r from-fuchsia-500 to-pink-500 flex items-center justify-center flex-shrink-0">
-                  <Sparkles className="h-4 w-4 text-white" />
-                </div>
-                <div>
-                  <p className="text-sm text-slate-900 dark:text-white">
-                    I can help you get a quote for an emergency replacement. Let me collect a few details to expedite this.
-                  </p>
-                </div>
-              </div>
+            <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }}
+              className="flex items-start gap-2 text-xs text-black/60 dark:text-white/60 bg-violet-50/50 dark:bg-violet-500/5 rounded-xl p-3">
+              <Sparkles className="w-3.5 h-3.5 text-violet-500 flex-shrink-0 mt-0.5" />
+              <span>I can help you get a quote for an emergency replacement. Let me collect a few details to expedite this.</span>
             </motion.div>
           )}
         </AnimatePresence>
-
-        {/* Form */}
         <AnimatePresence>
           {step >= 2 && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-5 border-2 border-fuchsia-200 dark:border-fuchsia-800"
-            >
-              <div className="flex items-center gap-2 mb-4">
-                <FileText className="h-5 w-5 text-fuchsia-600" />
-                <h3 className="font-semibold text-slate-900 dark:text-white">RFQ Summary (ready for sales)</h3>
-              </div>
-              
-              <div className="space-y-3">
-                <div className="grid grid-cols-2 gap-3">
-                  <div>
-                    <label className="text-xs font-medium text-slate-600 dark:text-slate-400 block mb-1">
-                      Project
-                    </label>
-                    <input
-                      readOnly
-                      value={formData.project}
-                      className="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg px-3 py-2 text-sm"
-                      placeholder="..."
-                    />
+            <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }}
+              className="rounded-xl border border-black/10 dark:border-white/10 bg-white dark:bg-white/5 p-3 space-y-2">
+              <p className="text-[11px] font-semibold text-black/60 dark:text-white/60">RFQ Summary (ready for sales)</p>
+              <div className="grid grid-cols-2 gap-2 text-[11px]">
+                {[["Project", formData.project], ["Company", formData.company], ["Timeline", formData.timeline], ["Jobsite ZIP", formData.jobsiteZip], ["Quote Type", formData.quoteType]].map(([label, value]) => (
+                  <div key={label}>
+                    <p className="text-black/40 dark:text-white/40">{label}</p>
+                    <p className="text-black/80 dark:text-white/80 font-medium h-4">{value}</p>
                   </div>
-                  
-                  <div>
-                    <label className="text-xs font-medium text-slate-600 dark:text-slate-400 block mb-1">
-                      Company
-                    </label>
-                    <input
-                      readOnly
-                      value={formData.company}
-                      className="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg px-3 py-2 text-sm"
-                      placeholder="..."
-                    />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-2 gap-3">
-                  <div>
-                    <label className="text-xs font-medium text-slate-600 dark:text-slate-400 block mb-1">
-                      Timeline
-                    </label>
-                    <input
-                      readOnly
-                      value={formData.timeline}
-                      className="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg px-3 py-2 text-sm"
-                      placeholder="..."
-                    />
-                  </div>
-
-                  <div>
-                    <label className="text-xs font-medium text-slate-600 dark:text-slate-400 block mb-1">
-                      Jobsite ZIP
-                    </label>
-                    <input
-                      readOnly
-                      value={formData.jobsiteZip}
-                      className="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg px-3 py-2 text-sm"
-                      placeholder="..."
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label className="text-xs font-medium text-slate-600 dark:text-slate-400 block mb-1">
-                    Quote Type
-                  </label>
-                  <input
-                    readOnly
-                    value={formData.quoteType}
-                    className="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg px-3 py-2 text-sm"
-                    placeholder="..."
-                  />
-                </div>
+                ))}
               </div>
             </motion.div>
           )}
         </AnimatePresence>
-
-        {/* Success */}
         <AnimatePresence>
           {step >= 3 && (
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              className="bg-green-50 dark:bg-green-900/20 rounded-xl p-4 border border-green-200 dark:border-green-800"
-            >
-              <div className="flex items-start gap-3">
-                <CheckCircle2 className="h-5 w-5 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" />
-                <div className="space-y-1.5">
-                  <p className="text-sm font-semibold text-green-900 dark:text-green-100">
-                    RFQ Captured
-                  </p>
-                  <div className="text-xs text-green-800 dark:text-green-200 space-y-0.5">
-                  <p><strong>Routed to:</strong> Phoenix Counter Team</p>
-                  <p><strong>Priority:</strong> Emergency / same day</p>
-                  </div>
-                </div>
+            <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }}
+              className="flex items-center gap-2 rounded-xl bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-200 dark:border-emerald-500/20 p-3">
+              <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
+              <div className="text-xs">
+                <p className="font-semibold text-emerald-800 dark:text-emerald-300">RFQ Captured</p>
+                <p className="text-emerald-600 dark:text-emerald-400">Routed to: Phoenix Counter Team</p>
+                <p className="text-emerald-600 dark:text-emerald-400">Priority: Emergency / same day</p>
               </div>
             </motion.div>
           )}
@@ -291,162 +139,86 @@ export function RFQCaptureAnimation({ isActive }) {
   );
 }
 
-// Animation 3: Substitutes / Out-of-Stock
 export function SubstitutesAnimation({ isActive }) {
   const [showOOS, setShowOOS] = useState(false);
   const [showSubstitutes, setShowSubstitutes] = useState(false);
 
   useEffect(() => {
-    if (!isActive) {
-      setShowOOS(false);
-      setShowSubstitutes(false);
-      return;
-    }
-
+    if (!isActive) { setShowOOS(false); setShowSubstitutes(false); return; }
     const timers = [];
     timers.push(setTimeout(() => setShowOOS(true), 800));
     timers.push(setTimeout(() => setShowSubstitutes(true), 1800));
-
     return () => timers.forEach(clearTimeout);
   }, [isActive]);
 
   return (
-    <div className="w-full h-full bg-gradient-to-br from-orange-50 to-amber-50 dark:from-orange-950 dark:to-amber-950 p-4 sm:p-6 flex items-center justify-center">
-      <div className="w-full">
-        {/* System Context Bar */}
-        <div className="text-[10px] sm:text-xs text-slate-600 dark:text-slate-400 mb-3 sm:mb-4 px-1">
-          <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
-            <span className="inline-flex items-center gap-1">
-              <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span>
-              <span className="hidden sm:inline">Live inventory</span>
-              <span className="sm:hidden">Inventory</span>
-            </span>
-            <span className="hidden sm:inline">•</span>
-            <span>Phoenix</span>
-            <span className="hidden sm:inline">•</span>
-            <span className="hidden sm:inline">3 suppliers</span>
+    <div className="rounded-2xl border border-black/10 dark:border-white/10 bg-white/80 dark:bg-white/5 backdrop-blur-lg shadow-lg overflow-hidden">
+      <div className="p-4 space-y-3">
+        <div className="flex items-center justify-between text-[11px] text-black/40 dark:text-white/40">
+          <div className="flex items-center gap-1.5">
+            <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500" />
+            <span>Live inventory</span>
+          </div>
+          <span>• <span className="text-black/60 dark:text-white/60">Phoenix</span> • <span className="text-black/60 dark:text-white/60">3 suppliers</span></span>
+        </div>
+
+        <div className="flex gap-3">
+          <div className="w-20 h-20 rounded-xl bg-slate-100 dark:bg-white/10 flex-shrink-0 overflow-hidden">
+            <img src="/media/carrier-condenser-coil.png" alt="" className="w-full h-full object-contain" />
+          </div>
+          <div>
+            <p className="text-sm font-medium text-black dark:text-white">Carrier #38MGRQ36D3</p>
+            <p className="text-[11px] text-black/50 dark:text-white/50">3-ton condenser coil</p>
+            {!showOOS ? (
+              <p className="text-[11px] text-amber-600 mt-1">Checking availability...</p>
+            ) : (
+              <p className="text-[11px] text-red-600 mt-1 font-medium">Out of stock</p>
+            )}
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-[180px_1fr] gap-3 items-start">
-          {/* Product Image - Left Side */}
-          <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg overflow-hidden border border-slate-200 dark:border-slate-700 max-w-[180px] md:max-w-none mx-auto md:mx-0">
-            <div className="aspect-square bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-700 dark:to-slate-800 p-3 sm:p-4 flex items-center justify-center">
-              <img
-                src="/media/carrier-condenser-coil.png"
-                alt="Carrier Part #38MGRQ36D3"
-                className="w-full h-full object-contain"
-              />
-            </div>
-            <div className="p-2 sm:p-3 border-t border-slate-200 dark:border-slate-700">
-              <div className="font-semibold text-xs sm:text-sm text-slate-900 dark:text-white">Carrier #38MGRQ36D3</div>
-              <div className="text-[10px] sm:text-xs text-slate-600 dark:text-slate-400 mt-1">3-ton condenser coil</div>
-              <AnimatePresence mode="wait">
-                {!showOOS ? (
-                  <motion.span
-                    key="checking"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    className="inline-block text-xs text-slate-500 mt-2"
-                  >
-                    Checking availability...
-                  </motion.span>
-                ) : (
-                  <motion.span
-                    key="oos"
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    className="inline-flex items-center gap-1 text-xs text-red-600 dark:text-red-400 font-medium bg-red-50 dark:bg-red-900/20 px-2 py-1 rounded mt-2"
-                  >
-                    Out of stock
-                  </motion.span>
-                )}
-              </AnimatePresence>
-            </div>
-          </div>
+        <AnimatePresence>
+          {showOOS && (
+            <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }}
+              className="flex items-start gap-2 text-xs text-black/60 dark:text-white/60 bg-violet-50/50 dark:bg-violet-500/5 rounded-xl p-3">
+              <Sparkles className="w-3.5 h-3.5 text-violet-500 flex-shrink-0 mt-0.5" />
+              <span>This part is backordered until March 15th. Here are 3 compatible alternatives available now:</span>
+            </motion.div>
+          )}
+        </AnimatePresence>
 
-          {/* Substitutes - Right Side */}
-          <div className="space-y-3">
-            {/* AI Message */}
-            <AnimatePresence>
-              {showOOS && (
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-4 border border-fuchsia-200 dark:border-fuchsia-800"
-                >
-                  <div className="flex items-start gap-3">
-                    <Sparkles className="h-5 w-5 text-fuchsia-600 mt-0.5 flex-shrink-0" />
-                    <p className="text-sm text-slate-900 dark:text-white">
-                      This part is backordered until March 15th. Here are 3 compatible alternatives available now:
-                    </p>
+        <AnimatePresence>
+          {showSubstitutes && (
+            <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} className="space-y-2">
+              <p className="text-[11px] font-semibold text-black/50 dark:text-white/50">Compatible Substitutes</p>
+              {[
+                { name: "Trane BAYCOIL36A", specs: "Direct replacement • Same tonnage", price: "$485", eta: "In stock", recommended: true },
+                { name: "Goodman CAPF3636B6", specs: "Compatible match • Standard efficiency", price: "$420", eta: "Ships today", recommended: false },
+                { name: "Lennox LB-92690C", specs: "Upgraded efficiency • Same fit", price: "$510", eta: "In stock", recommended: false },
+              ].map((item, i) => (
+                <motion.div key={item.name} initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.12 }}
+                  className="flex items-center justify-between gap-3 rounded-xl border border-black/5 dark:border-white/10 bg-white dark:bg-white/5 p-3">
+                  <div className="min-w-0">
+                    <div className="flex items-center gap-2">
+                      <p className="text-sm font-medium text-black dark:text-white truncate">{item.name}</p>
+                      {item.recommended && <span className="text-[9px] bg-violet-100 dark:bg-violet-500/20 text-violet-700 dark:text-violet-300 px-1.5 py-0.5 rounded-full font-medium">Recommended</span>}
+                    </div>
+                    <p className="text-[11px] text-black/50 dark:text-white/50">{item.specs}</p>
+                  </div>
+                  <div className="text-right flex-shrink-0">
+                    <p className="text-sm font-semibold text-black dark:text-white">{item.price}</p>
+                    <p className="text-[10px] text-emerald-600 dark:text-emerald-400">{item.eta}</p>
                   </div>
                 </motion.div>
-              )}
-            </AnimatePresence>
-
-            {/* Substitute Products */}
-            <AnimatePresence>
-              {showSubstitutes && (
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="space-y-2"
-                >
-                  <div className="text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-400 px-1">
-                    Compatible Substitutes
-                  </div>
-                  {[
-                    { name: "Trane BAYCOIL36A", specs: "Direct replacement • Same tonnage", price: "$485", eta: "In stock" },
-                    { name: "Goodman CAPF3636B6", specs: "Compatible match • Standard efficiency", price: "$420", eta: "Ships today" },
-                    { name: "Lennox LB-92690C", specs: "Upgraded efficiency • Same fit", price: "$510", eta: "In stock" },
-                  ].map((item, i) => (
-                    <motion.div
-                      key={i}
-                      initial={{ opacity: 0, x: -10 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: i * 0.2 }}
-                      className="bg-white dark:bg-slate-800 rounded-xl shadow p-3 border border-green-200 dark:border-green-800"
-                    >
-                  <div className="space-y-2">
-                    <div className="flex items-center justify-between">
-                      <div className="flex-1">
-                        <div className="flex items-center gap-2">
-                          <h4 className="font-semibold text-sm text-slate-900 dark:text-white">{item.name}</h4>
-                          {i === 0 && (
-                            <span className="text-xs bg-fuchsia-100 dark:bg-fuchsia-900/30 text-fuchsia-700 dark:text-fuchsia-300 px-2 py-0.5 rounded-full font-medium">
-                              Recommended
-                            </span>
-                          )}
-                        </div>
-                        <p className="text-xs text-slate-600 dark:text-slate-400 mt-0.5">{item.specs}</p>
-                      </div>
-                      <div className="text-right ml-4">
-                        <p className="font-semibold text-sm text-slate-900 dark:text-white">{item.price}</p>
-                        <span className="text-xs text-green-600 dark:text-green-400 flex items-center gap-1 mt-1 justify-end">
-                          <CheckCircle2 className="h-3 w-3" />
-                          {item.eta}
-                        </span>
-                      </div>
-                    </div>
-                    <div className="text-xs text-slate-500 dark:text-slate-400">
-                      {i === 0 ? "Phoenix • Pickup today" : i === 1 ? "Phoenix • Ships today" : "Tempe • Transfer available"}
-                    </div>
-                  </div>
-                    </motion.div>
-                  ))}
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
-        </div>
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </div>
   );
 }
 
-// Animation 4: Compatibility Q&A
 export function CompatibilityAnimation({ isActive }) {
   const [question, setQuestion] = useState("");
   const [showAnswer, setShowAnswer] = useState(false);
@@ -454,163 +226,81 @@ export function CompatibilityAnimation({ isActive }) {
   const QUESTION = "What air handlers work with this unit?";
 
   useEffect(() => {
-    if (!isActive) {
-      setQuestion("");
-      setShowAnswer(false);
-      setShowMatches(false);
-      return;
-    }
-
+    if (!isActive) { setQuestion(""); setShowAnswer(false); setShowMatches(false); return; }
     let i = 0;
     const timers = [];
-
-    // Type the question
     const typeInterval = setInterval(() => {
-      if (i < QUESTION.length) {
-        setQuestion(QUESTION.slice(0, i + 1));
-        i++;
-      } else {
-        clearInterval(typeInterval);
-        timers.push(setTimeout(() => setShowAnswer(true), 600));
-        timers.push(setTimeout(() => setShowMatches(true), 1400));
-      }
+      if (i < QUESTION.length) { setQuestion(QUESTION.slice(0, i + 1)); i++; }
+      else { clearInterval(typeInterval); timers.push(setTimeout(() => setShowAnswer(true), 600)); timers.push(setTimeout(() => setShowMatches(true), 1400)); }
     }, 50);
     timers.push(typeInterval);
-
     return () => timers.forEach(clearTimeout);
   }, [isActive]);
 
   return (
-    <div className="w-full h-full bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-950 dark:to-cyan-950 p-4 sm:p-6 flex items-center justify-center">
-      <div className="w-full">
-        {/* Context Bar */}
-        <div className="text-[10px] sm:text-xs text-slate-600 dark:text-slate-400 mb-3 sm:mb-4 px-1">
-          <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
-            <span className="inline-flex items-center gap-1">
-              <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span>
-              <span className="hidden sm:inline">Referencing: OEM specs + compatibility</span>
-              <span className="sm:hidden">OEM specs</span>
-            </span>
-            <span className="hidden sm:inline">•</span>
-            <span className="hidden sm:inline">Phoenix inventory</span>
+    <div className="rounded-2xl border border-black/10 dark:border-white/10 bg-white/80 dark:bg-white/5 backdrop-blur-lg shadow-lg overflow-hidden">
+      <div className="p-4 space-y-3">
+        <div className="flex items-center justify-between text-[11px] text-black/40 dark:text-white/40">
+          <div className="flex items-center gap-1.5">
+            <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500" />
+            <span>Referencing: OEM specs + compatibility</span>
+          </div>
+          <span>• <span className="text-black/60 dark:text-white/60">Phoenix inventory</span></span>
+        </div>
+
+        <div className="flex items-center gap-3 rounded-xl border border-black/5 dark:border-white/10 bg-white dark:bg-white/5 p-3">
+          <div className="w-12 h-12 rounded-lg bg-slate-100 dark:bg-white/10 flex-shrink-0 overflow-hidden">
+            <img src="/media/carrier-25vna4.png" alt="" className="w-full h-full object-contain" />
+          </div>
+          <div>
+            <p className="text-sm font-medium text-black dark:text-white">Carrier 25VNA4 3-Ton</p>
+            <p className="text-[11px] text-black/50 dark:text-white/50">16 SEER2 • $3,450</p>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-[180px_1fr] gap-3 items-start">
-          {/* Product Image - Left Side */}
-          <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg overflow-hidden border border-slate-200 dark:border-slate-700 max-w-[180px] md:max-w-none mx-auto md:mx-0">
-            <div className="aspect-square bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-700 dark:to-slate-800 p-3 sm:p-4 flex items-center justify-center">
-              <img
-                src="/media/carrier-25vna4.png"
-                alt="Carrier 25VNA4 3-Ton Heat Pump"
-                className="w-full h-full object-contain"
-              />
-            </div>
-            <div className="p-2 sm:p-3 border-t border-slate-200 dark:border-slate-700">
-              <div className="font-semibold text-xs sm:text-sm text-slate-900 dark:text-white">Carrier 25VNA4 3-Ton</div>
-              <div className="text-[10px] sm:text-xs text-slate-600 dark:text-slate-400 mt-1">16 SEER2 • $3,450</div>
-            </div>
-          </div>
-
-          {/* Q&A - Right Side */}
-          <div className="space-y-3">
-            {/* Question Input */}
-            <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-3 sm:p-4 border border-fuchsia-200 dark:border-fuchsia-800">
-              <div className="flex items-center gap-2 mb-2 sm:mb-3">
-                <Sparkles className="h-4 w-4 sm:h-5 sm:w-5 text-fuchsia-600" />
-                <span className="text-xs sm:text-sm font-medium text-slate-700 dark:text-slate-300">Ask about this product</span>
-              </div>
-              
-              <div className="flex items-center gap-2 sm:gap-3 bg-slate-50 dark:bg-slate-900 rounded-xl p-2 sm:p-3 border border-slate-200 dark:border-slate-700">
-                <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-slate-700 dark:bg-slate-600 flex items-center justify-center flex-shrink-0">
-                  <User className="h-3 w-3 sm:h-4 sm:w-4 text-white" />
-                </div>
-                <div className="flex-1 text-xs sm:text-sm text-slate-900 dark:text-white min-h-[20px]">
-                  {question || <span className="text-slate-400">Ask a question...</span>}
-                  {question.length > 0 && question.length < QUESTION.length && (
-                    <span className="animate-pulse">|</span>
-                  )}
-                </div>
-              </div>
-            </div>
-
-            {/* Answer */}
-            <AnimatePresence>
-              {showAnswer && (
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="space-y-2"
-                >
-                  <div className="bg-gradient-to-br from-fuchsia-50 to-pink-50 dark:from-fuchsia-900/20 dark:to-pink-900/20 rounded-2xl shadow p-2 sm:p-3 border border-fuchsia-100 dark:border-fuchsia-800">
-                    <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
-                      Carrier FB4CNF036 and FB4CNF042 are factory-matched air handlers for the 25VNA4. Want variable-speed or lowest cost?
-                    </p>
-                  </div>
-                  <div className="text-[10px] sm:text-xs text-slate-500 dark:text-slate-400">
-                    Source: Carrier manual + compatibility database
-                  </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
-
-            {/* Compatible Products */}
-            <AnimatePresence>
-              {showMatches && (
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="space-y-2"
-                >
-                  <div className="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-400 px-1">
-                    Compatible Air Handlers
-                  </div>
-                  {[
-                    { name: "Carrier FB4CNF036", specs: "3-ton • Variable speed", img: "/media/carrier-air-handler-new.png" },
-                    { name: "Carrier FB4CNF042", specs: "3.5-ton • Variable speed", img: "/media/carrier-air-handler-new.png" },
-                  ].map((item, i) => (
-                    <motion.div
-                      key={i}
-                      initial={{ opacity: 0, x: -10 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: i * 0.15 }}
-                      className="bg-white dark:bg-slate-800 rounded-xl shadow p-2 border border-slate-200 dark:border-slate-700"
-                    >
-                      <div className="flex items-center gap-2">
-                        <div className="w-12 h-12 flex-shrink-0 rounded-lg bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 p-1.5">
-                          <img src={item.img} alt={item.name} className="w-full h-full object-contain" />
-                        </div>
-                        <div className="flex-1 min-w-0">
-                          <div className="font-medium text-xs text-slate-900 dark:text-white truncate">{item.name}</div>
-                          <div className="text-xs text-slate-600 dark:text-slate-400 mt-0.5">{item.specs}</div>
-                          <div className="flex items-center gap-1.5 mt-1 text-xs">
-                            <span className="inline-flex items-center gap-0.5 text-green-600 dark:text-green-400">
-                              <CheckCircle2 className="h-2.5 w-2.5" />
-                              <span className="text-[10px]">Stock</span>
-                            </span>
-                            <span className="text-slate-400 text-[10px]">•</span>
-                            <span className="text-slate-500 dark:text-slate-400 text-[10px]">
-                              {i === 0 ? "Pickup today" : "Will-call"}
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </motion.div>
-                  ))}
-
-                  <div className="flex gap-2 pt-2 px-1">
-                    <button className="flex-1 h-8 px-3 text-xs rounded-lg font-medium bg-gradient-to-r from-fuchsia-500 to-pink-500 text-white hover:opacity-90 transition">
-                      Add to RFQ
-                    </button>
-                    <button className="flex-1 h-8 px-3 text-xs rounded-lg font-medium border border-slate-300 dark:border-slate-600 text-slate-900 dark:text-white hover:bg-slate-50 dark:hover:bg-slate-700 transition">
-                      Add to Cart
-                    </button>
-                  </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
+        <div className="rounded-xl border border-black/10 dark:border-white/15 bg-white dark:bg-white/5 px-4 py-3">
+          <p className="text-[11px] text-black/40 dark:text-white/40 mb-1">Ask about this product</p>
+          <p className="text-sm text-black/80 dark:text-white/80">
+            {question || <span className="text-black/30 dark:text-white/30">Ask a question...</span>}
+            {question.length > 0 && question.length < QUESTION.length && <span className="animate-pulse ml-0.5">|</span>}
+          </p>
         </div>
+
+        <AnimatePresence>
+          {showAnswer && (
+            <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }}
+              className="flex items-start gap-2 text-xs text-black/60 dark:text-white/60 bg-violet-50/50 dark:bg-violet-500/5 rounded-xl p-3">
+              <Sparkles className="w-3.5 h-3.5 text-violet-500 flex-shrink-0 mt-0.5" />
+              <div>
+                <p>Carrier FB4CNF036 and FB4CNF042 are factory-matched air handlers for the 25VNA4. Want variable-speed or lowest cost?</p>
+                <p className="mt-1 text-[10px] text-black/30 dark:text-white/30">Source: Carrier manual + compatibility database</p>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        <AnimatePresence>
+          {showMatches && (
+            <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} className="space-y-2">
+              <p className="text-[11px] font-semibold text-black/50 dark:text-white/50">Compatible Air Handlers</p>
+              {[
+                { name: "Carrier FB4CNF036", specs: "3-ton • Variable speed", avail: "Pickup today" },
+                { name: "Carrier FB4CNF042", specs: "3.5-ton • Variable speed", avail: "Will-call" },
+              ].map((item) => (
+                <div key={item.name} className="flex items-center gap-3 rounded-xl border border-black/5 dark:border-white/10 bg-white dark:bg-white/5 p-3">
+                  <div className="w-10 h-10 rounded-lg bg-slate-100 dark:bg-white/10 flex-shrink-0 overflow-hidden">
+                    <img src="/media/carrier-air-handler-new.png" alt="" className="w-full h-full object-contain" />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-xs font-medium text-black dark:text-white">{item.name}</p>
+                    <p className="text-[10px] text-black/50 dark:text-white/50">{item.specs}</p>
+                  </div>
+                  <span className="text-[10px] text-emerald-600 dark:text-emerald-400">{item.avail}</span>
+                </div>
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </div>
   );

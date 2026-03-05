@@ -4,9 +4,9 @@ import Footer from "./Footer";
 
 export default function PageLayout({ children }) {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="min-h-screen flex flex-col bg-white dark:bg-slate-900">
       <Header />
-      <main className="flex-1">
+      <main className="flex-1 pt-16">
         {children}
       </main>
       <Footer />

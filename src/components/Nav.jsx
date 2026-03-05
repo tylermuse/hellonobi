@@ -4,8 +4,6 @@ import Button from "./Button";
 import { useDemoForm } from "../context/DemoFormContext";
 import { trackDemoFormOpened } from "../utils/eventTracker";
 
-const SHOW_PRICING = false;
-
 export default function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { onOpen } = useDemoForm();
@@ -16,9 +14,14 @@ export default function Nav() {
     }
   };
 
+  const scrollToContact = () => {
+    const el = document.getElementById("contact");
+    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    setMobileMenuOpen(false);
+  };
+
   const navLinks = [
     { label: "Home", href: "/" },
-    { label: "Why Nobi", href: "/why-nobi/better-search" },
     { label: "FAQs", href: "/faqs" },
     { label: "Docs", href: "https://docs.nobi.ai", external: true },
   ];
@@ -27,102 +30,83 @@ export default function Nav() {
 
   const handleDemoClick = () => {
     trackDemoFormOpened();
-    onOpen();
+    scrollToContact();
   };
 
   return (
     <>
       {/* Desktop nav (hidden on mobile) */}
-      <nav className="hidden md:flex items-center gap-6 text-sm font-semibold absolute left-1/2 -translate-x-1/2">
+      <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-black/70 dark:text-white/70">
         {navLinks.map((link) => {
           const className = "hover:opacity-80 flex items-center gap-1";
           return link.external ? (
-            <a key={link.href} className={className} href={link.href} target="_blank" rel="noopener noreferrer">
+            <a key={link.label} href={link.href} target="_blank" rel="noopener noreferrer" className={className}>
               {link.label}
-              <ExternalLink className="w-4 h-4" />
+              <ExternalLink className="w-3 h-3 opacity-40" />
             </a>
           ) : (
-            <a key={link.href} className={className} href={link.href}>
+            <a key={link.label} href={link.href} className={className}>
               {link.label}
             </a>
           );
         })}
-        {/* Divider */}
-        <div className="w-px h-4 bg-black/20 dark:bg-white/20" />
-        {/* Ask Nobi */}
-        <button
-          className="flex items-center gap-1 bg-gradient-to-r from-indigo-500 via-violet-500 to-fuchsia-500 bg-clip-text text-transparent hover:opacity-80 transition-opacity"
-          onClick={handleAskNobi}
-        >
-          <Sparkles className="w-4 h-4 text-fuchsia-500" />
+        <div className="w-px h-5 bg-black/10 dark:bg-white/10" />
+        <button onClick={handleAskNobi} className="hover:opacity-80 flex items-center gap-1.5">
+          <Sparkles className="w-3.5 h-3.5 text-violet-500" />
           Ask Nobi
         </button>
       </nav>
 
-      {/* Right side: Demo button (desktop only) + Mobile menu button */}
-      <div className="flex items-center gap-3 ml-auto">
-        <Button
-          variant="outline"
-          className="hidden md:flex bg-white text-black border-black rounded-xl hover:bg-fuchsia-50 hover:border-fuchsia-200"
-          onClick={handleDemoClick}
-        >
-          Try Nobi on your site
+      {/* Right side: Demo button + Mobile menu button */}
+      <div className="flex items-center gap-3">
+        <Button onClick={handleDemoClick} className="hidden md:inline-flex" size="sm">
+          Request a Demo
         </Button>
 
-        {/* Hamburger menu (visible on mobile) */}
         <button
-          className="md:hidden p-2 hover:opacity-80"
+          className="md:hidden p-2 rounded-lg hover:bg-black/5 dark:hover:bg-white/10"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle mobile menu"
         >
           {mobileMenuOpen ? (
-            <X className="w-6 h-6" />
+            <X className="w-5 h-5 text-black dark:text-white" />
           ) : (
-            <Menu className="w-6 h-6" />
+            <Menu className="w-5 h-5 text-black dark:text-white" />
           )}
         </button>
       </div>
 
-      {/* Mobile menu (drawer) */}
+      {/* Mobile menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-t border-black/10 dark:border-white/10 absolute top-16 left-0 right-0 bg-white dark:bg-black">
-          <nav className="mx-auto max-w-7xl px-6 py-4 flex flex-col gap-4">
+        <div className="absolute top-full left-0 right-0 bg-white dark:bg-slate-900 border-t border-black/5 dark:border-white/10 shadow-lg md:hidden z-50">
+          <div className="flex flex-col p-4 gap-1">
             {navLinks.map((link) => (
               <a
-                key={link.href}
+                key={link.label}
                 href={link.href}
-                className="text-sm font-semibold hover:opacity-80 py-2 flex items-center gap-1"
-                onClick={closeMobileMenu}
                 target={link.external ? "_blank" : undefined}
                 rel={link.external ? "noopener noreferrer" : undefined}
+                className="flex items-center gap-2 py-2 px-3 rounded-lg text-base font-medium text-black/80 dark:text-white/80 hover:bg-black/5 dark:hover:bg-white/10"
+                onClick={closeMobileMenu}
               >
                 {link.label}
-                {link.external && <ExternalLink className="w-4 h-4" />}
+                {link.external && <ExternalLink className="w-3 h-3 opacity-40" />}
               </a>
             ))}
-            <div className="pt-2 border-t border-black/10 dark:border-white/10 flex flex-col gap-3">
-              <button
-                className="flex items-center gap-1 py-2 text-sm font-semibold bg-gradient-to-r from-indigo-500 via-violet-500 to-fuchsia-500 bg-clip-text text-transparent"
-                onClick={() => {
-                  handleAskNobi();
-                  closeMobileMenu();
-                }}
-              >
-                <Sparkles className="w-4 h-4 text-fuchsia-500" />
-                Ask Nobi
-              </button>
-              <Button
-                variant="outline"
-                className="bg-white text-black border-black hover:bg-black/5"
-                onClick={() => {
-                  handleDemoClick();
-                  closeMobileMenu();
-                }}
-              >
-                Try Nobi on your site
-              </Button>
-            </div>
-          </nav>
+            <button
+              className="flex items-center gap-2 py-2 px-3 rounded-lg text-base font-medium text-black/80 dark:text-white/80 hover:bg-black/5 dark:hover:bg-white/10 text-left"
+              onClick={() => { handleAskNobi(); closeMobileMenu(); }}
+            >
+              <Sparkles className="w-3.5 h-3.5 text-violet-500" />
+              Ask Nobi
+            </button>
+            <button
+              className="mt-2 py-2 px-3 rounded-lg text-base font-medium text-black/80 dark:text-white/80 bg-black/5 dark:bg-white/10 text-left"
+              onClick={scrollToContact}
+            >
+              Request a Demo
+            </button>
+          </div>
         </div>
       )}
     </>
