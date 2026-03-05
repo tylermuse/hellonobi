@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" font-family="system-ui, -apple-system, sans-serif">
+  <defs>
+    <filter id="nodeShadow">
+      <feDropShadow dx="0" dy="1" stdDeviation="4" flood-color="#94a3b8" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="500" fill="#ffffff"/>
+
+  <!-- Center text -->
+  <circle cx="600" cy="250" r="70" fill="#fffbeb" stroke="#fde68a" stroke-width="2"/>
+  <text x="600" y="240" text-anchor="middle" fill="#1e293b" font-size="16" font-weight="800">The Vicious</text>
+  <text x="600" y="262" text-anchor="middle" fill="#1e293b" font-size="16" font-weight="800">Cycle</text>
+  <text x="600" y="284" text-anchor="middle" fill="#d97706" font-size="10" font-weight="600">OF KNOWLEDGE LOSS</text>
+
+  <!-- 6 nodes arranged in a circle, radius ~180 from center (600,250) -->
+  <!-- Node positions (clockwise from top):
+       1: Employee Leaves    - top center (600, 60)
+       2: Knowledge Gap      - top right (780, 130)
+       3: More Errors        - bottom right (780, 370)
+       4: Customer Frustration - bottom center (600, 440)
+       5: Staff Overworked   - bottom left (420, 370)
+       6: More Turnover      - top left (420, 130)
+  -->
+
+  <!-- Curved arrows connecting nodes (clockwise) -->
+  <!-- Arrow 1→2 -->
+  <path d="M 670 70 Q 740 60, 750 100" fill="none" stroke="#fbbf24" stroke-width="2.5" stroke-linecap="round"/>
+  <polygon points="746,100 754,108 758,96" fill="#fbbf24"/>
+
+  <!-- Arrow 2→3 -->
+  <path d="M 810 178 Q 830 260, 810 340" fill="none" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+  <polygon points="816,338 808,350 820,348" fill="#f59e0b"/>
+
+  <!-- Arrow 3→4 -->
+  <path d="M 750 400 Q 700 430, 650 440" fill="none" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+  <polygon points="652,434 642,440 650,448" fill="#f59e0b"/>
+
+  <!-- Arrow 4→5 -->
+  <path d="M 550 440 Q 490 430, 450 400" fill="none" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+  <polygon points="454,404 444,394 448,408" fill="#f59e0b"/>
+
+  <!-- Arrow 5→6 -->
+  <path d="M 390 340 Q 370 260, 390 178" fill="none" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+  <polygon points="384,180 392,168 380,170" fill="#f59e0b"/>
+
+  <!-- Arrow 6→1 -->
+  <path d="M 458 108 Q 500 70, 540 65" fill="none" stroke="#fbbf24" stroke-width="2.5" stroke-linecap="round"/>
+  <polygon points="538,58 550,62 540,72" fill="#fbbf24"/>
+
+  <!-- NODE 1: Employee Leaves (top center) -->
+  <g filter="url(#nodeShadow)">
+    <rect x="518" y="24" width="164" height="72" rx="14" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+    <rect x="518" y="24" width="164" height="6" rx="3" fill="#f59e0b"/>
+
+    <!-- Door/exit icon -->
+    <rect x="536" y="44" width="22" height="30" rx="3" fill="#fffbeb" stroke="#fbbf24" stroke-width="1.5"/>
+    <line x1="550" y1="59" x2="556" y2="56" stroke="#f59e0b" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="556" y1="56" x2="556" y2="62" stroke="#f59e0b" stroke-width="1.5" stroke-linecap="round"/>
+
+    <text x="570" y="56" fill="#1e293b" font-size="12" font-weight="700">Employee</text>
+    <text x="570" y="72" fill="#1e293b" font-size="12" font-weight="700">Leaves</text>
+  </g>
+
+  <!-- NODE 2: Knowledge Gap (top right) -->
+  <g filter="url(#nodeShadow)">
+    <rect x="720" y="104" width="164" height="72" rx="14" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+    <rect x="720" y="104" width="164" height="6" rx="3" fill="#f59e0b"/>
+
+    <!-- Gap/break icon -->
+    <circle cx="750" cy="148" r="12" fill="#fffbeb" stroke="#fbbf24" stroke-width="1.5"/>
+    <line x1="744" y1="148" x2="756" y2="148" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+
+    <text x="772" y="140" fill="#1e293b" font-size="12" font-weight="700">Knowledge</text>
+    <text x="772" y="156" fill="#1e293b" font-size="12" font-weight="700">Gap</text>
+  </g>
+
+  <!-- NODE 3: More Errors (bottom right) -->
+  <g filter="url(#nodeShadow)">
+    <rect x="720" y="348" width="164" height="72" rx="14" fill="#ffffff" stroke="#ef4444" stroke-width="2"/>
+    <rect x="720" y="348" width="164" height="6" rx="3" fill="#ef4444"/>
+
+    <!-- Error/X icon -->
+    <circle cx="750" cy="392" r="12" fill="#fef2f2" stroke="#fca5a5" stroke-width="1.5"/>
+    <line x1="744" y1="386" x2="756" y2="398" stroke="#ef4444" stroke-width="2" stroke-linecap="round"/>
+    <line x1="756" y1="386" x2="744" y2="398" stroke="#ef4444" stroke-width="2" stroke-linecap="round"/>
+
+    <text x="772" y="384" fill="#1e293b" font-size="12" font-weight="700">More</text>
+    <text x="772" y="400" fill="#1e293b" font-size="12" font-weight="700">Errors</text>
+  </g>
+
+  <!-- NODE 4: Customer Frustration (bottom center) -->
+  <g filter="url(#nodeShadow)">
+    <rect x="518" y="414" width="164" height="72" rx="14" fill="#ffffff" stroke="#ef4444" stroke-width="2"/>
+    <rect x="518" y="414" width="164" height="6" rx="3" fill="#ef4444"/>
+
+    <!-- Frown icon -->
+    <circle cx="548" cy="458" r="12" fill="#fef2f2" stroke="#fca5a5" stroke-width="1.5"/>
+    <circle cx="544" cy="454" r="1.5" fill="#ef4444"/>
+    <circle cx="552" cy="454" r="1.5" fill="#ef4444"/>
+    <path d="M542 462 Q548 458 554 462" fill="none" stroke="#ef4444" stroke-width="1.5" stroke-linecap="round"/>
+
+    <text x="570" y="450" fill="#1e293b" font-size="12" font-weight="700">Customer</text>
+    <text x="570" y="466" fill="#1e293b" font-size="12" font-weight="700">Frustration</text>
+  </g>
+
+  <!-- NODE 5: Staff Overworked (bottom left) -->
+  <g filter="url(#nodeShadow)">
+    <rect x="316" y="348" width="164" height="72" rx="14" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+    <rect x="316" y="348" width="164" height="6" rx="3" fill="#f59e0b"/>
+
+    <!-- Overload icon -->
+    <circle cx="346" cy="392" r="12" fill="#fffbeb" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="346" y="397" text-anchor="middle" fill="#f59e0b" font-size="14" font-weight="700">!</text>
+
+    <text x="368" y="384" fill="#1e293b" font-size="12" font-weight="700">Staff</text>
+    <text x="368" y="400" fill="#1e293b" font-size="12" font-weight="700">Overworked</text>
+  </g>
+
+  <!-- NODE 6: More Turnover (top left) -->
+  <g filter="url(#nodeShadow)">
+    <rect x="316" y="104" width="164" height="72" rx="14" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+    <rect x="316" y="104" width="164" height="6" rx="3" fill="#f59e0b"/>
+
+    <!-- Cycle/repeat icon -->
+    <circle cx="346" cy="148" r="12" fill="#fffbeb" stroke="#fbbf24" stroke-width="1.5"/>
+    <path d="M340 144 A8 8 0 1 1 352 144" fill="none" stroke="#f59e0b" stroke-width="1.5" stroke-linecap="round"/>
+    <polygon points="352,140 356,146 350,146" fill="#f59e0b"/>
+
+    <text x="368" y="140" fill="#1e293b" font-size="12" font-weight="700">More</text>
+    <text x="368" y="156" fill="#1e293b" font-size="12" font-weight="700">Turnover</text>
+  </g>
+
+  <!-- Solution callout -->
+  <rect x="40" y="14" width="260" height="60" rx="12" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+  <text x="170" y="38" text-anchor="middle" fill="#166534" font-size="12" font-weight="700">AI Copilot breaks the cycle</text>
+  <text x="170" y="56" text-anchor="middle" fill="#16a34a" font-size="11">Preserves knowledge, reduces errors</text>
+
+  <rect x="900" y="14" width="260" height="60" rx="12" fill="#fef2f2" stroke="#fecaca" stroke-width="1.5"/>
+  <text x="1030" y="38" text-anchor="middle" fill="#991b1b" font-size="12" font-weight="700">Without intervention</text>
+  <text x="1030" y="56" text-anchor="middle" fill="#dc2626" font-size="11">Cycle accelerates over time</text>
+</svg>

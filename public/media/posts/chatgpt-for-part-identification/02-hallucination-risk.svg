@@ -1,0 +1,97 @@
+<svg viewBox="0 0 1200 500" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, sans-serif">
+  <!-- White background -->
+  <rect width="1200" height="500" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="600" y="40" text-anchor="middle" font-size="20" font-weight="700" fill="#1e293b">How AI Hallucination Creates Real Costs</text>
+  <text x="600" y="62" text-anchor="middle" font-size="12" fill="#64748b">A single fabricated SKU can trigger a costly chain reaction</text>
+
+  <!-- Step 1: Employee asks ChatGPT (neutral) -->
+  <rect x="30" y="110" width="195" height="130" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+  <rect x="30" y="110" width="195" height="6" rx="3" fill="#94a3b8"/>
+  <text x="128" y="145" text-anchor="middle" font-size="11" font-weight="600" fill="#475569">STEP 1</text>
+  <text x="128" y="170" text-anchor="middle" font-size="12" fill="#1e293b">Employee asks</text>
+  <text x="128" y="188" text-anchor="middle" font-size="12" fill="#1e293b">ChatGPT for a part</text>
+  <!-- Chat icon -->
+  <rect x="103" y="200" width="50" height="25" rx="6" fill="#e2e8f0"/>
+  <text x="128" y="217" text-anchor="middle" font-size="9" fill="#64748b">ChatGPT</text>
+
+  <!-- Arrow 1->2 -->
+  <line x1="230" y1="175" x2="265" y2="175" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="265,170 275,175 265,180" fill="#94a3b8"/>
+
+  <!-- Step 2: ChatGPT returns SKU (warning) -->
+  <rect x="280" y="110" width="195" height="130" rx="10" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.5"/>
+  <rect x="280" y="110" width="195" height="6" rx="3" fill="#f59e0b"/>
+  <text x="378" y="145" text-anchor="middle" font-size="11" font-weight="600" fill="#92400e">STEP 2</text>
+  <text x="378" y="170" text-anchor="middle" font-size="12" fill="#1e293b">ChatGPT returns</text>
+  <rect x="318" y="180" width="120" height="24" rx="4" fill="#fef3c7" stroke="#fcd34d" stroke-width="1"/>
+  <text x="378" y="196" text-anchor="middle" font-size="11" font-weight="600" fill="#92400e">SKU: BV-750-S3</text>
+  <!-- Warning triangle -->
+  <text x="378" y="228" text-anchor="middle" font-size="16" fill="#f59e0b">&#9888;</text>
+  <text x="378" y="236" text-anchor="middle" font-size="8" fill="#92400e">FABRICATED</text>
+
+  <!-- Arrow 2->3 -->
+  <line x1="480" y1="175" x2="515" y2="175" stroke="#d97706" stroke-width="2"/>
+  <polygon points="515,170 525,175 515,180" fill="#d97706"/>
+
+  <!-- Step 3: Part ordered (amber) -->
+  <rect x="530" y="110" width="195" height="130" rx="10" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.5"/>
+  <rect x="530" y="110" width="195" height="6" rx="3" fill="#d97706"/>
+  <text x="628" y="145" text-anchor="middle" font-size="11" font-weight="600" fill="#92400e">STEP 3</text>
+  <text x="628" y="170" text-anchor="middle" font-size="12" fill="#1e293b">Part ordered</text>
+  <text x="628" y="188" text-anchor="middle" font-size="12" fill="#1e293b">with confidence</text>
+  <!-- Order icon -->
+  <rect x="603" y="200" width="50" height="25" rx="4" fill="#fef3c7" stroke="#fcd34d" stroke-width="1"/>
+  <text x="628" y="217" text-anchor="middle" font-size="9" fill="#92400e">ORDER</text>
+
+  <!-- Arrow 3->4 -->
+  <line x1="730" y1="175" x2="765" y2="175" stroke="#dc2626" stroke-width="2"/>
+  <polygon points="765,170 775,175 765,180" fill="#dc2626"/>
+
+  <!-- Step 4: Wrong part (red) -->
+  <rect x="780" y="110" width="195" height="130" rx="10" fill="#fef2f2" stroke="#f87171" stroke-width="1.5"/>
+  <rect x="780" y="110" width="195" height="6" rx="3" fill="#dc2626"/>
+  <text x="878" y="145" text-anchor="middle" font-size="11" font-weight="600" fill="#991b1b">STEP 4</text>
+  <text x="878" y="170" text-anchor="middle" font-size="12" font-weight="600" fill="#dc2626">Wrong part arrives</text>
+  <text x="878" y="188" text-anchor="middle" font-size="12" fill="#991b1b">SKU does not exist</text>
+  <!-- X icon -->
+  <circle cx="878" cy="215" r="12" fill="#fef2f2" stroke="#f87171" stroke-width="1.5"/>
+  <text x="878" y="220" text-anchor="middle" font-size="14" font-weight="700" fill="#dc2626">X</text>
+
+  <!-- Arrow 4->5 -->
+  <line x1="980" y1="175" x2="1015" y2="175" stroke="#991b1b" stroke-width="2"/>
+  <polygon points="1015,170 1025,175 1015,180" fill="#991b1b"/>
+
+  <!-- Step 5: Consequences (dark red) -->
+  <rect x="1030" y="110" width="145" height="130" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <rect x="1030" y="110" width="145" height="6" rx="3" fill="#991b1b"/>
+  <text x="1103" y="145" text-anchor="middle" font-size="11" font-weight="600" fill="#991b1b">STEP 5</text>
+  <text x="1103" y="168" text-anchor="middle" font-size="11" font-weight="600" fill="#dc2626">Return filed</text>
+  <text x="1103" y="186" text-anchor="middle" font-size="11" font-weight="600" fill="#dc2626">Job delayed</text>
+  <text x="1103" y="204" text-anchor="middle" font-size="11" font-weight="600" fill="#dc2626">Trust eroded</text>
+  <text x="1103" y="228" text-anchor="middle" font-size="9" fill="#991b1b">$$$ LOST</text>
+
+  <!-- Bottom section: cost breakdown -->
+  <rect x="80" y="290" width="1040" height="180" rx="12" fill="#fef2f2" stroke="#fecaca" stroke-width="1"/>
+  <text x="600" y="320" text-anchor="middle" font-size="15" font-weight="700" fill="#991b1b">The Hidden Cost of One Hallucinated Part Number</text>
+
+  <!-- Cost items -->
+  <rect x="120" y="345" width="220" height="55" rx="8" fill="#ffffff" stroke="#fecaca" stroke-width="1"/>
+  <text x="230" y="366" text-anchor="middle" font-size="11" font-weight="600" fill="#1e293b">Return Shipping</text>
+  <text x="230" y="386" text-anchor="middle" font-size="16" font-weight="700" fill="#dc2626">$25 - $75</text>
+
+  <rect x="370" y="345" width="220" height="55" rx="8" fill="#ffffff" stroke="#fecaca" stroke-width="1"/>
+  <text x="480" y="366" text-anchor="middle" font-size="11" font-weight="600" fill="#1e293b">Labor (Re-order + Wait)</text>
+  <text x="480" y="386" text-anchor="middle" font-size="16" font-weight="700" fill="#dc2626">$50 - $150</text>
+
+  <rect x="620" y="345" width="220" height="55" rx="8" fill="#ffffff" stroke="#fecaca" stroke-width="1"/>
+  <text x="730" y="366" text-anchor="middle" font-size="11" font-weight="600" fill="#1e293b">Customer Downtime</text>
+  <text x="730" y="386" text-anchor="middle" font-size="16" font-weight="700" fill="#dc2626">$200+</text>
+
+  <rect x="870" y="345" width="220" height="55" rx="8" fill="#ffffff" stroke="#fecaca" stroke-width="1"/>
+  <text x="980" y="366" text-anchor="middle" font-size="11" font-weight="600" fill="#1e293b">Lost Future Revenue</text>
+  <text x="980" y="386" text-anchor="middle" font-size="16" font-weight="700" fill="#dc2626">$1,000+</text>
+
+  <text x="600" y="455" text-anchor="middle" font-size="12" fill="#64748b">Multiply by dozens of lookups per day across your team</text>
+</svg>

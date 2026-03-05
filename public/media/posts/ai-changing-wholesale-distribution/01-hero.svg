@@ -1,0 +1,79 @@
+<svg viewBox="0 0 1200 500" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, sans-serif">
+  <rect width="1200" height="500" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="600" y="38" text-anchor="middle" font-size="22" fill="#1e293b" font-weight="700">7 Ways AI Is Changing Wholesale Distribution</text>
+  <text x="600" y="58" text-anchor="middle" font-size="13" fill="#64748b">From the counter to the warehouse, AI is transforming every touchpoint</text>
+
+  <!-- Arc arrangement of 7 cards — staggered in a gentle curve -->
+
+  <!-- Card 1 - Part ID (blue) - top left -->
+  <rect x="50" y="90" width="150" height="130" rx="10" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+  <circle cx="125" cy="125" r="22" fill="#eff6ff"/>
+  <text x="125" y="132" text-anchor="middle" font-size="18" fill="#3b82f6">&#x1F50D;</text>
+  <text x="125" y="162" text-anchor="middle" font-size="14" fill="#1e293b" font-weight="700">Part ID</text>
+  <text x="125" y="180" text-anchor="middle" font-size="10" fill="#64748b">Instant identification</text>
+  <text x="125" y="193" text-anchor="middle" font-size="10" fill="#64748b">from any description</text>
+  <rect x="50" y="90" width="150" height="5" rx="3" fill="#3b82f6"/>
+
+  <!-- Card 2 - Forecasting (indigo) -->
+  <rect x="230" y="120" width="150" height="130" rx="10" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+  <circle cx="305" cy="155" r="22" fill="#eef2ff"/>
+  <text x="305" y="162" text-anchor="middle" font-size="18" fill="#6366f1">&#x1F4C8;</text>
+  <text x="305" y="192" text-anchor="middle" font-size="14" fill="#1e293b" font-weight="700">Forecasting</text>
+  <text x="305" y="210" text-anchor="middle" font-size="10" fill="#64748b">Demand prediction</text>
+  <text x="305" y="223" text-anchor="middle" font-size="10" fill="#64748b">with 92%+ accuracy</text>
+  <rect x="230" y="120" width="150" height="5" rx="3" fill="#6366f1"/>
+
+  <!-- Card 3 - Inventory (teal) -->
+  <rect x="410" y="140" width="150" height="130" rx="10" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+  <circle cx="485" cy="175" r="22" fill="#f0fdfa"/>
+  <text x="485" y="182" text-anchor="middle" font-size="18" fill="#14b8a6">&#x1F4E6;</text>
+  <text x="485" y="212" text-anchor="middle" font-size="14" fill="#1e293b" font-weight="700">Inventory</text>
+  <text x="485" y="230" text-anchor="middle" font-size="10" fill="#64748b">Smart stock levels</text>
+  <text x="485" y="243" text-anchor="middle" font-size="10" fill="#64748b">reduce overstock 60%</text>
+  <rect x="410" y="140" width="150" height="5" rx="3" fill="#14b8a6"/>
+
+  <!-- Card 4 - Pricing (green) - center bottom of arc -->
+  <rect x="525" y="300" width="150" height="130" rx="10" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+  <circle cx="600" cy="335" r="22" fill="#f0fdf4"/>
+  <text x="600" y="342" text-anchor="middle" font-size="18" fill="#22c55e">&#x1F4B2;</text>
+  <text x="600" y="372" text-anchor="middle" font-size="14" fill="#1e293b" font-weight="700">Pricing</text>
+  <text x="600" y="390" text-anchor="middle" font-size="10" fill="#64748b">Real-time competitive</text>
+  <text x="600" y="403" text-anchor="middle" font-size="10" fill="#64748b">price optimization</text>
+  <rect x="525" y="300" width="150" height="5" rx="3" fill="#22c55e"/>
+
+  <!-- Card 5 - Routes (purple) -->
+  <rect x="640" y="140" width="150" height="130" rx="10" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+  <circle cx="715" cy="175" r="22" fill="#faf5ff"/>
+  <text x="715" y="182" text-anchor="middle" font-size="18" fill="#a855f7">&#x1F6E3;</text>
+  <text x="715" y="212" text-anchor="middle" font-size="14" fill="#1e293b" font-weight="700">Routes</text>
+  <text x="715" y="230" text-anchor="middle" font-size="10" fill="#64748b">Delivery optimization</text>
+  <text x="715" y="243" text-anchor="middle" font-size="10" fill="#64748b">saves 15-20% fuel</text>
+  <rect x="640" y="140" width="150" height="5" rx="3" fill="#a855f7"/>
+
+  <!-- Card 6 - Service (amber) -->
+  <rect x="820" y="120" width="150" height="130" rx="10" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+  <circle cx="895" cy="155" r="22" fill="#fffbeb"/>
+  <text x="895" y="162" text-anchor="middle" font-size="18" fill="#f59e0b">&#x2B50;</text>
+  <text x="895" y="192" text-anchor="middle" font-size="14" fill="#1e293b" font-weight="700">Service</text>
+  <text x="895" y="210" text-anchor="middle" font-size="10" fill="#64748b">Customer experience</text>
+  <text x="895" y="223" text-anchor="middle" font-size="10" fill="#64748b">scores up 35%</text>
+  <rect x="820" y="120" width="150" height="5" rx="3" fill="#f59e0b"/>
+
+  <!-- Card 7 - Knowledge (coral) -->
+  <rect x="1000" y="90" width="150" height="130" rx="10" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+  <circle cx="1075" cy="125" r="22" fill="#fff7ed"/>
+  <text x="1075" y="132" text-anchor="middle" font-size="18" fill="#f97316">&#x1F4DA;</text>
+  <text x="1075" y="162" text-anchor="middle" font-size="14" fill="#1e293b" font-weight="700">Knowledge</text>
+  <text x="1075" y="180" text-anchor="middle" font-size="10" fill="#64748b">Capture and share</text>
+  <text x="1075" y="193" text-anchor="middle" font-size="10" fill="#64748b">tribal expertise</text>
+  <rect x="1000" y="90" width="150" height="5" rx="3" fill="#f97316"/>
+
+  <!-- Curved connector line behind cards -->
+  <path d="M125 220 Q300 310 485 270 Q600 250 600 300" stroke="#e2e8f0" stroke-width="1.5" stroke-dasharray="4,4" fill="none"/>
+  <path d="M600 300 Q600 270 715 270 Q900 310 1075 220" stroke="#e2e8f0" stroke-width="1.5" stroke-dasharray="4,4" fill="none"/>
+
+  <!-- Bottom tagline -->
+  <text x="600" y="470" text-anchor="middle" font-size="14" fill="#475569" font-weight="500">Each capability compounds the others -- the whole is greater than the parts</text>
+</svg>

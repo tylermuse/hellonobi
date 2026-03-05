@@ -1,0 +1,107 @@
+<svg viewBox="0 0 1200 500" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, sans-serif">
+  <rect width="1200" height="500" fill="#f8fafc"/>
+
+  <!-- Title -->
+  <text x="600" y="38" text-anchor="middle" fill="#1e293b" font-size="22" font-weight="700">Transaction Time Breakdown: The Lookup Bottleneck</text>
+  <text x="600" y="58" text-anchor="middle" fill="#475569" font-size="13">Where time is spent during a typical counter transaction</text>
+
+  <!-- TRADITIONAL TRANSACTION bar -->
+  <text x="80" y="108" fill="#1e293b" font-size="14" font-weight="700">Traditional Transaction</text>
+  <text x="80" y="125" fill="#64748b" font-size="11">Average total: 4-8 minutes</text>
+
+  <!-- Stacked horizontal bar -->
+  <!-- Total width for bar: 1000px (80 to 1080). Total time ~6.5 min = 390s. Scale: 1000/390 = 2.56px/sec -->
+  <!-- Greet: 10s = 26px -->
+  <rect x="80" y="140" width="26" height="55" rx="6" fill="#bbf7d0" stroke="#86efac" stroke-width="1"/>
+  <text x="93" y="164" text-anchor="middle" fill="#166534" font-size="8" font-weight="600">Greet</text>
+  <text x="93" y="178" text-anchor="middle" fill="#166534" font-size="9" font-weight="700">10s</text>
+
+  <!-- Understand: 30s = 77px -->
+  <rect x="106" y="140" width="77" height="55" rx="0" fill="#86efac" stroke="#4ade80" stroke-width="1"/>
+  <text x="144" y="164" text-anchor="middle" fill="#166534" font-size="9" font-weight="600">Understand</text>
+  <text x="144" y="178" text-anchor="middle" fill="#166534" font-size="9" font-weight="700">30s</text>
+
+  <!-- PRODUCT LOOKUP: 2-5min avg 3.5min = 210s = 538px — THE BOTTLENECK -->
+  <rect x="183" y="140" width="538" height="55" rx="0" fill="#fecaca" stroke="#ef4444" stroke-width="2"/>
+  <!-- Diagonal stripes pattern for emphasis -->
+  <text x="452" y="160" text-anchor="middle" fill="#991b1b" font-size="14" font-weight="800">PRODUCT LOOKUP</text>
+  <text x="452" y="180" text-anchor="middle" fill="#dc2626" font-size="12" font-weight="700">2 - 5 minutes</text>
+
+  <!-- Bottleneck callout arrow -->
+  <line x1="452" y1="195" x2="452" y2="218" stroke="#ef4444" stroke-width="2"/>
+  <polygon points="445,218 459,218 452,228" fill="#ef4444"/>
+  <rect x="372" y="230" width="160" height="30" rx="8" fill="#fef2f2" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="452" y="250" text-anchor="middle" fill="#dc2626" font-size="11" font-weight="700">THE BOTTLENECK</text>
+
+  <!-- Verify: 30s = 77px -->
+  <rect x="721" y="140" width="77" height="55" rx="0" fill="#bbf7d0" stroke="#86efac" stroke-width="1"/>
+  <text x="759" y="164" text-anchor="middle" fill="#166534" font-size="9" font-weight="600">Verify</text>
+  <text x="759" y="178" text-anchor="middle" fill="#166534" font-size="9" font-weight="700">30s</text>
+
+  <!-- Complete: 60s = 154px -->
+  <rect x="798" y="140" width="154" height="55" rx="6" fill="#86efac" stroke="#4ade80" stroke-width="1"/>
+  <text x="875" y="164" text-anchor="middle" fill="#166534" font-size="9" font-weight="600">Complete Sale</text>
+  <text x="875" y="178" text-anchor="middle" fill="#166534" font-size="9" font-weight="700">1 min</text>
+
+  <!-- Time scale markers -->
+  <g font-size="9" fill="#94a3b8">
+    <text x="80" y="210">0s</text>
+    <text x="183" y="210">40s</text>
+    <text x="452" y="210" text-anchor="middle">~3 min</text>
+    <text x="721" y="210">~4 min</text>
+    <text x="952" y="210" text-anchor="end">~6.5 min</text>
+  </g>
+
+  <!-- Divider -->
+  <line x1="80" y1="290" x2="1120" y2="290" stroke="#e2e8f0" stroke-width="1"/>
+  <rect x="520" y="278" width="160" height="24" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="600" y="294" text-anchor="middle" fill="#64748b" font-size="10" font-weight="600">WITH AI ASSISTANCE</text>
+
+  <!-- AI-ASSISTED TRANSACTION bar -->
+  <text x="80" y="330" fill="#1e293b" font-size="14" font-weight="700">AI-Assisted Transaction</text>
+  <text x="80" y="347" fill="#64748b" font-size="11">Average total: 1.5-2.5 minutes</text>
+
+  <!-- Same segments but lookup is tiny -->
+  <!-- Greet: 10s = 26px -->
+  <rect x="80" y="360" width="26" height="55" rx="6" fill="#bbf7d0" stroke="#86efac" stroke-width="1"/>
+  <text x="93" y="384" text-anchor="middle" fill="#166534" font-size="8" font-weight="600">Greet</text>
+  <text x="93" y="398" text-anchor="middle" fill="#166534" font-size="9" font-weight="700">10s</text>
+
+  <!-- Understand: 20s = 51px -->
+  <rect x="106" y="360" width="51" height="55" rx="0" fill="#86efac" stroke="#4ade80" stroke-width="1"/>
+  <text x="131" y="384" text-anchor="middle" fill="#166534" font-size="9" font-weight="600">Understand</text>
+  <text x="131" y="398" text-anchor="middle" fill="#166534" font-size="9" font-weight="700">20s</text>
+
+  <!-- AI Lookup: 20s = 51px -->
+  <rect x="157" y="360" width="51" height="55" rx="0" fill="#d1fae5" stroke="#10b981" stroke-width="2"/>
+  <text x="182" y="380" text-anchor="middle" fill="#065f46" font-size="9" font-weight="700">AI</text>
+  <text x="182" y="393" text-anchor="middle" fill="#065f46" font-size="9" font-weight="700">Lookup</text>
+  <text x="182" y="406" text-anchor="middle" fill="#10b981" font-size="9" font-weight="700">10-30s</text>
+
+  <!-- Verify: 15s = 38px -->
+  <rect x="208" y="360" width="38" height="55" rx="0" fill="#bbf7d0" stroke="#86efac" stroke-width="1"/>
+  <text x="227" y="384" text-anchor="middle" fill="#166534" font-size="8" font-weight="600">Verify</text>
+  <text x="227" y="398" text-anchor="middle" fill="#166534" font-size="9" font-weight="700">15s</text>
+
+  <!-- Complete: 60s = 154px -->
+  <rect x="246" y="360" width="154" height="55" rx="6" fill="#86efac" stroke="#4ade80" stroke-width="1"/>
+  <text x="323" y="384" text-anchor="middle" fill="#166534" font-size="9" font-weight="600">Complete Sale</text>
+  <text x="323" y="398" text-anchor="middle" fill="#166534" font-size="9" font-weight="700">1 min</text>
+
+  <!-- Comparison arrow showing savings -->
+  <g transform="translate(500, 360)">
+    <rect x="0" y="0" width="250" height="55" rx="10" fill="#ecfdf5" stroke="#10b981" stroke-width="1.5"/>
+    <text x="125" y="22" text-anchor="middle" fill="#065f46" font-size="11" font-weight="600">Lookup time reduced by</text>
+    <text x="125" y="45" text-anchor="middle" fill="#10b981" font-size="22" font-weight="800">90%</text>
+  </g>
+
+  <g transform="translate(780, 360)">
+    <rect x="0" y="0" width="200" height="55" rx="10" fill="#f0fdfa" stroke="#14b8a6" stroke-width="1"/>
+    <text x="100" y="20" text-anchor="middle" fill="#0d9488" font-size="10" font-weight="600">Total transaction savings</text>
+    <text x="100" y="44" text-anchor="middle" fill="#14b8a6" font-size="18" font-weight="800">3-5 min saved</text>
+  </g>
+
+  <!-- Bottom stat -->
+  <rect x="200" y="440" width="800" height="36" rx="18" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="600" y="463" text-anchor="middle" fill="#0d9488" font-size="12" font-weight="600">During the morning rush, AI saves 45-75 minutes of total customer wait time per hour</text>
+</svg>

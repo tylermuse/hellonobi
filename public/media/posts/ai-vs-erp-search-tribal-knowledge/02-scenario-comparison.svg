@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" font-family="system-ui, -apple-system, sans-serif">
+  <defs>
+    <filter id="scenShadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="6" flood-color="#94a3b8" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="500" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="600" y="40" text-anchor="middle" fill="#1e293b" font-size="22" font-weight="700">Same Request, Three Very Different Outcomes</text>
+
+  <!-- Request bubble at top -->
+  <g filter="url(#scenShadow)">
+    <rect x="340" y="58" width="520" height="52" rx="26" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="1.5"/>
+    <text x="600" y="90" text-anchor="middle" fill="#1e293b" font-size="14" font-weight="500">"I need the fitting for the dishwasher supply line"</text>
+  </g>
+
+  <!-- Three branch lines from request -->
+  <line x1="400" y1="110" x2="200" y2="160" stroke="#e2e8f0" stroke-width="2"/>
+  <line x1="600" y1="110" x2="600" y2="160" stroke="#e2e8f0" stroke-width="2"/>
+  <line x1="800" y1="110" x2="1000" y2="160" stroke="#e2e8f0" stroke-width="2"/>
+
+  <!-- PATH 1: AI Copilot (left, green/blue) -->
+  <g filter="url(#scenShadow)">
+    <!-- Path header -->
+    <rect x="50" y="160" width="300" height="44" rx="12" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+    <circle cx="82" cy="182" r="12" fill="#3b82f6"/>
+    <text x="82" y="187" text-anchor="middle" fill="#ffffff" font-size="10" font-weight="700">AI</text>
+    <text x="108" y="187" fill="#1e293b" font-size="14" font-weight="700">AI Copilot</text>
+
+    <!-- Process steps -->
+    <rect x="50" y="216" width="300" height="160" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+
+    <g transform="translate(70, 232)">
+      <circle cx="6" cy="6" r="4" fill="#3b82f6"/>
+      <text x="20" y="10" fill="#475569" font-size="11">Parses: fitting + dishwasher + supply</text>
+
+      <line x1="6" y1="12" x2="6" y2="30" stroke="#dbeafe" stroke-width="1.5"/>
+      <circle cx="6" cy="34" r="4" fill="#3b82f6"/>
+      <text x="20" y="38" fill="#475569" font-size="11">Semantic search: 250K+ SKUs</text>
+
+      <line x1="6" y1="40" x2="6" y2="58" stroke="#dbeafe" stroke-width="1.5"/>
+      <circle cx="6" cy="62" r="4" fill="#3b82f6"/>
+      <text x="20" y="66" fill="#475569" font-size="11">Cross-references 3 manufacturers</text>
+
+      <line x1="6" y1="68" x2="6" y2="86" stroke="#dbeafe" stroke-width="1.5"/>
+      <circle cx="6" cy="90" r="4" fill="#16a34a"/>
+      <text x="20" y="94" fill="#475569" font-size="11">Returns top match + 2 alternatives</text>
+    </g>
+
+    <!-- Time badge -->
+    <rect x="70" y="342" width="60" height="22" rx="4" fill="#eff6ff"/>
+    <text x="100" y="357" text-anchor="middle" fill="#3b82f6" font-size="10" font-weight="600">2 sec</text>
+
+    <!-- Result card -->
+    <rect x="50" y="388" width="300" height="90" rx="12" fill="#f0fdf4" stroke="#86efac" stroke-width="2"/>
+    <text x="200" y="416" text-anchor="middle" fill="#16a34a" font-size="16" font-weight="800">Correct SKU</text>
+    <text x="200" y="436" text-anchor="middle" fill="#166534" font-size="12">BrassCraft B1-20A, 3/8" Comp</text>
+    <text x="200" y="454" text-anchor="middle" fill="#166534" font-size="12">Dishwasher Supply Connector</text>
+    <rect x="168" y="460" width="64" height="20" rx="10" fill="#dcfce7"/>
+    <text x="200" y="475" text-anchor="middle" fill="#16a34a" font-size="10" font-weight="600">98% match</text>
+  </g>
+
+  <!-- PATH 2: ERP Search (center, amber) -->
+  <g filter="url(#scenShadow)">
+    <rect x="450" y="160" width="300" height="44" rx="12" fill="#fffbeb" stroke="#fde68a" stroke-width="1"/>
+    <circle cx="482" cy="182" r="12" fill="#f59e0b"/>
+    <text x="482" y="187" text-anchor="middle" fill="#ffffff" font-size="9" font-weight="700">ERP</text>
+    <text x="508" y="187" fill="#1e293b" font-size="14" font-weight="700">ERP Search</text>
+
+    <rect x="450" y="216" width="300" height="160" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+
+    <g transform="translate(470, 232)">
+      <circle cx="6" cy="6" r="4" fill="#f59e0b"/>
+      <text x="20" y="10" fill="#475569" font-size="11">Keyword: "fitting dishwasher"</text>
+
+      <line x1="6" y1="12" x2="6" y2="30" stroke="#fde68a" stroke-width="1.5"/>
+      <circle cx="6" cy="34" r="4" fill="#f59e0b"/>
+      <text x="20" y="38" fill="#475569" font-size="11">47 results returned</text>
+
+      <line x1="6" y1="40" x2="6" y2="58" stroke="#fde68a" stroke-width="1.5"/>
+      <circle cx="6" cy="62" r="4" fill="#f59e0b"/>
+      <text x="20" y="66" fill="#475569" font-size="11">Manual scroll and filter...</text>
+
+      <line x1="6" y1="68" x2="6" y2="86" stroke="#fde68a" stroke-width="1.5"/>
+      <circle cx="6" cy="90" r="4" fill="#d97706"/>
+      <text x="20" y="94" fill="#475569" font-size="11">Guess from descriptions</text>
+    </g>
+
+    <rect x="470" y="342" width="74" height="22" rx="4" fill="#fffbeb"/>
+    <text x="507" y="357" text-anchor="middle" fill="#d97706" font-size="10" font-weight="600">5-10 min</text>
+
+    <!-- Result card -->
+    <rect x="450" y="388" width="300" height="90" rx="12" fill="#fffbeb" stroke="#fcd34d" stroke-width="2"/>
+    <text x="600" y="416" text-anchor="middle" fill="#d97706" font-size="16" font-weight="800">47 Results</text>
+    <text x="600" y="436" text-anchor="middle" fill="#92400e" font-size="12">Manual filtering required</text>
+    <text x="600" y="454" text-anchor="middle" fill="#92400e" font-size="12">Correct part buried on page 3</text>
+    <rect x="558" y="460" width="84" height="20" rx="10" fill="#fef3c7"/>
+    <text x="600" y="475" text-anchor="middle" fill="#d97706" font-size="10" font-weight="600">Frustrating</text>
+  </g>
+
+  <!-- PATH 3: Tribal Knowledge (right, gray/red) -->
+  <g filter="url(#scenShadow)">
+    <rect x="850" y="160" width="300" height="44" rx="12" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="1"/>
+    <circle cx="882" cy="182" r="12" fill="#94a3b8"/>
+    <text x="882" y="187" text-anchor="middle" fill="#ffffff" font-size="9" font-weight="700">TK</text>
+    <text x="908" y="187" fill="#1e293b" font-size="14" font-weight="700">Tribal Knowledge</text>
+
+    <rect x="850" y="216" width="300" height="160" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+
+    <g transform="translate(870, 232)">
+      <circle cx="6" cy="6" r="4" fill="#94a3b8"/>
+      <text x="20" y="10" fill="#475569" font-size="11">Ask around: "Anyone know this?"</text>
+
+      <line x1="6" y1="12" x2="6" y2="30" stroke="#e2e8f0" stroke-width="1.5"/>
+      <circle cx="6" cy="34" r="4" fill="#94a3b8"/>
+      <text x="20" y="38" fill="#475569" font-size="11">Dave knows... but Dave left at 4</text>
+
+      <line x1="6" y1="40" x2="6" y2="58" stroke="#e2e8f0" stroke-width="1.5"/>
+      <circle cx="6" cy="62" r="4" fill="#94a3b8"/>
+      <text x="20" y="66" fill="#475569" font-size="11">New guy checks catalog binder</text>
+
+      <line x1="6" y1="68" x2="6" y2="86" stroke="#e2e8f0" stroke-width="1.5"/>
+      <circle cx="6" cy="90" r="4" fill="#ef4444"/>
+      <text x="20" y="94" fill="#475569" font-size="11">"Best guess" or call back later</text>
+    </g>
+
+    <rect x="870" y="342" width="100" height="22" rx="4" fill="#f1f5f9"/>
+    <text x="920" y="357" text-anchor="middle" fill="#64748b" font-size="10" font-weight="600">15 min - never</text>
+
+    <!-- Result card -->
+    <rect x="850" y="388" width="300" height="90" rx="12" fill="#fef2f2" stroke="#fca5a5" stroke-width="2"/>
+    <text x="1000" y="416" text-anchor="middle" fill="#dc2626" font-size="16" font-weight="800">Depends Who's Working</text>
+    <text x="1000" y="436" text-anchor="middle" fill="#991b1b" font-size="12">Knowledge gap = wrong part risk</text>
+    <text x="1000" y="454" text-anchor="middle" fill="#991b1b" font-size="12">Customer may call competitor instead</text>
+    <rect x="958" y="460" width="84" height="20" rx="10" fill="#fecaca"/>
+    <text x="1000" y="475" text-anchor="middle" fill="#dc2626" font-size="10" font-weight="600">Unreliable</text>
+  </g>
+</svg>

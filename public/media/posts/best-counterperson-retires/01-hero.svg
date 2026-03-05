@@ -1,0 +1,98 @@
+<svg viewBox="0 0 1200 500" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, sans-serif">
+  <rect width="1200" height="500" fill="#ffffff"/>
+
+  <!-- Subtle warm gradient at bottom -->
+  <defs>
+    <linearGradient id="warmFade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#fffbeb" stop-opacity="0.6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="500" fill="url(#warmFade)"/>
+
+  <!-- Title -->
+  <text x="600" y="38" text-anchor="middle" fill="#1e293b" font-size="22" font-weight="700">When Expertise Walks Out the Door</text>
+  <text x="600" y="58" text-anchor="middle" fill="#475569" font-size="13">Every retirement takes decades of irreplaceable product knowledge with it</text>
+
+  <!-- EXIT door on the right -->
+  <rect x="920" y="120" width="140" height="260" rx="6" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
+  <rect x="935" y="130" width="110" height="100" rx="4" fill="#e2e8f0"/>
+  <rect x="935" y="240" width="110" height="100" rx="4" fill="#e2e8f0"/>
+  <!-- Door handle -->
+  <circle cx="953" cy="255" r="6" fill="#94a3b8"/>
+  <!-- EXIT sign -->
+  <rect x="945" y="100" width="90" height="28" rx="4" fill="#dc2626"/>
+  <text x="990" y="119" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="800">EXIT</text>
+  <!-- Light glow from door -->
+  <rect x="930" y="380" width="120" height="4" rx="2" fill="#fbbf24" opacity="0.3"/>
+
+  <!-- Walking figure silhouette -->
+  <g transform="translate(830, 190)">
+    <!-- Head -->
+    <circle cx="0" cy="0" r="22" fill="#78716c"/>
+    <!-- Body -->
+    <rect x="-14" y="22" width="28" height="55" rx="8" fill="#78716c"/>
+    <!-- Left leg (walking) -->
+    <rect x="-14" y="72" width="12" height="50" rx="4" fill="#78716c" transform="rotate(-15, -8, 72)"/>
+    <!-- Right leg (walking) -->
+    <rect x="2" y="72" width="12" height="50" rx="4" fill="#78716c" transform="rotate(10, 8, 72)"/>
+    <!-- Left arm -->
+    <rect x="-22" y="28" width="10" height="40" rx="4" fill="#78716c" transform="rotate(15, -17, 28)"/>
+    <!-- Right arm -->
+    <rect x="12" y="28" width="10" height="40" rx="4" fill="#78716c" transform="rotate(-10, 17, 28)"/>
+  </g>
+
+  <!-- Floating knowledge tags drifting away from the figure -->
+  <!-- Tag 1: Cross-References (highest, most visible) -->
+  <g transform="translate(620, 130)" opacity="0.95">
+    <rect width="140" height="32" rx="16" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.5"/>
+    <text x="70" y="21" text-anchor="middle" fill="#92400e" font-size="11" font-weight="600">Cross-References</text>
+  </g>
+
+  <!-- Tag 2: Customer Preferences -->
+  <g transform="translate(450, 170)" opacity="0.8">
+    <rect width="155" height="32" rx="16" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.2"/>
+    <text x="77" y="21" text-anchor="middle" fill="#92400e" font-size="11" font-weight="600">Customer Preferences</text>
+  </g>
+
+  <!-- Tag 3: Product Knowledge -->
+  <g transform="translate(550, 230)" opacity="0.65">
+    <rect width="145" height="32" rx="16" fill="#fef3c7" stroke="#fbbf24" stroke-width="1"/>
+    <text x="72" y="21" text-anchor="middle" fill="#92400e" font-size="11" font-weight="600">Product Knowledge</text>
+  </g>
+
+  <!-- Tag 4: Sizing Rules -->
+  <g transform="translate(390, 280)" opacity="0.5">
+    <rect width="110" height="32" rx="16" fill="#fef3c7" stroke="#fbbf24" stroke-width="1"/>
+    <text x="55" y="21" text-anchor="middle" fill="#b45309" font-size="11" font-weight="600">Sizing Rules</text>
+  </g>
+
+  <!-- Tag 5: Brand Equivalents (most faded, falling) -->
+  <g transform="translate(480, 340)" opacity="0.3">
+    <rect width="140" height="32" rx="16" fill="#fef9c3" stroke="#fde68a" stroke-width="1"/>
+    <text x="70" y="21" text-anchor="middle" fill="#b45309" font-size="11" font-weight="600">Brand Equivalents</text>
+  </g>
+
+  <!-- Drift lines showing tags falling -->
+  <g stroke="#f59e0b" stroke-width="1" stroke-dasharray="3,4" opacity="0.2">
+    <line x1="720" y1="150" x2="780" y2="170"/>
+    <line x1="560" y1="195" x2="640" y2="220"/>
+    <line x1="650" y1="255" x2="710" y2="275"/>
+    <line x1="470" y1="305" x2="540" y2="330"/>
+    <line x1="560" y1="365" x2="620" y2="390"/>
+  </g>
+
+  <!-- Stat box bottom left -->
+  <rect x="80" y="400" width="380" height="70" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+  <rect x="80" y="400" width="5" height="70" rx="2" fill="#f59e0b"/>
+  <text x="105" y="427" fill="#1e293b" font-size="28" font-weight="800">25%</text>
+  <text x="225" y="427" fill="#475569" font-size="14" font-weight="500">of the workforce</text>
+  <text x="105" y="452" fill="#64748b" font-size="13">retiring in the next decade</text>
+
+  <!-- Secondary stat -->
+  <rect x="490" y="400" width="280" height="70" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+  <rect x="490" y="400" width="5" height="70" rx="2" fill="#dc2626"/>
+  <text x="515" y="427" fill="#1e293b" font-size="28" font-weight="800">30+</text>
+  <text x="600" y="427" fill="#475569" font-size="14" font-weight="500">years of knowledge</text>
+  <text x="515" y="452" fill="#64748b" font-size="13">lost with each retirement</text>
+</svg>

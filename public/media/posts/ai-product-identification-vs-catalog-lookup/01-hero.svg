@@ -1,0 +1,85 @@
+<svg viewBox="0 0 1200 500" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, sans-serif">
+  <!-- White background -->
+  <rect width="1200" height="500" fill="#ffffff"/>
+
+  <!-- Left side: Traditional Lookup (muted) -->
+  <rect x="0" y="0" width="560" height="500" fill="#f8fafc"/>
+
+  <!-- Left header -->
+  <text x="280" y="52" text-anchor="middle" font-size="13" font-weight="600" fill="#94a3b8" letter-spacing="2">TRADITIONAL LOOKUP</text>
+
+  <!-- Stacked catalogs illustration -->
+  <rect x="120" y="80" width="180" height="14" rx="2" fill="#cbd5e1" transform="rotate(-3 210 87)"/>
+  <rect x="115" y="95" width="190" height="14" rx="2" fill="#94a3b8" transform="rotate(1 210 102)"/>
+  <rect x="118" y="110" width="185" height="14" rx="2" fill="#cbd5e1" transform="rotate(-1 210 117)"/>
+  <rect x="110" y="130" width="200" height="140" rx="4" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="210" y="175" text-anchor="middle" font-size="11" fill="#94a3b8">PARTS CATALOG</text>
+  <text x="210" y="195" text-anchor="middle" font-size="11" fill="#94a3b8">VOL. 12 - 2024</text>
+  <line x1="140" y1="215" x2="280" y2="215" stroke="#cbd5e1" stroke-width="1"/>
+  <line x1="140" y1="230" x2="260" y2="230" stroke="#cbd5e1" stroke-width="1"/>
+  <line x1="140" y1="245" x2="270" y2="245" stroke="#cbd5e1" stroke-width="1"/>
+
+  <!-- Magnifying glass -->
+  <circle cx="390" cy="160" r="35" fill="none" stroke="#94a3b8" stroke-width="3"/>
+  <line x1="415" y1="185" x2="440" y2="210" stroke="#94a3b8" stroke-width="3" stroke-linecap="round"/>
+  <text x="390" y="165" text-anchor="middle" font-size="12" fill="#94a3b8">???</text>
+
+  <!-- Scattered papers -->
+  <rect x="340" y="230" width="80" height="50" rx="2" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1" transform="rotate(8 380 255)"/>
+  <rect x="370" y="220" width="80" height="50" rx="2" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1" transform="rotate(-5 410 245)"/>
+  <rect x="420" y="240" width="80" height="50" rx="2" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1" transform="rotate(3 460 265)"/>
+
+  <!-- Time label left -->
+  <rect x="170" y="330" width="220" height="60" rx="8" fill="#fef2f2" stroke="#fecaca" stroke-width="1"/>
+  <text x="280" y="355" text-anchor="middle" font-size="14" font-weight="600" fill="#dc2626">5 - 10 min avg</text>
+  <text x="280" y="375" text-anchor="middle" font-size="11" fill="#94a3b8">per part lookup</text>
+
+  <!-- Left bottom stats -->
+  <text x="280" y="430" text-anchor="middle" font-size="11" fill="#94a3b8">Flipping pages, calling vendors,</text>
+  <text x="280" y="448" text-anchor="middle" font-size="11" fill="#94a3b8">hoping the catalog is current</text>
+
+  <!-- Center VS badge -->
+  <circle cx="600" cy="250" r="36" fill="#1e293b"/>
+  <text x="600" y="258" text-anchor="middle" font-size="20" font-weight="700" fill="#ffffff">VS</text>
+  <!-- Divider line -->
+  <line x1="600" y1="0" x2="600" y2="200" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="600" y1="300" x2="600" y2="500" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4,4"/>
+
+  <!-- Right side: AI Identification -->
+  <rect x="640" y="0" width="560" height="500" fill="#ffffff"/>
+
+  <!-- Right header -->
+  <text x="920" y="52" text-anchor="middle" font-size="13" font-weight="600" fill="#2563eb" letter-spacing="2">AI IDENTIFICATION</text>
+
+  <!-- Chat interface mockup -->
+  <rect x="720" y="75" width="320" height="220" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+  <!-- Chat header bar -->
+  <rect x="720" y="75" width="320" height="36" rx="12" fill="#2563eb"/>
+  <rect x="720" y="99" width="320" height="12" fill="#2563eb"/>
+  <circle cx="740" cy="93" r="5" fill="#60a5fa"/>
+  <text x="755" y="97" font-size="11" font-weight="600" fill="#ffffff">AI Copilot</text>
+  <circle cx="1020" cy="93" r="3" fill="#34d399"/>
+
+  <!-- User message bubble -->
+  <rect x="830" y="125" width="195" height="32" rx="10" fill="#eff6ff"/>
+  <text x="927" y="145" text-anchor="middle" font-size="10" fill="#1e40af">"3/4 inch brass ball valve"</text>
+
+  <!-- AI response -->
+  <rect x="735" y="168" width="220" height="115" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="750" y="188" font-size="10" font-weight="600" fill="#1e293b">Top Match (98.5%)</text>
+  <text x="750" y="205" font-size="10" fill="#2563eb" font-weight="500">SKU: BV-075-BR</text>
+  <text x="750" y="220" font-size="9" fill="#64748b">Watts 3/4" Brass Ball Valve</text>
+  <line x1="750" y1="230" x2="940" y2="230" stroke="#e2e8f0" stroke-width="0.5"/>
+  <text x="750" y="245" font-size="9" fill="#64748b">Cross-ref: Apollo 70-100</text>
+  <circle cx="750" cy="263" r="4" fill="#22c55e"/>
+  <text x="760" y="267" font-size="9" fill="#16a34a" font-weight="500">In Stock: 47 units</text>
+
+  <!-- Time label right -->
+  <rect x="810" y="330" width="220" height="60" rx="8" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
+  <text x="920" y="355" text-anchor="middle" font-size="14" font-weight="600" fill="#16a34a">10 - 30 sec avg</text>
+  <text x="920" y="375" text-anchor="middle" font-size="11" fill="#94a3b8">per part lookup</text>
+
+  <!-- Right bottom stats -->
+  <text x="920" y="430" text-anchor="middle" font-size="11" fill="#64748b">Instant search, verified SKUs,</text>
+  <text x="920" y="448" text-anchor="middle" font-size="11" fill="#64748b">cross-references and live inventory</text>
+</svg>

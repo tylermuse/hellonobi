@@ -1,0 +1,87 @@
+<svg viewBox="0 0 1200 500" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, sans-serif">
+  <!-- White background -->
+  <rect width="1200" height="500" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="600" y="38" text-anchor="middle" font-size="20" font-weight="700" fill="#1e293b">Capability Comparison by Tool Type</text>
+  <text x="600" y="58" text-anchor="middle" font-size="12" fill="#64748b">Five critical dimensions for distribution AI tools</text>
+
+  <!-- Radar chart center -->
+  <!-- Pentagon grid lines (5 levels, 5 axes) -->
+  <!-- Axes at angles: 90, 162, 234, 306, 18 degrees (top, left-upper, left-lower, right-lower, right-upper) -->
+  <!-- Center at 520, 280. Max radius 180 -->
+
+  <!-- Axis lines -->
+  <line x1="520" y1="280" x2="520" y2="100" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="520" y1="280" x2="349" y2="175" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="520" y1="280" x2="385" y2="425" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="520" y1="280" x2="655" y2="425" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="520" y1="280" x2="691" y2="175" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- Grid pentagons (5 levels) -->
+  <!-- Level 5 (outermost) -->
+  <polygon points="520,100 349,175 385,425 655,425 691,175" fill="none" stroke="#e2e8f0" stroke-width="1"/>
+  <!-- Level 4 -->
+  <polygon points="520,136 383,198 412,398 628,398 657,198" fill="none" stroke="#f1f5f9" stroke-width="1"/>
+  <!-- Level 3 -->
+  <polygon points="520,172 418,222 439,370 601,370 622,222" fill="none" stroke="#f1f5f9" stroke-width="1"/>
+  <!-- Level 2 -->
+  <polygon points="520,208 452,245 466,343 574,343 588,245" fill="none" stroke="#f1f5f9" stroke-width="1"/>
+  <!-- Level 1 -->
+  <polygon points="520,244 486,268 493,316 547,316 554,268" fill="none" stroke="#f1f5f9" stroke-width="1"/>
+
+  <!-- Axis labels -->
+  <text x="520" y="85" text-anchor="middle" font-size="12" font-weight="600" fill="#1e293b">Catalog Depth</text>
+  <text x="325" y="165" text-anchor="end" font-size="12" font-weight="600" fill="#1e293b">Language</text>
+  <text x="325" y="179" text-anchor="end" font-size="12" font-weight="600" fill="#1e293b">Understanding</text>
+  <text x="370" y="450" text-anchor="middle" font-size="12" font-weight="600" fill="#1e293b">Cross-Reference</text>
+  <text x="670" y="450" text-anchor="middle" font-size="12" font-weight="600" fill="#1e293b">Integration</text>
+  <text x="715" y="165" text-anchor="start" font-size="12" font-weight="600" fill="#1e293b">Accuracy</text>
+
+  <!-- Data: General AI (small red polygon) - roughly level 1-2 on each -->
+  <polygon points="520,208 466,255 480,338 560,338 574,255" fill="#ef4444" fill-opacity="0.15" stroke="#ef4444" stroke-width="2"/>
+  <!-- Data points -->
+  <circle cx="520" cy="208" r="4" fill="#ef4444"/>
+  <circle cx="466" cy="255" r="4" fill="#ef4444"/>
+  <circle cx="480" cy="338" r="4" fill="#ef4444"/>
+  <circle cx="560" cy="338" r="4" fill="#ef4444"/>
+  <circle cx="574" cy="255" r="4" fill="#ef4444"/>
+
+  <!-- Data: eCommerce Search (medium amber polygon) - roughly level 2-3 -->
+  <polygon points="520,172 418,222 453,380 601,370 622,222" fill="#f59e0b" fill-opacity="0.12" stroke="#f59e0b" stroke-width="2"/>
+  <circle cx="520" cy="172" r="4" fill="#f59e0b"/>
+  <circle cx="418" cy="222" r="4" fill="#f59e0b"/>
+  <circle cx="453" cy="380" r="4" fill="#f59e0b"/>
+  <circle cx="601" cy="370" r="4" fill="#f59e0b"/>
+  <circle cx="622" cy="222" r="4" fill="#f59e0b"/>
+
+  <!-- Data: Purpose-Built Copilot (large blue/green polygon) - level 4-5 -->
+  <polygon points="520,100 362,185 398,418 648,425 685,185" fill="#2563eb" fill-opacity="0.10" stroke="#2563eb" stroke-width="2.5"/>
+  <circle cx="520" cy="100" r="5" fill="#2563eb"/>
+  <circle cx="362" cy="185" r="5" fill="#2563eb"/>
+  <circle cx="398" cy="418" r="5" fill="#2563eb"/>
+  <circle cx="648" cy="425" r="5" fill="#2563eb"/>
+  <circle cx="685" cy="185" r="5" fill="#2563eb"/>
+
+  <!-- Legend -->
+  <rect x="860" y="150" width="280" height="180" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="1000" y="178" text-anchor="middle" font-size="13" font-weight="700" fill="#1e293b">Tool Types</text>
+
+  <!-- Legend: General AI -->
+  <rect x="885" y="198" width="16" height="16" rx="3" fill="#ef4444" fill-opacity="0.3" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="912" y="211" font-size="12" fill="#475569">General AI (ChatGPT, etc.)</text>
+
+  <!-- Legend: eCommerce Search -->
+  <rect x="885" y="232" width="16" height="16" rx="3" fill="#f59e0b" fill-opacity="0.3" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="912" y="245" font-size="12" fill="#475569">eCommerce Search</text>
+
+  <!-- Legend: Purpose-Built Copilot -->
+  <rect x="885" y="266" width="16" height="16" rx="3" fill="#2563eb" fill-opacity="0.3" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="912" y="279" font-size="12" fill="#475569">Purpose-Built Copilot</text>
+
+  <!-- Scale note -->
+  <text x="1000" y="310" text-anchor="middle" font-size="10" fill="#94a3b8">Outer ring = highest capability</text>
+
+  <!-- Bottom accent -->
+  <rect x="0" y="492" width="1200" height="8" fill="#4f46e5" opacity="0.06"/>
+</svg>

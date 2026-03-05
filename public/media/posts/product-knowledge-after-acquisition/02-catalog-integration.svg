@@ -1,0 +1,122 @@
+<svg viewBox="0 0 1200 500" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, sans-serif">
+  <rect width="1200" height="500" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="600" y="38" text-anchor="middle" fill="#1e293b" font-size="22" font-weight="700">Unified Knowledge: Catalog Convergence</text>
+  <text x="600" y="58" text-anchor="middle" fill="#475569" font-size="13">How AI consolidates multiple product catalogs into one accessible knowledge base</text>
+
+  <!-- Source boxes on the left -->
+  <g>
+    <!-- Plumbing -->
+    <rect x="60" y="95" width="200" height="60" rx="10" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+    <circle cx="90" cy="125" r="14" fill="#3b82f6" opacity="0.2"/>
+    <text x="90" y="130" text-anchor="middle" fill="#3b82f6" font-size="14" font-weight="700">P</text>
+    <text x="175" y="120" text-anchor="middle" fill="#1e40af" font-size="13" font-weight="600">Plumbing Catalog</text>
+    <text x="175" y="137" text-anchor="middle" fill="#64748b" font-size="10">120K SKUs</text>
+
+    <!-- HVAC -->
+    <rect x="60" y="175" width="200" height="60" rx="10" fill="#ede9fe" stroke="#8b5cf6" stroke-width="1.5"/>
+    <circle cx="90" cy="205" r="14" fill="#8b5cf6" opacity="0.2"/>
+    <text x="90" y="210" text-anchor="middle" fill="#8b5cf6" font-size="14" font-weight="700">H</text>
+    <text x="175" y="200" text-anchor="middle" fill="#5b21b6" font-size="13" font-weight="600">HVAC Catalog</text>
+    <text x="175" y="217" text-anchor="middle" fill="#64748b" font-size="10">80K SKUs</text>
+
+    <!-- Electrical -->
+    <rect x="60" y="255" width="200" height="60" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+    <circle cx="90" cy="285" r="14" fill="#f59e0b" opacity="0.2"/>
+    <text x="90" y="290" text-anchor="middle" fill="#f59e0b" font-size="14" font-weight="700">E</text>
+    <text x="175" y="280" text-anchor="middle" fill="#92400e" font-size="13" font-weight="600">Electrical Catalog</text>
+    <text x="175" y="297" text-anchor="middle" fill="#64748b" font-size="10">45K SKUs</text>
+
+    <!-- Manufacturer Specs -->
+    <rect x="60" y="335" width="200" height="60" rx="10" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5"/>
+    <circle cx="90" cy="365" r="14" fill="#94a3b8" opacity="0.2"/>
+    <text x="90" y="370" text-anchor="middle" fill="#64748b" font-size="14" font-weight="700">M</text>
+    <text x="175" y="358" text-anchor="middle" fill="#475569" font-size="13" font-weight="600">Manufacturer Specs</text>
+    <text x="175" y="375" text-anchor="middle" fill="#64748b" font-size="10">Technical Data</text>
+  </g>
+
+  <!-- Converging lines with dots -->
+  <g stroke="#8b5cf6" stroke-width="2" fill="none" opacity="0.4">
+    <line x1="260" y1="125" x2="490" y2="235"/>
+    <line x1="260" y1="205" x2="490" y2="245"/>
+    <line x1="260" y1="285" x2="490" y2="255"/>
+    <line x1="260" y1="365" x2="490" y2="265"/>
+  </g>
+  <!-- Animated dots on lines -->
+  <circle cx="340" cy="168" r="4" fill="#8b5cf6" opacity="0.6"/>
+  <circle cx="390" cy="218" r="4" fill="#8b5cf6" opacity="0.6"/>
+  <circle cx="370" cy="272" r="4" fill="#8b5cf6" opacity="0.6"/>
+  <circle cx="400" cy="300" r="4" fill="#8b5cf6" opacity="0.6"/>
+  <circle cx="420" cy="188" r="3" fill="#8b5cf6" opacity="0.4"/>
+  <circle cx="450" cy="238" r="3" fill="#8b5cf6" opacity="0.4"/>
+
+  <!-- Central AI Knowledge Engine hexagon -->
+  <g transform="translate(565, 250)">
+    <polygon points="0,-75 65,-37.5 65,37.5 0,75 -65,37.5 -65,-37.5" fill="#f5f3ff" stroke="#8b5cf6" stroke-width="2.5"/>
+    <polygon points="0,-55 47.5,-27.5 47.5,27.5 0,55 -47.5,27.5 -47.5,-27.5" fill="#ede9fe" stroke="#8b5cf6" stroke-width="1" opacity="0.5"/>
+    <!-- AI icon in center -->
+    <circle cx="0" cy="-12" r="16" fill="#8b5cf6" opacity="0.15"/>
+    <text x="0" y="-6" text-anchor="middle" fill="#8b5cf6" font-size="16" font-weight="800">AI</text>
+    <text x="0" y="14" text-anchor="middle" fill="#5b21b6" font-size="9" font-weight="700">KNOWLEDGE</text>
+    <text x="0" y="26" text-anchor="middle" fill="#5b21b6" font-size="9" font-weight="700">ENGINE</text>
+    <text x="0" y="44" text-anchor="middle" fill="#8b5cf6" font-size="8">Unified Access</text>
+  </g>
+
+  <!-- Fanning out lines to employees on right -->
+  <g stroke="#8b5cf6" stroke-width="2" fill="none" opacity="0.4">
+    <line x1="640" y1="225" x2="830" y2="115"/>
+    <line x1="640" y1="240" x2="830" y2="205"/>
+    <line x1="640" y1="260" x2="830" y2="295"/>
+    <line x1="640" y1="275" x2="830" y2="385"/>
+  </g>
+  <!-- Dots on outgoing lines -->
+  <circle cx="720" cy="178" r="4" fill="#8b5cf6" opacity="0.6"/>
+  <circle cx="750" cy="218" r="4" fill="#8b5cf6" opacity="0.6"/>
+  <circle cx="740" cy="275" r="4" fill="#8b5cf6" opacity="0.6"/>
+  <circle cx="770" cy="340" r="3" fill="#8b5cf6" opacity="0.4"/>
+
+  <!-- Employee roles on the right -->
+  <g>
+    <!-- Counter -->
+    <rect x="830" y="90" width="180" height="50" rx="10" fill="#ecfdf5" stroke="#10b981" stroke-width="1.5"/>
+    <circle cx="858" cy="115" r="12" fill="#10b981" opacity="0.15"/>
+    <circle cx="858" cy="111" r="4" fill="#10b981" opacity="0.5"/>
+    <rect x="854" y="117" width="8" height="6" rx="2" fill="#10b981" opacity="0.5"/>
+    <text x="935" y="112" text-anchor="middle" fill="#065f46" font-size="12" font-weight="600">Counter Staff</text>
+    <text x="935" y="128" text-anchor="middle" fill="#64748b" font-size="10">Full catalog access</text>
+
+    <!-- Sales -->
+    <rect x="830" y="180" width="180" height="50" rx="10" fill="#ecfdf5" stroke="#10b981" stroke-width="1.5"/>
+    <circle cx="858" cy="205" r="12" fill="#10b981" opacity="0.15"/>
+    <circle cx="858" cy="201" r="4" fill="#10b981" opacity="0.5"/>
+    <rect x="854" y="207" width="8" height="6" rx="2" fill="#10b981" opacity="0.5"/>
+    <text x="935" y="202" text-anchor="middle" fill="#065f46" font-size="12" font-weight="600">Outside Sales</text>
+    <text x="935" y="218" text-anchor="middle" fill="#64748b" font-size="10">Cross-sell ready</text>
+
+    <!-- Inside Sales -->
+    <rect x="830" y="270" width="180" height="50" rx="10" fill="#ecfdf5" stroke="#10b981" stroke-width="1.5"/>
+    <circle cx="858" cy="295" r="12" fill="#10b981" opacity="0.15"/>
+    <circle cx="858" cy="291" r="4" fill="#10b981" opacity="0.5"/>
+    <rect x="854" y="297" width="8" height="6" rx="2" fill="#10b981" opacity="0.5"/>
+    <text x="935" y="292" text-anchor="middle" fill="#065f46" font-size="12" font-weight="600">Inside Sales</text>
+    <text x="935" y="308" text-anchor="middle" fill="#64748b" font-size="10">Instant answers</text>
+
+    <!-- New Hire -->
+    <rect x="830" y="360" width="180" height="50" rx="10" fill="#ecfdf5" stroke="#10b981" stroke-width="1.5"/>
+    <circle cx="858" cy="385" r="12" fill="#10b981" opacity="0.15"/>
+    <circle cx="858" cy="381" r="4" fill="#10b981" opacity="0.5"/>
+    <rect x="854" y="387" width="8" height="6" rx="2" fill="#10b981" opacity="0.5"/>
+    <text x="935" y="382" text-anchor="middle" fill="#065f46" font-size="12" font-weight="600">New Hires</text>
+    <text x="935" y="398" text-anchor="middle" fill="#64748b" font-size="10">Day-one capable</text>
+  </g>
+
+  <!-- Labels for flow direction -->
+  <text x="380" y="82" text-anchor="middle" fill="#94a3b8" font-size="10" font-weight="600">DATA SOURCES</text>
+  <text x="565" y="82" text-anchor="middle" fill="#8b5cf6" font-size="10" font-weight="600">AI UNIFICATION</text>
+  <text x="920" y="82" text-anchor="middle" fill="#10b981" font-size="10" font-weight="600">EMPOWERED TEAM</text>
+
+  <!-- Bottom insight -->
+  <rect x="200" y="448" width="800" height="36" rx="18" fill="#f5f3ff" stroke="#8b5cf6" stroke-width="1"/>
+  <text x="600" y="470" text-anchor="middle" fill="#5b21b6" font-size="12" font-weight="600">One AI knowledge engine replaces years of tribal knowledge across all product lines</text>
+</svg>

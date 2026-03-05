@@ -1,0 +1,65 @@
+<svg viewBox="0 0 1200 500" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, sans-serif">
+  <rect width="1200" height="500" fill="#ffffff"/>
+
+  <!-- Center hub -->
+  <circle cx="600" cy="250" r="80" fill="#4338ca"/>
+  <circle cx="600" cy="250" r="76" fill="#4338ca" stroke="#6366f1" stroke-width="2"/>
+  <text x="600" y="235" text-anchor="middle" font-size="13" fill="white" font-weight="400">The Distributor's</text>
+  <text x="600" y="256" text-anchor="middle" font-size="18" fill="white" font-weight="800">Guide to AI</text>
+  <text x="600" y="275" text-anchor="middle" font-size="11" fill="#c7d2fe">Complete Framework</text>
+
+  <!-- Spokes -->
+  <!-- Spoke 1 - "What Works" (green) - top left -->
+  <line x1="535" y1="195" x2="310" y2="110" stroke="#e2e8f0" stroke-width="2"/>
+  <circle cx="310" cy="110" r="5" fill="#22c55e"/>
+  <rect x="130" y="65" width="210" height="90" rx="10" fill="white" stroke="#bbf7d0" stroke-width="1.5"/>
+  <rect x="130" y="65" width="210" height="5" rx="3" fill="#22c55e"/>
+  <text x="235" y="95" text-anchor="middle" font-size="15" fill="#1e293b" font-weight="700">What Works</text>
+  <text x="235" y="114" text-anchor="middle" font-size="10" fill="#64748b">Proven AI applications with</text>
+  <text x="235" y="128" text-anchor="middle" font-size="10" fill="#64748b">measurable distributor ROI</text>
+
+  <!-- Spoke 2 - "What Doesn't" (red) - top right -->
+  <line x1="665" y1="195" x2="890" y2="110" stroke="#e2e8f0" stroke-width="2"/>
+  <circle cx="890" cy="110" r="5" fill="#ef4444"/>
+  <rect x="790" y="65" width="210" height="90" rx="10" fill="white" stroke="#fecaca" stroke-width="1.5"/>
+  <rect x="790" y="65" width="210" height="5" rx="3" fill="#ef4444"/>
+  <text x="895" y="95" text-anchor="middle" font-size="15" fill="#1e293b" font-weight="700">What Doesn't</text>
+  <text x="895" y="114" text-anchor="middle" font-size="10" fill="#64748b">Common AI failures and</text>
+  <text x="895" y="128" text-anchor="middle" font-size="10" fill="#64748b">overpromised capabilities</text>
+
+  <!-- Spoke 3 - "Getting Started" (blue) - left -->
+  <line x1="520" y1="250" x2="270" y2="250" stroke="#e2e8f0" stroke-width="2"/>
+  <circle cx="270" cy="250" r="5" fill="#3b82f6"/>
+  <rect x="40" y="205" width="210" height="90" rx="10" fill="white" stroke="#bfdbfe" stroke-width="1.5"/>
+  <rect x="40" y="205" width="210" height="5" rx="3" fill="#3b82f6"/>
+  <text x="145" y="235" text-anchor="middle" font-size="15" fill="#1e293b" font-weight="700">Getting Started</text>
+  <text x="145" y="254" text-anchor="middle" font-size="10" fill="#64748b">Step-by-step adoption</text>
+  <text x="145" y="268" text-anchor="middle" font-size="10" fill="#64748b">roadmap for your team</text>
+
+  <!-- Spoke 4 - "Evaluation" (purple) - right -->
+  <line x1="680" y1="250" x2="930" y2="250" stroke="#e2e8f0" stroke-width="2"/>
+  <circle cx="930" cy="250" r="5" fill="#a855f7"/>
+  <rect x="950" y="205" width="210" height="90" rx="10" fill="white" stroke="#e9d5ff" stroke-width="1.5"/>
+  <rect x="950" y="205" width="210" height="5" rx="3" fill="#a855f7"/>
+  <text x="1055" y="235" text-anchor="middle" font-size="15" fill="#1e293b" font-weight="700">Evaluation</text>
+  <text x="1055" y="254" text-anchor="middle" font-size="10" fill="#64748b">How to assess AI vendors</text>
+  <text x="1055" y="268" text-anchor="middle" font-size="10" fill="#64748b">and solutions critically</text>
+
+  <!-- Spoke 5 - "Measuring ROI" (amber) - bottom left -->
+  <line x1="535" y1="305" x2="310" y2="390" stroke="#e2e8f0" stroke-width="2"/>
+  <circle cx="310" cy="390" r="5" fill="#f59e0b"/>
+  <rect x="130" y="345" width="210" height="90" rx="10" fill="white" stroke="#fde68a" stroke-width="1.5"/>
+  <rect x="130" y="345" width="210" height="5" rx="3" fill="#f59e0b"/>
+  <text x="235" y="375" text-anchor="middle" font-size="15" fill="#1e293b" font-weight="700">Measuring ROI</text>
+  <text x="235" y="394" text-anchor="middle" font-size="10" fill="#64748b">Track and prove the value</text>
+  <text x="235" y="408" text-anchor="middle" font-size="10" fill="#64748b">of your AI investment</text>
+
+  <!-- Spoke 6 - "Running a Pilot" (teal) - bottom right -->
+  <line x1="665" y1="305" x2="890" y2="390" stroke="#e2e8f0" stroke-width="2"/>
+  <circle cx="890" cy="390" r="5" fill="#14b8a6"/>
+  <rect x="790" y="345" width="210" height="90" rx="10" fill="white" stroke="#99f6e4" stroke-width="1.5"/>
+  <rect x="790" y="345" width="210" height="5" rx="3" fill="#14b8a6"/>
+  <text x="895" y="375" text-anchor="middle" font-size="15" fill="#1e293b" font-weight="700">Running a Pilot</text>
+  <text x="895" y="394" text-anchor="middle" font-size="10" fill="#64748b">Design a 90-day proof of</text>
+  <text x="895" y="408" text-anchor="middle" font-size="10" fill="#64748b">concept that proves value</text>
+</svg>

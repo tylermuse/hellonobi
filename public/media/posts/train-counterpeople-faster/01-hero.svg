@@ -1,0 +1,125 @@
+<svg viewBox="0 0 1200 500" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, sans-serif">
+  <rect width="1200" height="500" fill="#ffffff"/>
+  <rect x="0" y="0" width="1200" height="500" rx="0" fill="#f8fafc"/>
+
+  <!-- Title -->
+  <text x="600" y="40" text-anchor="middle" fill="#1e293b" font-size="22" font-weight="700">Training Timeline: Traditional vs. AI-Augmented</text>
+  <text x="600" y="62" text-anchor="middle" fill="#475569" font-size="13">How AI tools compress the path to proficiency for new counterpeople</text>
+
+  <!-- TRADITIONAL TIMELINE (top) -->
+  <rect x="50" y="85" width="1100" height="170" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+  <rect x="50" y="85" width="1100" height="4" rx="2" fill="#f59e0b" opacity="0.4"/>
+
+  <text x="80" y="115" fill="#f59e0b" font-size="14" font-weight="700">TRADITIONAL TRAINING</text>
+  <text x="310" y="115" fill="#64748b" font-size="12">24 months to full competence</text>
+
+  <!-- Traditional bar track -->
+  <rect x="80" y="135" width="1040" height="36" rx="6" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- Phase segments — Traditional (24mo total = 1040px) -->
+  <!-- Orientation: 1mo = 43px -->
+  <rect x="80" y="135" width="43" height="36" rx="6" fill="#fef3c7" stroke="#fbbf24" stroke-width="1"/>
+  <text x="101" y="150" text-anchor="middle" fill="#92400e" font-size="8" font-weight="600">ORIENT.</text>
+  <text x="101" y="163" text-anchor="middle" fill="#92400e" font-size="9" font-weight="700">1 mo</text>
+
+  <!-- Shadowing: 3mo = 130px -->
+  <rect x="123" y="135" width="130" height="36" rx="0" fill="#fef9c3" stroke="#fbbf24" stroke-width="1"/>
+  <text x="188" y="150" text-anchor="middle" fill="#92400e" font-size="9" font-weight="600">SHADOWING</text>
+  <text x="188" y="163" text-anchor="middle" fill="#92400e" font-size="9" font-weight="700">3 mo</text>
+
+  <!-- Supervised: 6mo = 260px -->
+  <rect x="253" y="135" width="260" height="36" rx="0" fill="#fde68a" stroke="#f59e0b" stroke-width="1"/>
+  <text x="383" y="150" text-anchor="middle" fill="#78350f" font-size="9" font-weight="600">SUPERVISED PRACTICE</text>
+  <text x="383" y="163" text-anchor="middle" fill="#78350f" font-size="9" font-weight="700">6 mo</text>
+
+  <!-- Semi-Independent: 6mo = 260px -->
+  <rect x="513" y="135" width="260" height="36" rx="0" fill="#fbbf24" stroke="#f59e0b" stroke-width="1"/>
+  <text x="643" y="150" text-anchor="middle" fill="#78350f" font-size="9" font-weight="600">SEMI-INDEPENDENT</text>
+  <text x="643" y="163" text-anchor="middle" fill="#78350f" font-size="9" font-weight="700">6 mo</text>
+
+  <!-- Full Competence: 8mo = 347px -->
+  <rect x="773" y="135" width="347" height="36" rx="6" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+  <text x="946" y="150" text-anchor="middle" fill="#ffffff" font-size="9" font-weight="600">FULL COMPETENCE</text>
+  <text x="946" y="163" text-anchor="middle" fill="#ffffff" font-size="9" font-weight="700">8 mo</text>
+
+  <!-- Month labels under traditional bar -->
+  <g font-size="10" fill="#94a3b8">
+    <text x="80" y="186">0</text>
+    <text x="120" y="186">1</text>
+    <text x="250" y="186">4</text>
+    <text x="510" y="186">10</text>
+    <text x="770" y="186">16</text>
+    <text x="1105" y="186" text-anchor="end">24 mo</text>
+  </g>
+
+  <!-- AI-AUGMENTED TIMELINE (bottom) -->
+  <rect x="50" y="270" width="1100" height="170" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+  <rect x="50" y="270" width="1100" height="4" rx="2" fill="#10b981" opacity="0.4"/>
+
+  <text x="80" y="300" fill="#10b981" font-size="14" font-weight="700">AI-AUGMENTED TRAINING</text>
+  <text x="340" y="300" fill="#64748b" font-size="12">6 months to full competence</text>
+
+  <!-- AI bar track -->
+  <rect x="80" y="320" width="1040" height="36" rx="6" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- Phase segments — AI (6mo maps to 260px of the 1040 total, but we show it proportionally) -->
+  <!-- Orientation: 0.5mo = 22px -->
+  <rect x="80" y="320" width="22" height="36" rx="6" fill="#d1fae5" stroke="#34d399" stroke-width="1"/>
+  <text x="91" y="343" text-anchor="middle" fill="#065f46" font-size="7" font-weight="600">O</text>
+
+  <!-- AI-Guided Shadowing: 1mo = 43px -->
+  <rect x="102" y="320" width="43" height="36" rx="0" fill="#a7f3d0" stroke="#34d399" stroke-width="1"/>
+  <text x="123" y="336" text-anchor="middle" fill="#065f46" font-size="8" font-weight="600">SHADOW</text>
+  <text x="123" y="349" text-anchor="middle" fill="#065f46" font-size="8" font-weight="700">1 mo</text>
+
+  <!-- AI-Assisted Supervised: 2mo = 87px -->
+  <rect x="145" y="320" width="87" height="36" rx="0" fill="#6ee7b7" stroke="#10b981" stroke-width="1"/>
+  <text x="188" y="336" text-anchor="middle" fill="#064e3b" font-size="8" font-weight="600">SUPERVISED</text>
+  <text x="188" y="349" text-anchor="middle" fill="#064e3b" font-size="8" font-weight="700">2 mo</text>
+
+  <!-- Semi-Independent: 1mo = 43px -->
+  <rect x="232" y="320" width="43" height="36" rx="0" fill="#34d399" stroke="#10b981" stroke-width="1"/>
+  <text x="253" y="336" text-anchor="middle" fill="#064e3b" font-size="7" font-weight="600">SEMI-IND</text>
+  <text x="253" y="349" text-anchor="middle" fill="#064e3b" font-size="8" font-weight="700">1 mo</text>
+
+  <!-- Full Competence: 1.5mo = 65px -->
+  <rect x="275" y="320" width="65" height="36" rx="6" fill="#10b981" stroke="#059669" stroke-width="1"/>
+  <text x="307" y="336" text-anchor="middle" fill="#ffffff" font-size="8" font-weight="600">FULL</text>
+  <text x="307" y="349" text-anchor="middle" fill="#ffffff" font-size="8" font-weight="700">1.5 mo</text>
+
+  <!-- 6-month marker line -->
+  <line x1="340" y1="315" x2="340" y2="370" stroke="#10b981" stroke-width="2" stroke-dasharray="4,3"/>
+  <text x="350" y="383" fill="#10b981" font-size="10" font-weight="600">6 months total</text>
+
+  <!-- Remaining space is empty (greyed out) -->
+  <rect x="340" y="320" width="780" height="36" rx="0" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="6,4"/>
+  <text x="730" y="343" text-anchor="middle" fill="#cbd5e1" font-size="12" font-weight="500">18 months of training time eliminated</text>
+
+  <!-- Month labels under AI bar -->
+  <g font-size="10" fill="#94a3b8">
+    <text x="80" y="372">0</text>
+    <text x="145" y="372">1.5</text>
+    <text x="232" y="372">3.5</text>
+    <text x="275" y="372">4.5</text>
+  </g>
+
+  <!-- 4x FASTER badge -->
+  <rect x="940" y="440" width="210" height="50" rx="25" fill="#10b981" stroke="none"/>
+  <text x="1045" y="463" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="600">TIME TO COMPETENCE</text>
+  <text x="1045" y="479" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="800">4x Faster</text>
+
+  <!-- Comparison stats bottom left -->
+  <g transform="translate(80, 445)">
+    <rect width="160" height="42" rx="8" fill="#fffbeb" stroke="#f59e0b" stroke-width="1"/>
+    <text x="80" y="18" text-anchor="middle" fill="#92400e" font-size="10" font-weight="600">Traditional</text>
+    <text x="80" y="34" text-anchor="middle" fill="#f59e0b" font-size="16" font-weight="800">24 months</text>
+  </g>
+  <g transform="translate(260, 445)">
+    <rect width="160" height="42" rx="8" fill="#ecfdf5" stroke="#10b981" stroke-width="1"/>
+    <text x="80" y="18" text-anchor="middle" fill="#065f46" font-size="10" font-weight="600">AI-Augmented</text>
+    <text x="80" y="34" text-anchor="middle" fill="#10b981" font-size="16" font-weight="800">6 months</text>
+  </g>
+
+  <!-- Arrow between stats -->
+  <text x="438" y="472" fill="#64748b" font-size="18">&#x2192;</text>
+</svg>

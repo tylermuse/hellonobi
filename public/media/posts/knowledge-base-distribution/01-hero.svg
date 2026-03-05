@@ -1,0 +1,96 @@
+<svg viewBox="0 0 1200 500" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, sans-serif">
+  <rect width="1200" height="500" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="600" y="38" text-anchor="middle" font-size="22" fill="#1e293b" font-weight="700">From Locked Knowledge to Shared Intelligence</text>
+  <text x="600" y="58" text-anchor="middle" font-size="13" fill="#64748b">How a knowledge base transforms tribal expertise into organizational assets</text>
+
+  <!-- LEFT SIDE: Knowledge Locked -->
+  <rect x="40" y="85" width="460" height="370" rx="12" fill="#fafbfc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="270" y="115" text-anchor="middle" font-size="16" fill="#64748b" font-weight="700" letter-spacing="1">KNOWLEDGE LOCKED</text>
+  <line x1="140" y1="125" x2="400" y2="125" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- Person 1 with thought bubble -->
+  <circle cx="140" cy="200" r="24" fill="#e2e8f0"/>
+  <circle cx="140" cy="186" r="12" fill="#cbd5e1"/>
+  <rect x="126" y="198" width="28" height="20" rx="6" fill="#cbd5e1"/>
+  <!-- Thought bubble -->
+  <rect x="90" y="240" width="100" height="40" rx="8" fill="#fef2f2" stroke="#fecaca" stroke-width="1"/>
+  <text x="140" y="264" text-anchor="middle" font-size="9" fill="#64748b">Bearing specs</text>
+  <circle cx="125" y="232" r="3" fill="#fecaca"/>
+
+  <!-- Person 2 -->
+  <circle cx="310" cy="200" r="24" fill="#e2e8f0"/>
+  <circle cx="310" cy="186" r="12" fill="#cbd5e1"/>
+  <rect x="296" y="198" width="28" height="20" rx="6" fill="#cbd5e1"/>
+  <rect x="260" y="240" width="100" height="40" rx="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="310" y="264" text-anchor="middle" font-size="9" fill="#64748b">Cross-refs</text>
+  <circle cx="295" y="232" r="3" fill="#bfdbfe"/>
+
+  <!-- Person 3 -->
+  <circle cx="140" cy="340" r="24" fill="#e2e8f0"/>
+  <circle cx="140" cy="326" r="12" fill="#cbd5e1"/>
+  <rect x="126" y="338" width="28" height="20" rx="6" fill="#cbd5e1"/>
+  <rect x="90" y="375" width="100" height="40" rx="8" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
+  <text x="140" y="399" text-anchor="middle" font-size="9" fill="#64748b">OEM quirks</text>
+  <circle cx="125" y="367" r="3" fill="#bbf7d0"/>
+
+  <!-- Person 4 -->
+  <circle cx="310" cy="340" r="24" fill="#e2e8f0"/>
+  <circle cx="310" cy="326" r="12" fill="#cbd5e1"/>
+  <rect x="296" y="338" width="28" height="20" rx="6" fill="#cbd5e1"/>
+  <rect x="260" y="375" width="100" height="40" rx="8" fill="#faf5ff" stroke="#e9d5ff" stroke-width="1"/>
+  <text x="310" y="399" text-anchor="middle" font-size="9" fill="#64748b">Edge cases</text>
+  <circle cx="295" y="367" r="3" fill="#e9d5ff"/>
+
+  <!-- No connection lines - isolated -->
+  <text x="270" y="440" text-anchor="middle" font-size="11" fill="#94a3b8" font-style="italic">Each person is a silo</text>
+
+  <!-- CENTER ARROW -->
+  <rect x="525" y="225" width="150" height="50" rx="25" fill="#7c3aed"/>
+  <text x="600" y="255" text-anchor="middle" font-size="13" fill="white" font-weight="700">TRANSFORM</text>
+  <polygon points="690,250 710,240 710,260" fill="#7c3aed"/>
+  <polygon points="525,250 505,240 505,260" fill="#7c3aed" opacity="0.3"/>
+
+  <!-- RIGHT SIDE: Knowledge Shared -->
+  <rect x="700" y="85" width="460" height="370" rx="12" fill="#faf5ff" stroke="#e9d5ff" stroke-width="1.5"/>
+  <text x="930" y="115" text-anchor="middle" font-size="16" fill="#7c3aed" font-weight="700" letter-spacing="1">KNOWLEDGE SHARED</text>
+  <line x1="800" y1="125" x2="1060" y2="125" stroke="#e9d5ff" stroke-width="1"/>
+
+  <!-- Central hub -->
+  <circle cx="930" cy="280" r="45" fill="#7c3aed"/>
+  <text x="930" y="274" text-anchor="middle" font-size="11" fill="white" font-weight="700">KNOWLEDGE</text>
+  <text x="930" y="290" text-anchor="middle" font-size="11" fill="white" font-weight="700">HUB</text>
+
+  <!-- Person 1 connected -->
+  <circle cx="800" cy="180" r="20" fill="#ede9fe"/>
+  <circle cx="800" cy="168" r="10" fill="#c4b5fd"/>
+  <rect x="788" y="178" width="24" height="16" rx="5" fill="#c4b5fd"/>
+  <line x1="815" y1="195" x2="895" y2="248" stroke="#a78bfa" stroke-width="2"/>
+
+  <!-- Person 2 connected -->
+  <circle cx="1060" cy="180" r="20" fill="#ede9fe"/>
+  <circle cx="1060" cy="168" r="10" fill="#c4b5fd"/>
+  <rect x="1048" y="178" width="24" height="16" rx="5" fill="#c4b5fd"/>
+  <line x1="1045" y1="195" x2="965" y2="248" stroke="#a78bfa" stroke-width="2"/>
+
+  <!-- Person 3 connected -->
+  <circle cx="800" cy="380" r="20" fill="#ede9fe"/>
+  <circle cx="800" cy="368" r="10" fill="#c4b5fd"/>
+  <rect x="788" y="378" width="24" height="16" rx="5" fill="#c4b5fd"/>
+  <line x1="815" y1="368" x2="895" y2="310" stroke="#a78bfa" stroke-width="2"/>
+
+  <!-- Person 4 connected -->
+  <circle cx="1060" cy="380" r="20" fill="#ede9fe"/>
+  <circle cx="1060" cy="368" r="10" fill="#c4b5fd"/>
+  <rect x="1048" y="378" width="24" height="16" rx="5" fill="#c4b5fd"/>
+  <line x1="1045" y1="368" x2="965" y2="310" stroke="#a78bfa" stroke-width="2"/>
+
+  <!-- Flow arrows on lines (small dots to show bidirectional) -->
+  <circle cx="855" cy="220" r="3" fill="#a78bfa"/>
+  <circle cx="1005" cy="220" r="3" fill="#a78bfa"/>
+  <circle cx="855" cy="340" r="3" fill="#a78bfa"/>
+  <circle cx="1005" cy="340" r="3" fill="#a78bfa"/>
+
+  <text x="930" y="440" text-anchor="middle" font-size="11" fill="#7c3aed" font-style="italic">Everyone contributes and benefits</text>
+</svg>

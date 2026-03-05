@@ -1,0 +1,93 @@
+<svg viewBox="0 0 1200 500" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, sans-serif">
+  <!-- White background -->
+  <rect width="1200" height="500" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="600" y="40" text-anchor="middle" font-size="20" font-weight="700" fill="#1e293b">When to Use Each Tool</text>
+  <text x="600" y="62" text-anchor="middle" font-size="12" fill="#64748b">A practical decision guide for distribution teams</text>
+
+  <!-- LEFT COLUMN: eCommerce Search -->
+  <rect x="60" y="85" width="510" height="385" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+  <!-- Header -->
+  <rect x="60" y="85" width="510" height="52" rx="12" fill="#eff6ff"/>
+  <rect x="60" y="125" width="510" height="12" fill="#eff6ff"/>
+  <text x="315" y="118" text-anchor="middle" font-size="16" font-weight="700" fill="#2563eb">Use eCommerce Search When...</text>
+
+  <!-- Bullet items -->
+  <circle cx="100" cy="172" r="6" fill="#2563eb"/>
+  <text x="100" y="176" text-anchor="middle" font-size="8" font-weight="700" fill="#ffffff">1</text>
+  <text x="118" y="176" font-size="13" fill="#1e293b">Customer is browsing your website</text>
+  <text x="118" y="194" font-size="11" fill="#64748b">Self-service, no employee involvement needed</text>
+
+  <line x1="90" y1="210" x2="540" y2="210" stroke="#f1f5f9" stroke-width="1"/>
+
+  <circle cx="100" cy="232" r="6" fill="#2563eb"/>
+  <text x="100" y="236" text-anchor="middle" font-size="8" font-weight="700" fill="#ffffff">2</text>
+  <text x="118" y="236" font-size="13" fill="#1e293b">Shopper uses filters and facets</text>
+  <text x="118" y="254" font-size="11" fill="#64748b">Category, brand, size, material navigation</text>
+
+  <line x1="90" y1="270" x2="540" y2="270" stroke="#f1f5f9" stroke-width="1"/>
+
+  <circle cx="100" cy="292" r="6" fill="#2563eb"/>
+  <text x="100" y="296" text-anchor="middle" font-size="8" font-weight="700" fill="#ffffff">3</text>
+  <text x="118" y="296" font-size="13" fill="#1e293b">Customer knows the general category</text>
+  <text x="118" y="314" font-size="11" fill="#64748b">Structured queries: "1/2 inch brass ball valve"</text>
+
+  <line x1="90" y1="330" x2="540" y2="330" stroke="#f1f5f9" stroke-width="1"/>
+
+  <circle cx="100" cy="352" r="6" fill="#2563eb"/>
+  <text x="100" y="356" text-anchor="middle" font-size="8" font-weight="700" fill="#ffffff">4</text>
+  <text x="118" y="356" font-size="13" fill="#1e293b">Ordering is fully self-service</text>
+  <text x="118" y="374" font-size="11" fill="#64748b">Add-to-cart, checkout, account management</text>
+
+  <line x1="90" y1="390" x2="540" y2="390" stroke="#f1f5f9" stroke-width="1"/>
+
+  <circle cx="100" cy="412" r="6" fill="#2563eb"/>
+  <text x="100" y="416" text-anchor="middle" font-size="8" font-weight="700" fill="#ffffff">5</text>
+  <text x="118" y="416" font-size="13" fill="#1e293b">Product data is clean and structured</text>
+  <text x="118" y="434" font-size="11" fill="#64748b">Well-organized catalog with complete attributes</text>
+
+  <!-- RIGHT COLUMN: AI Copilot -->
+  <rect x="630" y="85" width="510" height="385" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <!-- Header -->
+  <rect x="630" y="85" width="510" height="52" rx="12" fill="#f0fdf4"/>
+  <rect x="630" y="125" width="510" height="12" fill="#f0fdf4"/>
+  <text x="885" y="118" text-anchor="middle" font-size="16" font-weight="700" fill="#16a34a">Use AI Copilot When...</text>
+
+  <!-- Bullet items -->
+  <circle cx="670" cy="172" r="6" fill="#16a34a"/>
+  <text x="670" y="176" text-anchor="middle" font-size="8" font-weight="700" fill="#ffffff">1</text>
+  <text x="688" y="176" font-size="13" fill="#1e293b">Employee takes a phone call or walk-in</text>
+  <text x="688" y="194" font-size="11" fill="#64748b">Verbal requests need instant interpretation</text>
+
+  <line x1="660" y1="210" x2="1110" y2="210" stroke="#f1f5f9" stroke-width="1"/>
+
+  <circle cx="670" cy="232" r="6" fill="#16a34a"/>
+  <text x="670" y="236" text-anchor="middle" font-size="8" font-weight="700" fill="#ffffff">2</text>
+  <text x="688" y="236" font-size="13" fill="#1e293b">Request is vague or uses slang</text>
+  <text x="688" y="254" font-size="11" fill="#64748b">"I need the thingy that goes on a Trane unit"</text>
+
+  <line x1="660" y1="270" x2="1110" y2="270" stroke="#f1f5f9" stroke-width="1"/>
+
+  <circle cx="670" cy="292" r="6" fill="#16a34a"/>
+  <text x="670" y="296" text-anchor="middle" font-size="8" font-weight="700" fill="#ffffff">3</text>
+  <text x="688" y="296" font-size="13" fill="#1e293b">Customer needs a cross-reference</text>
+  <text x="688" y="314" font-size="11" fill="#64748b">"What's the Watts equivalent of Apollo 70-100?"</text>
+
+  <line x1="660" y1="330" x2="1110" y2="330" stroke="#f1f5f9" stroke-width="1"/>
+
+  <circle cx="670" cy="352" r="6" fill="#16a34a"/>
+  <text x="670" y="356" text-anchor="middle" font-size="8" font-weight="700" fill="#ffffff">4</text>
+  <text x="688" y="356" font-size="13" fill="#1e293b">Speed at the counter is critical</text>
+  <text x="688" y="374" font-size="11" fill="#64748b">Line of contractors waiting, seconds matter</text>
+
+  <line x1="660" y1="390" x2="1110" y2="390" stroke="#f1f5f9" stroke-width="1"/>
+
+  <circle cx="670" cy="412" r="6" fill="#16a34a"/>
+  <text x="670" y="416" text-anchor="middle" font-size="8" font-weight="700" fill="#ffffff">5</text>
+  <text x="688" y="416" font-size="13" fill="#1e293b">New hire needs product knowledge support</text>
+  <text x="688" y="434" font-size="11" fill="#64748b">AI bridges the experience gap instantly</text>
+
+  <!-- Bottom note -->
+  <text x="600" y="490" text-anchor="middle" font-size="11" fill="#94a3b8">Most distributors benefit from both tools working together</text>
+</svg>
