@@ -80,14 +80,14 @@ function Hero() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="text-center max-w-3xl mx-auto">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-balance text-black dark:text-white leading-[1.1]">
-            AI Copilot for Counter Sales{" "}
+            Get buyers the parts they need{" "}
             <span className="bg-gradient-to-r from-violet-500 to-fuchsia-500 bg-clip-text text-transparent">
-              in Industrial Distribution
+              in seconds
             </span>
           </h1>
 
           <p className="mt-6 text-lg md:text-xl text-black/60 dark:text-white/60 max-w-2xl mx-auto leading-relaxed">
-            Nobi helps counter staff and inside sales teams quickly identify the correct parts customers need — even when the request is vague or incomplete.
+            Nobi is an AI copilot that helps counter staff and inside sales teams quickly identify the correct parts that customers need.
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
